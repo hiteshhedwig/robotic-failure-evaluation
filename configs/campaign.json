@@ -1,0 +1,681 @@
+{
+  "description": "Exploratory G1 push evaluation with eight matched seeded schedules per condition",
+  "sampling": "For each seed, Python random.Random(seed): choose a world-axis direction uniformly from +/-x,+/-y, then onset uniformly across one 0.8 s gait cycle [3.0,3.8], quantized to 2 ms.",
+  "note": "Severity levels and detector thresholds were selected during development pilots. This is not a held-out validation benchmark. Reference repetitions have identical deterministic initial conditions and no push.",
+  "schedules": [
+    {
+      "seed": 0,
+      "direction_world": [
+        0,
+        -1,
+        0
+      ],
+      "start_s": 3.606
+    },
+    {
+      "seed": 1,
+      "direction_world": [
+        -1,
+        0,
+        0
+      ],
+      "start_s": 3.456
+    },
+    {
+      "seed": 2,
+      "direction_world": [
+        1,
+        0,
+        0
+      ],
+      "start_s": 3.074
+    },
+    {
+      "seed": 3,
+      "direction_world": [
+        -1,
+        0,
+        0
+      ],
+      "start_s": 3.474
+    },
+    {
+      "seed": 4,
+      "direction_world": [
+        -1,
+        0,
+        0
+      ],
+      "start_s": 3.242
+    },
+    {
+      "seed": 5,
+      "direction_world": [
+        0,
+        1,
+        0
+      ],
+      "start_s": 3.594
+    },
+    {
+      "seed": 6,
+      "direction_world": [
+        1,
+        0,
+        0
+      ],
+      "start_s": 3.388
+    },
+    {
+      "seed": 7,
+      "direction_world": [
+        0,
+        1,
+        0
+      ],
+      "start_s": 3.758
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "reference-seed0",
+      "seed": 0,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2
+    },
+    {
+      "id": "mild-seed0",
+      "seed": 0,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          0,
+          -25,
+          0
+        ],
+        "start_s": 3.606,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "moderate-seed0",
+      "seed": 0,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          0,
+          -100,
+          0
+        ],
+        "start_s": 3.606,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "strong-seed0",
+      "seed": 0,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          0,
+          -250,
+          0
+        ],
+        "start_s": 3.606,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "reference-seed1",
+      "seed": 1,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2
+    },
+    {
+      "id": "mild-seed1",
+      "seed": 1,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          -25,
+          0,
+          0
+        ],
+        "start_s": 3.456,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "moderate-seed1",
+      "seed": 1,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          -100,
+          0,
+          0
+        ],
+        "start_s": 3.456,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "strong-seed1",
+      "seed": 1,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          -250,
+          0,
+          0
+        ],
+        "start_s": 3.456,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "reference-seed2",
+      "seed": 2,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2
+    },
+    {
+      "id": "mild-seed2",
+      "seed": 2,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          25,
+          0,
+          0
+        ],
+        "start_s": 3.074,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "moderate-seed2",
+      "seed": 2,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          100,
+          0,
+          0
+        ],
+        "start_s": 3.074,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "strong-seed2",
+      "seed": 2,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          250,
+          0,
+          0
+        ],
+        "start_s": 3.074,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "reference-seed3",
+      "seed": 3,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2
+    },
+    {
+      "id": "mild-seed3",
+      "seed": 3,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          -25,
+          0,
+          0
+        ],
+        "start_s": 3.474,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "moderate-seed3",
+      "seed": 3,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          -100,
+          0,
+          0
+        ],
+        "start_s": 3.474,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "strong-seed3",
+      "seed": 3,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          -250,
+          0,
+          0
+        ],
+        "start_s": 3.474,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "reference-seed4",
+      "seed": 4,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2
+    },
+    {
+      "id": "mild-seed4",
+      "seed": 4,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          -25,
+          0,
+          0
+        ],
+        "start_s": 3.242,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "moderate-seed4",
+      "seed": 4,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          -100,
+          0,
+          0
+        ],
+        "start_s": 3.242,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "strong-seed4",
+      "seed": 4,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          -250,
+          0,
+          0
+        ],
+        "start_s": 3.242,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "reference-seed5",
+      "seed": 5,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2
+    },
+    {
+      "id": "mild-seed5",
+      "seed": 5,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          0,
+          25,
+          0
+        ],
+        "start_s": 3.594,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "moderate-seed5",
+      "seed": 5,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          0,
+          100,
+          0
+        ],
+        "start_s": 3.594,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "strong-seed5",
+      "seed": 5,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          0,
+          250,
+          0
+        ],
+        "start_s": 3.594,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "reference-seed6",
+      "seed": 6,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2
+    },
+    {
+      "id": "mild-seed6",
+      "seed": 6,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          25,
+          0,
+          0
+        ],
+        "start_s": 3.388,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "moderate-seed6",
+      "seed": 6,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          100,
+          0,
+          0
+        ],
+        "start_s": 3.388,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "strong-seed6",
+      "seed": 6,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          250,
+          0,
+          0
+        ],
+        "start_s": 3.388,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "reference-seed7",
+      "seed": 7,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2
+    },
+    {
+      "id": "mild-seed7",
+      "seed": 7,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          0,
+          25,
+          0
+        ],
+        "start_s": 3.758,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "moderate-seed7",
+      "seed": 7,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          0,
+          100,
+          0
+        ],
+        "start_s": 3.758,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "strong-seed7",
+      "seed": 7,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          0,
+          250,
+          0
+        ],
+        "start_s": 3.758,
+        "duration_s": 0.2
+      }
+    }
+  ]
+}

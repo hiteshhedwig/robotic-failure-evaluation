@@ -1,0 +1,8 @@
+{
+  "upstream_repository": "https://github.com/unitreerobotics/unitree_rl_gym",
+  "upstream_revision": "276801e46c5d433564f24658bac64f254b7d2d4b",
+  "policy_sha256": "cf668f75b90d1abf73d2b87612a6e76bccc61ff7e083b63582d3f6aaa3c1759d",
+  "model_tree_sha256": "f92529072acc10d877fe5f5392d80ae42158ac82f5b8d4a28212b6ca52e20f2d",
+  "deployment_config_sha256": "73044e7d355c61915695c16d6e09eb3efef46eec1e3d708fd3eb9157dfe3bbbb",
+  "deployment_code_sha256": "48e9f7a6b8ba701e68dfa48f2e89944c9f2aac1ec39c0a9915d6fe14ec71a4da"
+}
