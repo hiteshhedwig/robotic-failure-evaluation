@@ -1,0 +1,36 @@
+{
+  "cases": [
+    {
+      "id": "g1-baseline",
+      "reference": "artifacts/push-pilot/push-y-0"
+    },
+    {
+      "id": "g1-recovery",
+      "reference": "artifacts/push-pilot/push-y-100"
+    },
+    {
+      "id": "g1-fall",
+      "reference": "artifacts/push-pilot/push-y-250"
+    },
+    {
+      "id": "g1-upright-timeout",
+      "reference": "artifacts/boundary/boundary-seed1"
+    },
+    {
+      "id": "go1-baseline",
+      "reference": "artifacts/go1/campaign/reference-seed0"
+    },
+    {
+      "id": "go1-recovery",
+      "reference": "artifacts/go1/campaign/moderate-seed0"
+    },
+    {
+      "id": "go1-fall",
+      "reference": "artifacts/go1/campaign/strong-seed0"
+    },
+    {
+      "id": "go1-posture",
+      "reference": "artifacts/go1/campaign/extreme-seed5"
+    }
+  ]
+}

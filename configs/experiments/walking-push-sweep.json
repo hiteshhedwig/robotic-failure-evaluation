@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "id": "shared-walking-push-v1",
+  "robots": [
+    "g1",
+    "go1"
+  ],
+  "seeds": [
+    0,
+    1
+  ],
+  "task": {
+    "duration_s": 10,
+    "warmup_s": 2,
+    "command": [
+      0.5,
+      0,
+      0
+    ],
+    "minimum_progress_m": 2
+  },
+  "disturbance": {
+    "type": "root_force_pulse",
+    "force_mode": "newtons",
+    "duration_s": 0.2,
+    "onset_range_s": [
+      3,
+      3.8
+    ],
+    "directions": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "levels": [
+      {
+        "name": "reference",
+        "magnitude": 0
+      },
+      {
+        "name": "light",
+        "magnitude": 100
+      },
+      {
+        "name": "strong",
+        "magnitude": 500
+      }
+    ]
+  },
+  "notes": "Small integration demonstration, not a held-out reliability campaign. Change robots, seeds and levels here; do not edit runner/report code."
+}

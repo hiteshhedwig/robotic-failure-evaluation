@@ -1,5 +1,4 @@
 """Headless adaptation of Unitree's pinned MuJoCo deployment loop."""
-import hashlib
 import subprocess
 from pathlib import Path
 import sys
@@ -8,14 +7,14 @@ import mujoco
 import torch
 import yaml
 
-ROOT = Path(__file__).resolve().parents[1]
+from .base import ROOT, MuJoCoAdapter
 UPSTREAM = ROOT / ".deps/unitree_rl_gym"
 REVISION = "276801e46c5d433564f24658bac64f254b7d2d4b"
 sys.path.insert(0, str(UPSTREAM))
 # Reuse upstream control and observation math without editing vendor files.
 from deploy.deploy_mujoco.deploy_mujoco import pd_control, get_gravity_orientation
 
-class G1Simulation:
+class G1Simulation(MuJoCoAdapter):
     def __init__(self, command, seed=0):
         actual=subprocess.check_output(["git","-C",str(UPSTREAM),"rev-parse","HEAD"],text=True).strip()
         if actual!=REVISION:
@@ -66,35 +65,8 @@ class G1Simulation:
                 self.action = self.policy(torch.from_numpy(self.obs).unsqueeze(0)).numpy().squeeze()
             self.target = self.action*c["action_scale"] + self.default
 
-    def state(self):
-        d, m = self.data, self.model
-        contacts = []
-        for contact in d.contact:
-            a, b = int(contact.geom1), int(contact.geom2)
-            if self.floor in (a, b):
-                geom = b if a == self.floor else a
-                body = m.body(int(m.geom_bodyid[geom])).name
-                contacts.append(body)
-        return {"time_s": float(d.time), "position": d.xpos[self.root].tolist(),
-                "tilt_deg": float(np.rad2deg(np.arccos(np.clip(d.xmat[self.root,8],-1,1)))),
-                "velocity": d.qvel[:3].tolist(), "qpos": d.qpos.tolist(),
-                "qvel": d.qvel.tolist(), "action": self.action.tolist(),
-                "effort": d.ctrl.tolist(), "floor_contact_bodies": sorted(set(contacts))}
-
     def fingerprint(self):
-        digest = hashlib.sha256()
-        for path in sorted(self.model_path.parent.rglob("*")):
-            if path.is_file():
-                digest.update(str(path.relative_to(self.model_path.parent)).encode())
-                digest.update(hashlib.sha256(path.read_bytes()).digest())
-        code = hashlib.sha256()
-        for path in sorted((ROOT/"robot_eval").glob("*.py")) + [ROOT/"scripts/run_trial.py"]:
-            code.update(path.name.encode())
-            code.update(path.read_bytes())
-        return {"upstream_revision": REVISION, "evaluation_code_sha256":code.hexdigest(),
-                "policy_sha256": hashlib.sha256(self.policy_path.read_bytes()).hexdigest(),
-                "model_tree_sha256": digest.hexdigest(),
-                "deployment_config_sha256": hashlib.sha256(self.config_path.read_bytes()).hexdigest(),
-                "deployment_config": self.config, "mujoco": mujoco.__version__,
-                "torch": torch.__version__, "numpy": np.__version__,
-                "inference_device": "cpu", "torch_threads": torch.get_num_threads()}
+        meta = super().fingerprint()
+        meta.update(upstream_revision=REVISION, torch=torch.__version__,
+                    torch_threads=torch.get_num_threads())
+        return meta

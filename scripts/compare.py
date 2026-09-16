@@ -27,7 +27,7 @@ def compare(reference,candidate):
               "infrastructure_error":after["status"] not in {"COMPLETED","FALL","TASK_TIMEOUT","POSTURE_VIOLATION"}}
         if (pa/"manifest.json").exists() and (pb/"manifest.json").exists():
             ma=json.loads((pa/"manifest.json").read_text());mb=json.loads((pb/"manifest.json").read_text())
-            pair["changed_fingerprints"]=[k for k in ["policy_sha256","model_tree_sha256","evaluation_code_sha256"] if ma.get(k)!=mb.get(k)]
+            pair["changed_fingerprints"]=[k for k in ["policy_sha256","model_tree_sha256","evaluation_code_sha256","robot_profile_sha256","adapter_source_sha256"] if ma.get(k)!=mb.get(k)]
         pairs.append(pair)
     return {"matched":True,"pairs":pairs,"regression":any(p["new_task_failure"] or p["infrastructure_error"] for p in pairs),
             "outcome_agreement":all(p["reference"]==p["candidate"] for p in pairs)}

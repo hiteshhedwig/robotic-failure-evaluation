@@ -11,7 +11,7 @@ import subprocess
 import sys
 import mujoco
 import numpy as np
-from .simulation import G1Simulation, ROOT
+from .base import MuJoCoAdapter, ROOT
 
 PLAYGROUND=ROOT/".deps/mujoco_playground"
 MENAGERIE=ROOT/".deps/mujoco_menagerie"
@@ -29,7 +29,7 @@ def load_model():
     path=GO1/"xmls/scene_mjx_fullcollisions_flat_terrain.xml"
     return mujoco.MjModel.from_xml_path(str(path),assets=assets)
 
-class Go1Simulation(G1Simulation):
+class Go1Simulation(MuJoCoAdapter):
     def __init__(self,command,seed=0):
         sys.path.insert(0,str(ROOT/".runtime/python"))
         import onnxruntime as ort
@@ -41,6 +41,7 @@ class Go1Simulation(G1Simulation):
         self.data=mujoco.MjData(self.model)
         mujoco.mj_resetDataKeyframe(self.model,self.data,0)
         self.model.opt.timestep=0.004
+        self.asset_directories=[GO1/"xmls",MENAGERIE/"unitree_go1"]
         self.model_path=GO1/"xmls/scene_mjx_fullcollisions_flat_terrain.xml"
         self.config_path=DEPLOY/"play_go1_joystick.py"
         self.policy_path=DEPLOY/"onnx/go1_policy.onnx"
@@ -86,13 +87,6 @@ class Go1Simulation(G1Simulation):
         meta=super().fingerprint()
         lock=json.loads((ROOT/"configs/go1-dependencies.json").read_text())
         meta.update(lock)
-        digest=hashlib.sha256()
-        for directory in [GO1/"xmls",MENAGERIE/"unitree_go1"]:
-            for path in sorted(directory.rglob("*")):
-                if path.is_file():
-                    digest.update(str(path.relative_to(directory)).encode())
-                    digest.update(hashlib.sha256(path.read_bytes()).digest())
         meta.update(robot="go1",upstream_revision=lock["playground_revision"],
-                    model_tree_sha256=digest.hexdigest(),onnxruntime=self.ort_version,
-                    inference_device="cpu",torch_threads=None)
+                    onnxruntime=self.ort_version,inference_device="cpu")
         return meta
