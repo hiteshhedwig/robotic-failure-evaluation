@@ -1,0 +1,7 @@
+{"event": "RUN_STARTED", "time_s": 0, "physics_dt_s": 0.002, "policy_dt_s": 0.02}
+{"event": "EVALUATION_STARTED", "time_s": 2.002000000000001, "position": [0.8037290556400803, -0.02201302808039793, 0.7675421288773143]}
+{"event": "PUSH_STARTED", "time_s": 3.6059999999998245, "force_world_n": [0.0, -250.0, 0.0], "body": "pelvis (rigid torso/arms share this body)", "point": "body center of mass"}
+{"event": "PUSH_ENDED", "time_s": 3.8059999999998024, "impulse_ns": [0.0, -50.0, 0.0]}
+{"event": "POSTURE_VIOLATION", "time_s": 4.19799999999976, "position": [1.809549361628809, -1.127022585978639, 0.21138291964497083], "tilt_deg": 87.09444869375761, "floor_contact_bodies": ["pelvis"]}
+{"event": "FALL_DETECTED", "time_s": 4.201999999999759, "position": [1.8042435028590629, -1.132460036764342, 0.2081204123946474], "tilt_deg": 88.3300620357947, "floor_contact_bodies": ["pelvis", "right_ankle_roll_link"]}
+{"event": "RUN_FINISHED", "time_s": 4.201999999999759, "outcome": "FALL"}

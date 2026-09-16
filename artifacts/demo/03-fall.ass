@@ -1,0 +1,1150 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1440
+PlayResY: 900
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Title,DejaVu Sans,29,&H00FFFFFF,&H00FFFFFF,&H00101820,&H00101820,-1,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Accent,DejaVu Sans,18,&H00BFD65A,&H00FFFFFF,&H00101820,&H00101820,-1,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Heading,DejaVu Sans,27,&H00FFFFFF,&H00FFFFFF,&H00101820,&H00101820,-1,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Body,DejaVu Sans,23,&H00E7E5E2,&H00FFFFFF,&H00101820,&H00101820,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Proof,DejaVu Sans,21,&H00BFD65A,&H00FFFFFF,&H00101820,&H00101820,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Data,DejaVu Sans,17,&H00CBCBCB,&H00FFFFFF,&H00101820,&H00101820,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:28.40,Title,,0,0,0,,{\an7\pos(25,18)\q2}Humanoid Failure Evaluation | A stronger push causes a fall
+Dialogue: 0,0:00:00.00,0:00:28.40,Accent,,0,0,0,,{\an7\pos(25,62)\q2}RECORDED STATE REPLAY | 0.5x + reading pauses | Pretrained G1 policy | SIMULATION ONLY
+Dialogue: 0,0:00:00.00,0:00:05.00,Accent,,0,0,0,,{\an7\pos(25,132)\q2}PAUSED FOR EXPLANATION
+Dialogue: 0,0:00:00.00,0:00:05.00,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:00.00,0:00:05.00,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:00.00,0:00:05.00,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:00.00,0:00:05.00,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:00.00,0:00:05.00,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.002s | Tilt 0.0 deg | Pelvis height 0.793 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.00,0:00:05.04,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.00,0:00:05.04,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.00,0:00:05.04,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.00,0:00:05.04,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.00,0:00:05.04,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.00,0:00:05.04,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.002s | Tilt 0.0 deg | Pelvis height 0.793 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.04,0:00:05.08,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.04,0:00:05.08,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.04,0:00:05.08,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.04,0:00:05.08,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.04,0:00:05.08,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.04,0:00:05.08,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.022s | Tilt 0.7 deg | Pelvis height 0.791 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.08,0:00:05.12,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.08,0:00:05.12,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.08,0:00:05.12,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.08,0:00:05.12,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.08,0:00:05.12,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.08,0:00:05.12,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.042s | Tilt 1.1 deg | Pelvis height 0.787 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.12,0:00:05.16,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.12,0:00:05.16,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.12,0:00:05.16,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.12,0:00:05.16,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.12,0:00:05.16,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.12,0:00:05.16,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.062s | Tilt 1.1 deg | Pelvis height 0.784 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.16,0:00:05.20,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.16,0:00:05.20,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.16,0:00:05.20,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.16,0:00:05.20,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.16,0:00:05.20,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.16,0:00:05.20,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.082s | Tilt 0.9 deg | Pelvis height 0.782 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.20,0:00:05.24,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.20,0:00:05.24,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.20,0:00:05.24,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.20,0:00:05.24,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.20,0:00:05.24,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.20,0:00:05.24,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.102s | Tilt 0.7 deg | Pelvis height 0.781 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.24,0:00:05.28,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.24,0:00:05.28,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.24,0:00:05.28,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.24,0:00:05.28,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.24,0:00:05.28,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.24,0:00:05.28,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.122s | Tilt 0.6 deg | Pelvis height 0.779 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.28,0:00:05.32,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.28,0:00:05.32,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.28,0:00:05.32,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.28,0:00:05.32,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.28,0:00:05.32,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.28,0:00:05.32,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.142s | Tilt 0.8 deg | Pelvis height 0.778 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.32,0:00:05.36,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.32,0:00:05.36,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.32,0:00:05.36,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.32,0:00:05.36,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.32,0:00:05.36,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.32,0:00:05.36,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.162s | Tilt 1.1 deg | Pelvis height 0.776 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.36,0:00:05.40,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.36,0:00:05.40,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.36,0:00:05.40,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.36,0:00:05.40,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.36,0:00:05.40,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.36,0:00:05.40,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.182s | Tilt 1.3 deg | Pelvis height 0.775 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.40,0:00:05.44,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.40,0:00:05.44,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.40,0:00:05.44,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.40,0:00:05.44,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.40,0:00:05.44,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.40,0:00:05.44,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.202s | Tilt 1.4 deg | Pelvis height 0.775 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.44,0:00:05.48,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.44,0:00:05.48,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.44,0:00:05.48,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.44,0:00:05.48,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.44,0:00:05.48,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.44,0:00:05.48,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.222s | Tilt 1.4 deg | Pelvis height 0.775 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.48,0:00:05.52,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.48,0:00:05.52,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.48,0:00:05.52,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.48,0:00:05.52,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.48,0:00:05.52,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.48,0:00:05.52,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.242s | Tilt 1.4 deg | Pelvis height 0.775 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.52,0:00:05.56,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.52,0:00:05.56,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.52,0:00:05.56,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.52,0:00:05.56,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.52,0:00:05.56,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.52,0:00:05.56,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.262s | Tilt 1.4 deg | Pelvis height 0.776 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.56,0:00:05.60,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.56,0:00:05.60,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.56,0:00:05.60,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.56,0:00:05.60,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.56,0:00:05.60,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.56,0:00:05.60,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.282s | Tilt 1.4 deg | Pelvis height 0.776 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.60,0:00:05.64,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.60,0:00:05.64,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.60,0:00:05.64,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.60,0:00:05.64,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.60,0:00:05.64,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.60,0:00:05.64,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.302s | Tilt 1.3 deg | Pelvis height 0.777 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.64,0:00:05.68,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.64,0:00:05.68,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.64,0:00:05.68,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.64,0:00:05.68,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.64,0:00:05.68,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.64,0:00:05.68,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.322s | Tilt 1.1 deg | Pelvis height 0.777 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.68,0:00:05.72,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.68,0:00:05.72,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.68,0:00:05.72,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.68,0:00:05.72,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.68,0:00:05.72,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.68,0:00:05.72,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.342s | Tilt 1.0 deg | Pelvis height 0.776 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.72,0:00:05.76,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.72,0:00:05.76,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.72,0:00:05.76,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.72,0:00:05.76,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.72,0:00:05.76,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.72,0:00:05.76,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.362s | Tilt 0.9 deg | Pelvis height 0.775 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.76,0:00:05.80,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.76,0:00:05.80,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.76,0:00:05.80,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.76,0:00:05.80,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.76,0:00:05.80,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.76,0:00:05.80,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.382s | Tilt 1.1 deg | Pelvis height 0.773 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.80,0:00:05.84,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.80,0:00:05.84,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.80,0:00:05.84,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.80,0:00:05.84,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.80,0:00:05.84,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.80,0:00:05.84,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.402s | Tilt 1.6 deg | Pelvis height 0.770 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.84,0:00:05.88,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.84,0:00:05.88,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.84,0:00:05.88,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.84,0:00:05.88,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.84,0:00:05.88,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.84,0:00:05.88,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.422s | Tilt 2.4 deg | Pelvis height 0.767 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.88,0:00:05.92,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.88,0:00:05.92,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.88,0:00:05.92,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.88,0:00:05.92,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.88,0:00:05.92,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.88,0:00:05.92,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.442s | Tilt 3.0 deg | Pelvis height 0.766 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.92,0:00:05.96,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.92,0:00:05.96,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.92,0:00:05.96,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.92,0:00:05.96,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.92,0:00:05.96,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.92,0:00:05.96,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.462s | Tilt 3.4 deg | Pelvis height 0.766 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:05.96,0:00:06.00,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:05.96,0:00:06.00,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:05.96,0:00:06.00,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:05.96,0:00:06.00,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:05.96,0:00:06.00,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:05.96,0:00:06.00,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.482s | Tilt 3.6 deg | Pelvis height 0.767 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.00,0:00:06.04,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.00,0:00:06.04,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.00,0:00:06.04,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.00,0:00:06.04,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.00,0:00:06.04,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.00,0:00:06.04,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.502s | Tilt 3.8 deg | Pelvis height 0.768 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.04,0:00:06.08,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.04,0:00:06.08,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.04,0:00:06.08,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.04,0:00:06.08,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.04,0:00:06.08,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.04,0:00:06.08,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.522s | Tilt 3.9 deg | Pelvis height 0.769 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.08,0:00:06.12,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.08,0:00:06.12,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.08,0:00:06.12,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.08,0:00:06.12,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.08,0:00:06.12,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.08,0:00:06.12,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.542s | Tilt 4.0 deg | Pelvis height 0.770 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.12,0:00:06.16,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.12,0:00:06.16,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.12,0:00:06.16,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.12,0:00:06.16,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.12,0:00:06.16,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.12,0:00:06.16,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.562s | Tilt 4.0 deg | Pelvis height 0.771 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.16,0:00:06.20,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.16,0:00:06.20,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.16,0:00:06.20,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.16,0:00:06.20,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.16,0:00:06.20,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.16,0:00:06.20,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.582s | Tilt 4.1 deg | Pelvis height 0.772 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.20,0:00:06.24,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.20,0:00:06.24,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.20,0:00:06.24,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.20,0:00:06.24,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.20,0:00:06.24,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.20,0:00:06.24,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.602s | Tilt 4.0 deg | Pelvis height 0.772 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.24,0:00:06.28,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.24,0:00:06.28,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.24,0:00:06.28,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.24,0:00:06.28,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.24,0:00:06.28,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.24,0:00:06.28,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.622s | Tilt 4.0 deg | Pelvis height 0.773 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.28,0:00:06.32,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.28,0:00:06.32,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.28,0:00:06.32,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.28,0:00:06.32,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.28,0:00:06.32,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.28,0:00:06.32,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.642s | Tilt 3.9 deg | Pelvis height 0.774 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.32,0:00:06.36,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.32,0:00:06.36,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.32,0:00:06.36,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.32,0:00:06.36,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.32,0:00:06.36,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.32,0:00:06.36,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.662s | Tilt 3.8 deg | Pelvis height 0.774 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.36,0:00:06.40,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.36,0:00:06.40,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.36,0:00:06.40,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.36,0:00:06.40,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.36,0:00:06.40,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.36,0:00:06.40,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.682s | Tilt 3.6 deg | Pelvis height 0.775 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.40,0:00:06.44,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.40,0:00:06.44,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.40,0:00:06.44,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.40,0:00:06.44,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.40,0:00:06.44,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.40,0:00:06.44,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.702s | Tilt 3.4 deg | Pelvis height 0.775 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.44,0:00:06.48,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.44,0:00:06.48,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.44,0:00:06.48,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.44,0:00:06.48,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.44,0:00:06.48,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.44,0:00:06.48,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.722s | Tilt 3.2 deg | Pelvis height 0.775 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.48,0:00:06.52,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.48,0:00:06.52,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.48,0:00:06.52,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.48,0:00:06.52,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.48,0:00:06.52,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.48,0:00:06.52,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.742s | Tilt 2.9 deg | Pelvis height 0.775 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.52,0:00:06.56,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.52,0:00:06.56,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.52,0:00:06.56,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.52,0:00:06.56,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.52,0:00:06.56,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.52,0:00:06.56,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.762s | Tilt 2.5 deg | Pelvis height 0.774 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.56,0:00:06.60,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.56,0:00:06.60,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.56,0:00:06.60,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.56,0:00:06.60,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.56,0:00:06.60,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.56,0:00:06.60,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.782s | Tilt 2.1 deg | Pelvis height 0.773 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.60,0:00:06.64,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.60,0:00:06.64,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.60,0:00:06.64,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.60,0:00:06.64,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.60,0:00:06.64,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.60,0:00:06.64,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.802s | Tilt 1.5 deg | Pelvis height 0.771 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.64,0:00:06.68,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.64,0:00:06.68,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.64,0:00:06.68,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.64,0:00:06.68,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.64,0:00:06.68,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.64,0:00:06.68,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.822s | Tilt 0.6 deg | Pelvis height 0.769 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.68,0:00:06.72,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.68,0:00:06.72,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.68,0:00:06.72,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.68,0:00:06.72,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.68,0:00:06.72,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.68,0:00:06.72,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.842s | Tilt 0.7 deg | Pelvis height 0.766 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.72,0:00:06.76,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.72,0:00:06.76,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.72,0:00:06.76,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.72,0:00:06.76,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.72,0:00:06.76,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.72,0:00:06.76,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.862s | Tilt 1.2 deg | Pelvis height 0.766 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.76,0:00:06.80,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.76,0:00:06.80,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.76,0:00:06.80,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.76,0:00:06.80,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.76,0:00:06.80,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.76,0:00:06.80,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.882s | Tilt 1.6 deg | Pelvis height 0.766 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.80,0:00:06.84,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.80,0:00:06.84,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.80,0:00:06.84,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.80,0:00:06.84,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.80,0:00:06.84,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.80,0:00:06.84,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.902s | Tilt 2.0 deg | Pelvis height 0.767 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.84,0:00:06.88,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.84,0:00:06.88,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.84,0:00:06.88,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.84,0:00:06.88,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.84,0:00:06.88,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.84,0:00:06.88,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.922s | Tilt 2.4 deg | Pelvis height 0.767 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.88,0:00:06.92,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.88,0:00:06.92,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.88,0:00:06.92,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.88,0:00:06.92,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.88,0:00:06.92,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.88,0:00:06.92,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.942s | Tilt 2.7 deg | Pelvis height 0.768 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.92,0:00:06.96,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.92,0:00:06.96,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.92,0:00:06.96,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.92,0:00:06.96,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.92,0:00:06.96,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.92,0:00:06.96,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.962s | Tilt 3.1 deg | Pelvis height 0.769 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:06.96,0:00:07.00,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:06.96,0:00:07.00,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:06.96,0:00:07.00,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:06.96,0:00:07.00,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:06.96,0:00:07.00,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:06.96,0:00:07.00,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 0.982s | Tilt 3.4 deg | Pelvis height 0.770 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.00,0:00:07.04,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.00,0:00:07.04,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.00,0:00:07.04,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.00,0:00:07.04,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.00,0:00:07.04,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.00,0:00:07.04,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.002s | Tilt 3.6 deg | Pelvis height 0.771 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.04,0:00:07.08,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.04,0:00:07.08,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.04,0:00:07.08,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.04,0:00:07.08,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.04,0:00:07.08,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.04,0:00:07.08,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.022s | Tilt 3.6 deg | Pelvis height 0.772 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.08,0:00:07.12,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.08,0:00:07.12,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.08,0:00:07.12,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.08,0:00:07.12,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.08,0:00:07.12,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.08,0:00:07.12,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.042s | Tilt 3.6 deg | Pelvis height 0.772 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.12,0:00:07.16,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.12,0:00:07.16,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.12,0:00:07.16,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.12,0:00:07.16,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.12,0:00:07.16,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.12,0:00:07.16,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.062s | Tilt 3.5 deg | Pelvis height 0.773 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.16,0:00:07.20,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.16,0:00:07.20,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.16,0:00:07.20,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.16,0:00:07.20,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.16,0:00:07.20,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.16,0:00:07.20,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.082s | Tilt 3.3 deg | Pelvis height 0.773 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.20,0:00:07.24,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.20,0:00:07.24,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.20,0:00:07.24,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.20,0:00:07.24,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.20,0:00:07.24,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.20,0:00:07.24,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.102s | Tilt 3.0 deg | Pelvis height 0.774 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.24,0:00:07.28,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.24,0:00:07.28,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.24,0:00:07.28,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.24,0:00:07.28,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.24,0:00:07.28,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.24,0:00:07.28,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.122s | Tilt 2.7 deg | Pelvis height 0.774 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.28,0:00:07.32,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.28,0:00:07.32,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.28,0:00:07.32,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.28,0:00:07.32,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.28,0:00:07.32,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.28,0:00:07.32,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.142s | Tilt 2.3 deg | Pelvis height 0.774 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.32,0:00:07.36,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.32,0:00:07.36,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.32,0:00:07.36,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.32,0:00:07.36,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.32,0:00:07.36,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.32,0:00:07.36,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.162s | Tilt 1.8 deg | Pelvis height 0.773 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.36,0:00:07.40,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.36,0:00:07.40,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.36,0:00:07.40,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.36,0:00:07.40,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.36,0:00:07.40,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.36,0:00:07.40,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.182s | Tilt 1.3 deg | Pelvis height 0.772 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.40,0:00:07.44,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.40,0:00:07.44,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.40,0:00:07.44,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.40,0:00:07.44,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.40,0:00:07.44,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.40,0:00:07.44,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.202s | Tilt 0.6 deg | Pelvis height 0.770 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.44,0:00:07.48,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.44,0:00:07.48,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.44,0:00:07.48,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.44,0:00:07.48,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.44,0:00:07.48,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.44,0:00:07.48,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.222s | Tilt 0.4 deg | Pelvis height 0.768 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.48,0:00:07.52,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.48,0:00:07.52,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.48,0:00:07.52,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.48,0:00:07.52,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.48,0:00:07.52,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.48,0:00:07.52,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.242s | Tilt 1.4 deg | Pelvis height 0.765 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.52,0:00:07.56,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.52,0:00:07.56,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.52,0:00:07.56,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.52,0:00:07.56,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.52,0:00:07.56,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.52,0:00:07.56,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.262s | Tilt 2.0 deg | Pelvis height 0.764 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.56,0:00:07.60,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.56,0:00:07.60,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.56,0:00:07.60,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.56,0:00:07.60,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.56,0:00:07.60,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.56,0:00:07.60,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.282s | Tilt 2.4 deg | Pelvis height 0.764 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.60,0:00:07.64,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.60,0:00:07.64,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.60,0:00:07.64,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.60,0:00:07.64,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.60,0:00:07.64,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.60,0:00:07.64,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.302s | Tilt 2.7 deg | Pelvis height 0.765 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.64,0:00:07.68,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.64,0:00:07.68,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.64,0:00:07.68,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.64,0:00:07.68,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.64,0:00:07.68,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.64,0:00:07.68,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.322s | Tilt 2.9 deg | Pelvis height 0.767 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.68,0:00:07.72,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.68,0:00:07.72,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.68,0:00:07.72,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.68,0:00:07.72,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.68,0:00:07.72,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.68,0:00:07.72,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.342s | Tilt 3.0 deg | Pelvis height 0.768 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.72,0:00:07.76,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.72,0:00:07.76,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.72,0:00:07.76,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.72,0:00:07.76,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.72,0:00:07.76,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.72,0:00:07.76,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.362s | Tilt 3.2 deg | Pelvis height 0.769 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.76,0:00:07.80,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.76,0:00:07.80,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.76,0:00:07.80,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.76,0:00:07.80,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.76,0:00:07.80,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.76,0:00:07.80,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.382s | Tilt 3.2 deg | Pelvis height 0.770 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.80,0:00:07.84,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.80,0:00:07.84,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.80,0:00:07.84,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.80,0:00:07.84,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.80,0:00:07.84,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.80,0:00:07.84,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.402s | Tilt 3.3 deg | Pelvis height 0.771 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.84,0:00:07.88,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.84,0:00:07.88,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.84,0:00:07.88,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.84,0:00:07.88,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.84,0:00:07.88,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.84,0:00:07.88,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.422s | Tilt 3.3 deg | Pelvis height 0.772 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.88,0:00:07.92,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.88,0:00:07.92,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.88,0:00:07.92,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.88,0:00:07.92,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.88,0:00:07.92,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.88,0:00:07.92,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.442s | Tilt 3.3 deg | Pelvis height 0.773 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.92,0:00:07.96,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.92,0:00:07.96,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.92,0:00:07.96,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.92,0:00:07.96,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.92,0:00:07.96,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.92,0:00:07.96,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.462s | Tilt 3.2 deg | Pelvis height 0.773 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:07.96,0:00:08.00,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:07.96,0:00:08.00,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:07.96,0:00:08.00,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:07.96,0:00:08.00,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:07.96,0:00:08.00,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:07.96,0:00:08.00,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.482s | Tilt 3.1 deg | Pelvis height 0.774 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.00,0:00:08.04,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.00,0:00:08.04,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.00,0:00:08.04,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.00,0:00:08.04,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.00,0:00:08.04,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.00,0:00:08.04,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.502s | Tilt 2.9 deg | Pelvis height 0.774 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.04,0:00:08.08,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.04,0:00:08.08,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.04,0:00:08.08,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.04,0:00:08.08,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.04,0:00:08.08,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.04,0:00:08.08,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.522s | Tilt 2.7 deg | Pelvis height 0.775 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.08,0:00:08.12,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.08,0:00:08.12,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.08,0:00:08.12,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.08,0:00:08.12,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.08,0:00:08.12,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.08,0:00:08.12,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.542s | Tilt 2.5 deg | Pelvis height 0.775 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.12,0:00:08.16,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.12,0:00:08.16,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.12,0:00:08.16,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.12,0:00:08.16,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.12,0:00:08.16,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.12,0:00:08.16,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.562s | Tilt 2.2 deg | Pelvis height 0.775 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.16,0:00:08.20,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.16,0:00:08.20,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.16,0:00:08.20,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.16,0:00:08.20,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.16,0:00:08.20,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.16,0:00:08.20,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.582s | Tilt 1.8 deg | Pelvis height 0.775 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.20,0:00:08.24,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.20,0:00:08.24,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.20,0:00:08.24,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.20,0:00:08.24,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.20,0:00:08.24,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.20,0:00:08.24,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.602s | Tilt 1.4 deg | Pelvis height 0.773 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.24,0:00:08.28,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.24,0:00:08.28,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.24,0:00:08.28,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.24,0:00:08.28,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.24,0:00:08.28,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.24,0:00:08.28,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.622s | Tilt 0.8 deg | Pelvis height 0.771 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.28,0:00:08.32,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.28,0:00:08.32,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.28,0:00:08.32,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.28,0:00:08.32,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.28,0:00:08.32,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.28,0:00:08.32,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.642s | Tilt 0.5 deg | Pelvis height 0.769 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.32,0:00:08.36,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.32,0:00:08.36,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.32,0:00:08.36,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.32,0:00:08.36,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.32,0:00:08.36,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.32,0:00:08.36,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.662s | Tilt 0.9 deg | Pelvis height 0.768 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.36,0:00:08.40,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.36,0:00:08.40,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.36,0:00:08.40,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.36,0:00:08.40,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.36,0:00:08.40,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.36,0:00:08.40,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.682s | Tilt 1.2 deg | Pelvis height 0.767 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.40,0:00:08.44,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.40,0:00:08.44,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.40,0:00:08.44,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.40,0:00:08.44,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.40,0:00:08.44,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.40,0:00:08.44,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.702s | Tilt 1.5 deg | Pelvis height 0.768 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.44,0:00:08.48,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.44,0:00:08.48,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.44,0:00:08.48,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.44,0:00:08.48,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.44,0:00:08.48,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.44,0:00:08.48,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.722s | Tilt 1.8 deg | Pelvis height 0.768 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.48,0:00:08.52,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.48,0:00:08.52,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.48,0:00:08.52,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.48,0:00:08.52,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.48,0:00:08.52,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.48,0:00:08.52,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.742s | Tilt 2.1 deg | Pelvis height 0.769 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.52,0:00:08.56,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.52,0:00:08.56,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.52,0:00:08.56,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.52,0:00:08.56,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.52,0:00:08.56,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.52,0:00:08.56,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.762s | Tilt 2.4 deg | Pelvis height 0.769 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.56,0:00:08.60,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.56,0:00:08.60,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.56,0:00:08.60,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.56,0:00:08.60,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.56,0:00:08.60,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.56,0:00:08.60,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.782s | Tilt 2.7 deg | Pelvis height 0.770 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.60,0:00:08.64,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.60,0:00:08.64,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.60,0:00:08.64,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.60,0:00:08.64,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.60,0:00:08.64,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.60,0:00:08.64,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.802s | Tilt 2.9 deg | Pelvis height 0.771 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.64,0:00:08.68,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.64,0:00:08.68,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.64,0:00:08.68,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.64,0:00:08.68,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.64,0:00:08.68,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.64,0:00:08.68,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.822s | Tilt 2.9 deg | Pelvis height 0.771 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.68,0:00:08.72,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.68,0:00:08.72,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.68,0:00:08.72,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.68,0:00:08.72,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.68,0:00:08.72,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.68,0:00:08.72,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.842s | Tilt 2.9 deg | Pelvis height 0.772 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.72,0:00:08.76,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.72,0:00:08.76,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.72,0:00:08.76,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.72,0:00:08.76,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.72,0:00:08.76,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.72,0:00:08.76,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.862s | Tilt 2.8 deg | Pelvis height 0.772 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.76,0:00:08.80,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.76,0:00:08.80,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.76,0:00:08.80,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.76,0:00:08.80,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.76,0:00:08.80,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.76,0:00:08.80,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.882s | Tilt 2.6 deg | Pelvis height 0.773 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.80,0:00:08.84,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.80,0:00:08.84,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.80,0:00:08.84,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.80,0:00:08.84,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.80,0:00:08.84,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.80,0:00:08.84,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.902s | Tilt 2.3 deg | Pelvis height 0.773 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.84,0:00:08.88,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.84,0:00:08.88,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.84,0:00:08.88,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.84,0:00:08.88,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.84,0:00:08.88,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.84,0:00:08.88,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.922s | Tilt 1.9 deg | Pelvis height 0.773 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.88,0:00:08.92,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.88,0:00:08.92,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.88,0:00:08.92,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.88,0:00:08.92,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.88,0:00:08.92,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.88,0:00:08.92,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.942s | Tilt 1.5 deg | Pelvis height 0.772 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.92,0:00:08.96,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.92,0:00:08.96,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.92,0:00:08.96,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.92,0:00:08.96,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.92,0:00:08.96,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.92,0:00:08.96,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.962s | Tilt 1.1 deg | Pelvis height 0.771 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:08.96,0:00:09.00,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:08.96,0:00:09.00,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:08.96,0:00:09.00,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:08.96,0:00:09.00,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:08.96,0:00:09.00,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:08.96,0:00:09.00,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 1.982s | Tilt 0.7 deg | Pelvis height 0.770 m\NScored forward progress: warmup / not scored\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.00,0:00:09.04,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.00,0:00:09.04,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.00,0:00:09.04,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.00,0:00:09.04,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.00,0:00:09.04,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.00,0:00:09.04,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.002s | Tilt 0.6 deg | Pelvis height 0.768 m\NScored forward progress: 0.000 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.04,0:00:09.08,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.04,0:00:09.08,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.04,0:00:09.08,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.04,0:00:09.08,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.04,0:00:09.08,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.04,0:00:09.08,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.022s | Tilt 1.4 deg | Pelvis height 0.764 m\NScored forward progress: 0.011 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.08,0:00:09.12,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.08,0:00:09.12,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.08,0:00:09.12,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.08,0:00:09.12,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.08,0:00:09.12,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.08,0:00:09.12,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.042s | Tilt 2.2 deg | Pelvis height 0.763 m\NScored forward progress: 0.021 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.12,0:00:09.16,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.12,0:00:09.16,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.12,0:00:09.16,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.12,0:00:09.16,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.12,0:00:09.16,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.12,0:00:09.16,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.062s | Tilt 2.7 deg | Pelvis height 0.763 m\NScored forward progress: 0.030 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.16,0:00:09.20,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.16,0:00:09.20,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.16,0:00:09.20,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.16,0:00:09.20,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.16,0:00:09.20,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.16,0:00:09.20,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.082s | Tilt 3.0 deg | Pelvis height 0.763 m\NScored forward progress: 0.039 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.20,0:00:09.24,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.20,0:00:09.24,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.20,0:00:09.24,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.20,0:00:09.24,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.20,0:00:09.24,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.20,0:00:09.24,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.102s | Tilt 3.3 deg | Pelvis height 0.765 m\NScored forward progress: 0.048 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.24,0:00:09.28,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.24,0:00:09.28,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.24,0:00:09.28,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.24,0:00:09.28,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.24,0:00:09.28,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.24,0:00:09.28,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.122s | Tilt 3.4 deg | Pelvis height 0.766 m\NScored forward progress: 0.058 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.28,0:00:09.32,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.28,0:00:09.32,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.28,0:00:09.32,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.28,0:00:09.32,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.28,0:00:09.32,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.28,0:00:09.32,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.142s | Tilt 3.5 deg | Pelvis height 0.767 m\NScored forward progress: 0.067 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.32,0:00:09.36,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.32,0:00:09.36,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.32,0:00:09.36,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.32,0:00:09.36,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.32,0:00:09.36,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.32,0:00:09.36,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.162s | Tilt 3.6 deg | Pelvis height 0.769 m\NScored forward progress: 0.076 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.36,0:00:09.40,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.36,0:00:09.40,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.36,0:00:09.40,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.36,0:00:09.40,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.36,0:00:09.40,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.36,0:00:09.40,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.182s | Tilt 3.7 deg | Pelvis height 0.770 m\NScored forward progress: 0.086 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.40,0:00:09.44,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.40,0:00:09.44,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.40,0:00:09.44,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.40,0:00:09.44,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.40,0:00:09.44,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.40,0:00:09.44,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.202s | Tilt 3.7 deg | Pelvis height 0.771 m\NScored forward progress: 0.095 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.44,0:00:09.48,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.44,0:00:09.48,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.44,0:00:09.48,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.44,0:00:09.48,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.44,0:00:09.48,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.44,0:00:09.48,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.222s | Tilt 3.6 deg | Pelvis height 0.771 m\NScored forward progress: 0.105 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.48,0:00:09.52,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.48,0:00:09.52,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.48,0:00:09.52,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.48,0:00:09.52,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.48,0:00:09.52,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.48,0:00:09.52,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.242s | Tilt 3.6 deg | Pelvis height 0.772 m\NScored forward progress: 0.115 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.52,0:00:09.56,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.52,0:00:09.56,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.52,0:00:09.56,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.52,0:00:09.56,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.52,0:00:09.56,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.52,0:00:09.56,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.262s | Tilt 3.4 deg | Pelvis height 0.773 m\NScored forward progress: 0.124 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.56,0:00:09.60,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.56,0:00:09.60,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.56,0:00:09.60,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.56,0:00:09.60,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.56,0:00:09.60,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.56,0:00:09.60,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.282s | Tilt 3.3 deg | Pelvis height 0.773 m\NScored forward progress: 0.134 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.60,0:00:09.64,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.60,0:00:09.64,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.60,0:00:09.64,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.60,0:00:09.64,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.60,0:00:09.64,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.60,0:00:09.64,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.302s | Tilt 3.1 deg | Pelvis height 0.774 m\NScored forward progress: 0.144 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.64,0:00:09.68,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.64,0:00:09.68,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.64,0:00:09.68,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.64,0:00:09.68,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.64,0:00:09.68,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.64,0:00:09.68,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.322s | Tilt 2.9 deg | Pelvis height 0.774 m\NScored forward progress: 0.153 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.68,0:00:09.72,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.68,0:00:09.72,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.68,0:00:09.72,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.68,0:00:09.72,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.68,0:00:09.72,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.68,0:00:09.72,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.342s | Tilt 2.6 deg | Pelvis height 0.774 m\NScored forward progress: 0.163 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.72,0:00:09.76,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.72,0:00:09.76,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.72,0:00:09.76,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.72,0:00:09.76,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.72,0:00:09.76,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.72,0:00:09.76,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.362s | Tilt 2.3 deg | Pelvis height 0.774 m\NScored forward progress: 0.173 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.76,0:00:09.80,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.76,0:00:09.80,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.76,0:00:09.80,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.76,0:00:09.80,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.76,0:00:09.80,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.76,0:00:09.80,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.382s | Tilt 1.9 deg | Pelvis height 0.774 m\NScored forward progress: 0.183 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.80,0:00:09.84,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.80,0:00:09.84,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.80,0:00:09.84,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.80,0:00:09.84,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.80,0:00:09.84,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.80,0:00:09.84,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.402s | Tilt 1.5 deg | Pelvis height 0.772 m\NScored forward progress: 0.193 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.84,0:00:09.88,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.84,0:00:09.88,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.84,0:00:09.88,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.84,0:00:09.88,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.84,0:00:09.88,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.84,0:00:09.88,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.422s | Tilt 0.8 deg | Pelvis height 0.770 m\NScored forward progress: 0.203 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.88,0:00:09.92,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.88,0:00:09.92,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.88,0:00:09.92,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.88,0:00:09.92,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.88,0:00:09.92,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.88,0:00:09.92,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.442s | Tilt 0.4 deg | Pelvis height 0.768 m\NScored forward progress: 0.212 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.92,0:00:09.96,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.92,0:00:09.96,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.92,0:00:09.96,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.92,0:00:09.96,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.92,0:00:09.96,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.92,0:00:09.96,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.462s | Tilt 0.9 deg | Pelvis height 0.767 m\NScored forward progress: 0.221 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:09.96,0:00:10.00,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:09.96,0:00:10.00,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:09.96,0:00:10.00,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:09.96,0:00:10.00,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:09.96,0:00:10.00,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:09.96,0:00:10.00,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.482s | Tilt 1.3 deg | Pelvis height 0.766 m\NScored forward progress: 0.229 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.00,0:00:10.04,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.00,0:00:10.04,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.00,0:00:10.04,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.00,0:00:10.04,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.00,0:00:10.04,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.00,0:00:10.04,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.502s | Tilt 1.6 deg | Pelvis height 0.767 m\NScored forward progress: 0.238 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.04,0:00:10.08,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.04,0:00:10.08,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.04,0:00:10.08,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.04,0:00:10.08,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.04,0:00:10.08,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.04,0:00:10.08,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.522s | Tilt 1.9 deg | Pelvis height 0.767 m\NScored forward progress: 0.246 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.08,0:00:10.12,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.08,0:00:10.12,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.08,0:00:10.12,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.08,0:00:10.12,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.08,0:00:10.12,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.08,0:00:10.12,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.542s | Tilt 2.3 deg | Pelvis height 0.768 m\NScored forward progress: 0.255 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.12,0:00:10.16,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.12,0:00:10.16,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.12,0:00:10.16,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.12,0:00:10.16,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.12,0:00:10.16,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.12,0:00:10.16,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.562s | Tilt 2.6 deg | Pelvis height 0.769 m\NScored forward progress: 0.264 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.16,0:00:10.20,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.16,0:00:10.20,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.16,0:00:10.20,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.16,0:00:10.20,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.16,0:00:10.20,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.16,0:00:10.20,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.582s | Tilt 2.8 deg | Pelvis height 0.769 m\NScored forward progress: 0.273 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.20,0:00:10.24,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.20,0:00:10.24,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.20,0:00:10.24,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.20,0:00:10.24,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.20,0:00:10.24,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.20,0:00:10.24,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.602s | Tilt 3.0 deg | Pelvis height 0.770 m\NScored forward progress: 0.283 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.24,0:00:10.28,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.24,0:00:10.28,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.24,0:00:10.28,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.24,0:00:10.28,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.24,0:00:10.28,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.24,0:00:10.28,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.622s | Tilt 3.1 deg | Pelvis height 0.771 m\NScored forward progress: 0.292 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.28,0:00:10.32,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.28,0:00:10.32,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.28,0:00:10.32,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.28,0:00:10.32,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.28,0:00:10.32,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.28,0:00:10.32,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.642s | Tilt 3.1 deg | Pelvis height 0.771 m\NScored forward progress: 0.302 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.32,0:00:10.36,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.32,0:00:10.36,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.32,0:00:10.36,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.32,0:00:10.36,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.32,0:00:10.36,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.32,0:00:10.36,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.662s | Tilt 3.0 deg | Pelvis height 0.772 m\NScored forward progress: 0.311 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.36,0:00:10.40,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.36,0:00:10.40,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.36,0:00:10.40,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.36,0:00:10.40,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.36,0:00:10.40,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.36,0:00:10.40,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.682s | Tilt 2.8 deg | Pelvis height 0.772 m\NScored forward progress: 0.321 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.40,0:00:10.44,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.40,0:00:10.44,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.40,0:00:10.44,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.40,0:00:10.44,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.40,0:00:10.44,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.40,0:00:10.44,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.702s | Tilt 2.5 deg | Pelvis height 0.772 m\NScored forward progress: 0.331 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.44,0:00:10.48,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.44,0:00:10.48,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.44,0:00:10.48,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.44,0:00:10.48,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.44,0:00:10.48,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.44,0:00:10.48,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.722s | Tilt 2.1 deg | Pelvis height 0.772 m\NScored forward progress: 0.340 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.48,0:00:10.52,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.48,0:00:10.52,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.48,0:00:10.52,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.48,0:00:10.52,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.48,0:00:10.52,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.48,0:00:10.52,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.742s | Tilt 1.7 deg | Pelvis height 0.772 m\NScored forward progress: 0.350 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.52,0:00:10.56,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.52,0:00:10.56,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.52,0:00:10.56,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.52,0:00:10.56,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.52,0:00:10.56,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.52,0:00:10.56,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.762s | Tilt 1.2 deg | Pelvis height 0.771 m\NScored forward progress: 0.361 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.56,0:00:10.60,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.56,0:00:10.60,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.56,0:00:10.60,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.56,0:00:10.60,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.56,0:00:10.60,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.56,0:00:10.60,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.782s | Tilt 0.8 deg | Pelvis height 0.770 m\NScored forward progress: 0.371 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.60,0:00:10.64,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.60,0:00:10.64,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.60,0:00:10.64,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.60,0:00:10.64,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.60,0:00:10.64,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.60,0:00:10.64,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.802s | Tilt 0.5 deg | Pelvis height 0.768 m\NScored forward progress: 0.381 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.64,0:00:10.68,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.64,0:00:10.68,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.64,0:00:10.68,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.64,0:00:10.68,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.64,0:00:10.68,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.64,0:00:10.68,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.822s | Tilt 1.2 deg | Pelvis height 0.765 m\NScored forward progress: 0.391 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.68,0:00:10.72,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.68,0:00:10.72,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.68,0:00:10.72,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.68,0:00:10.72,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.68,0:00:10.72,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.68,0:00:10.72,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.842s | Tilt 2.1 deg | Pelvis height 0.763 m\NScored forward progress: 0.401 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.72,0:00:10.76,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.72,0:00:10.76,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.72,0:00:10.76,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.72,0:00:10.76,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.72,0:00:10.76,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.72,0:00:10.76,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.862s | Tilt 2.6 deg | Pelvis height 0.763 m\NScored forward progress: 0.411 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.76,0:00:10.80,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.76,0:00:10.80,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.76,0:00:10.80,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.76,0:00:10.80,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.76,0:00:10.80,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.76,0:00:10.80,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.882s | Tilt 2.9 deg | Pelvis height 0.764 m\NScored forward progress: 0.420 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.80,0:00:10.84,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.80,0:00:10.84,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.80,0:00:10.84,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.80,0:00:10.84,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.80,0:00:10.84,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.80,0:00:10.84,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.902s | Tilt 3.1 deg | Pelvis height 0.765 m\NScored forward progress: 0.429 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.84,0:00:10.88,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.84,0:00:10.88,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.84,0:00:10.88,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.84,0:00:10.88,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.84,0:00:10.88,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.84,0:00:10.88,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.922s | Tilt 3.3 deg | Pelvis height 0.766 m\NScored forward progress: 0.438 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.88,0:00:10.92,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.88,0:00:10.92,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.88,0:00:10.92,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.88,0:00:10.92,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.88,0:00:10.92,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.88,0:00:10.92,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.942s | Tilt 3.4 deg | Pelvis height 0.767 m\NScored forward progress: 0.447 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.92,0:00:10.96,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.92,0:00:10.96,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.92,0:00:10.96,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.92,0:00:10.96,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.92,0:00:10.96,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.92,0:00:10.96,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.962s | Tilt 3.5 deg | Pelvis height 0.769 m\NScored forward progress: 0.457 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:10.96,0:00:11.00,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:10.96,0:00:11.00,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The experiment
+Dialogue: 0,0:00:10.96,0:00:11.00,Body,,0,0,0,,{\an7\pos(25,270)\q2}Use the same onset and direction with\Na 250 N pulse. We detect the\Nresulting body-floor contact\Nindependently of the policy.
+Dialogue: 0,0:00:10.96,0:00:11.00,Proof,,0,0,0,,{\an7\pos(25,540)\q2}Goal: at least 2 m forward progress\Nafter warmup, with no confirmed fall.
+Dialogue: 0,0:00:10.96,0:00:11.00,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:10.96,0:00:11.00,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 2.982s | Tilt 3.6 deg | Pelvis height 0.770 m\NScored forward progress: 0.466 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:11.00,0:00:16.00,Accent,,0,0,0,,{\an7\pos(25,132)\q2}PAUSED FOR EXPLANATION
+Dialogue: 0,0:00:11.00,0:00:16.00,Heading,,0,0,0,,{\an7\pos(25,180)\q2}Inject a measured push
+Dialogue: 0,0:00:11.00,0:00:16.00,Body,,0,0,0,,{\an7\pos(25,270)\q2}Apply 250.0 N in world direction [0,\N250, 0] for 0.2 simulated seconds.\NThe arrow illustrates the recorded\Nforce on the rigid pelvis/torso body.
+Dialogue: 0,0:00:11.00,0:00:16.00,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The pulse is an input disturbance. Its\Npresence alone is not a robot failure.
+Dialogue: 0,0:00:11.00,0:00:16.00,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:11.00,0:00:16.00,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.002s | Tilt 3.6 deg | Pelvis height 0.771 m\NScored forward progress: 0.476 m / required 2.000 m\NRecorded applied force [N]: [0.0, 250.0, 0.0]
+Dialogue: 0,0:00:16.00,0:00:16.04,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:16.00,0:00:16.04,Heading,,0,0,0,,{\an7\pos(25,180)\q2}Inject a measured push
+Dialogue: 0,0:00:16.00,0:00:16.04,Body,,0,0,0,,{\an7\pos(25,270)\q2}Apply 250.0 N in world direction [0,\N250, 0] for 0.2 simulated seconds.\NThe arrow illustrates the recorded\Nforce on the rigid pelvis/torso body.
+Dialogue: 0,0:00:16.00,0:00:16.04,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The pulse is an input disturbance. Its\Npresence alone is not a robot failure.
+Dialogue: 0,0:00:16.00,0:00:16.04,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:16.00,0:00:16.04,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.002s | Tilt 3.6 deg | Pelvis height 0.771 m\NScored forward progress: 0.476 m / required 2.000 m\NRecorded applied force [N]: [0.0, 250.0, 0.0]
+Dialogue: 0,0:00:16.04,0:00:16.08,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:16.04,0:00:16.08,Heading,,0,0,0,,{\an7\pos(25,180)\q2}Inject a measured push
+Dialogue: 0,0:00:16.04,0:00:16.08,Body,,0,0,0,,{\an7\pos(25,270)\q2}Apply 250.0 N in world direction [0,\N250, 0] for 0.2 simulated seconds.\NThe arrow illustrates the recorded\Nforce on the rigid pelvis/torso body.
+Dialogue: 0,0:00:16.04,0:00:16.08,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The pulse is an input disturbance. Its\Npresence alone is not a robot failure.
+Dialogue: 0,0:00:16.04,0:00:16.08,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:16.04,0:00:16.08,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.022s | Tilt 3.4 deg | Pelvis height 0.771 m\NScored forward progress: 0.485 m / required 2.000 m\NRecorded applied force [N]: [0.0, 250.0, 0.0]
+Dialogue: 0,0:00:16.08,0:00:16.12,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:16.08,0:00:16.12,Heading,,0,0,0,,{\an7\pos(25,180)\q2}Inject a measured push
+Dialogue: 0,0:00:16.08,0:00:16.12,Body,,0,0,0,,{\an7\pos(25,270)\q2}Apply 250.0 N in world direction [0,\N250, 0] for 0.2 simulated seconds.\NThe arrow illustrates the recorded\Nforce on the rigid pelvis/torso body.
+Dialogue: 0,0:00:16.08,0:00:16.12,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The pulse is an input disturbance. Its\Npresence alone is not a robot failure.
+Dialogue: 0,0:00:16.08,0:00:16.12,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:16.08,0:00:16.12,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.042s | Tilt 2.8 deg | Pelvis height 0.772 m\NScored forward progress: 0.495 m / required 2.000 m\NRecorded applied force [N]: [0.0, 250.0, 0.0]
+Dialogue: 0,0:00:16.12,0:00:16.16,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:16.12,0:00:16.16,Heading,,0,0,0,,{\an7\pos(25,180)\q2}Inject a measured push
+Dialogue: 0,0:00:16.12,0:00:16.16,Body,,0,0,0,,{\an7\pos(25,270)\q2}Apply 250.0 N in world direction [0,\N250, 0] for 0.2 simulated seconds.\NThe arrow illustrates the recorded\Nforce on the rigid pelvis/torso body.
+Dialogue: 0,0:00:16.12,0:00:16.16,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The pulse is an input disturbance. Its\Npresence alone is not a robot failure.
+Dialogue: 0,0:00:16.12,0:00:16.16,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:16.12,0:00:16.16,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.062s | Tilt 2.1 deg | Pelvis height 0.772 m\NScored forward progress: 0.504 m / required 2.000 m\NRecorded applied force [N]: [0.0, 250.0, 0.0]
+Dialogue: 0,0:00:16.16,0:00:16.20,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:16.16,0:00:16.20,Heading,,0,0,0,,{\an7\pos(25,180)\q2}Inject a measured push
+Dialogue: 0,0:00:16.16,0:00:16.20,Body,,0,0,0,,{\an7\pos(25,270)\q2}Apply 250.0 N in world direction [0,\N250, 0] for 0.2 simulated seconds.\NThe arrow illustrates the recorded\Nforce on the rigid pelvis/torso body.
+Dialogue: 0,0:00:16.16,0:00:16.20,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The pulse is an input disturbance. Its\Npresence alone is not a robot failure.
+Dialogue: 0,0:00:16.16,0:00:16.20,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:16.16,0:00:16.20,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.082s | Tilt 1.2 deg | Pelvis height 0.771 m\NScored forward progress: 0.514 m / required 2.000 m\NRecorded applied force [N]: [0.0, 250.0, 0.0]
+Dialogue: 0,0:00:16.20,0:00:16.24,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:16.20,0:00:16.24,Heading,,0,0,0,,{\an7\pos(25,180)\q2}Inject a measured push
+Dialogue: 0,0:00:16.20,0:00:16.24,Body,,0,0,0,,{\an7\pos(25,270)\q2}Apply 250.0 N in world direction [0,\N250, 0] for 0.2 simulated seconds.\NThe arrow illustrates the recorded\Nforce on the rigid pelvis/torso body.
+Dialogue: 0,0:00:16.20,0:00:16.24,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The pulse is an input disturbance. Its\Npresence alone is not a robot failure.
+Dialogue: 0,0:00:16.20,0:00:16.24,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:16.20,0:00:16.24,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.102s | Tilt 0.7 deg | Pelvis height 0.770 m\NScored forward progress: 0.523 m / required 2.000 m\NRecorded applied force [N]: [0.0, 250.0, 0.0]
+Dialogue: 0,0:00:16.24,0:00:16.28,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:16.24,0:00:16.28,Heading,,0,0,0,,{\an7\pos(25,180)\q2}Inject a measured push
+Dialogue: 0,0:00:16.24,0:00:16.28,Body,,0,0,0,,{\an7\pos(25,270)\q2}Apply 250.0 N in world direction [0,\N250, 0] for 0.2 simulated seconds.\NThe arrow illustrates the recorded\Nforce on the rigid pelvis/torso body.
+Dialogue: 0,0:00:16.24,0:00:16.28,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The pulse is an input disturbance. Its\Npresence alone is not a robot failure.
+Dialogue: 0,0:00:16.24,0:00:16.28,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:16.24,0:00:16.28,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.122s | Tilt 2.0 deg | Pelvis height 0.768 m\NScored forward progress: 0.533 m / required 2.000 m\NRecorded applied force [N]: [0.0, 250.0, 0.0]
+Dialogue: 0,0:00:16.28,0:00:16.32,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:16.28,0:00:16.32,Heading,,0,0,0,,{\an7\pos(25,180)\q2}Inject a measured push
+Dialogue: 0,0:00:16.28,0:00:16.32,Body,,0,0,0,,{\an7\pos(25,270)\q2}Apply 250.0 N in world direction [0,\N250, 0] for 0.2 simulated seconds.\NThe arrow illustrates the recorded\Nforce on the rigid pelvis/torso body.
+Dialogue: 0,0:00:16.28,0:00:16.32,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The pulse is an input disturbance. Its\Npresence alone is not a robot failure.
+Dialogue: 0,0:00:16.28,0:00:16.32,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:16.28,0:00:16.32,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.142s | Tilt 3.8 deg | Pelvis height 0.765 m\NScored forward progress: 0.543 m / required 2.000 m\NRecorded applied force [N]: [0.0, 250.0, 0.0]
+Dialogue: 0,0:00:16.32,0:00:16.36,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:16.32,0:00:16.36,Heading,,0,0,0,,{\an7\pos(25,180)\q2}Inject a measured push
+Dialogue: 0,0:00:16.32,0:00:16.36,Body,,0,0,0,,{\an7\pos(25,270)\q2}Apply 250.0 N in world direction [0,\N250, 0] for 0.2 simulated seconds.\NThe arrow illustrates the recorded\Nforce on the rigid pelvis/torso body.
+Dialogue: 0,0:00:16.32,0:00:16.36,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The pulse is an input disturbance. Its\Npresence alone is not a robot failure.
+Dialogue: 0,0:00:16.32,0:00:16.36,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:16.32,0:00:16.36,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.162s | Tilt 6.1 deg | Pelvis height 0.760 m\NScored forward progress: 0.552 m / required 2.000 m\NRecorded applied force [N]: [0.0, 250.0, 0.0]
+Dialogue: 0,0:00:16.36,0:00:16.40,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:16.36,0:00:16.40,Heading,,0,0,0,,{\an7\pos(25,180)\q2}Inject a measured push
+Dialogue: 0,0:00:16.36,0:00:16.40,Body,,0,0,0,,{\an7\pos(25,270)\q2}Apply 250.0 N in world direction [0,\N250, 0] for 0.2 simulated seconds.\NThe arrow illustrates the recorded\Nforce on the rigid pelvis/torso body.
+Dialogue: 0,0:00:16.36,0:00:16.40,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The pulse is an input disturbance. Its\Npresence alone is not a robot failure.
+Dialogue: 0,0:00:16.36,0:00:16.40,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:16.36,0:00:16.40,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.182s | Tilt 8.1 deg | Pelvis height 0.757 m\NScored forward progress: 0.561 m / required 2.000 m\NRecorded applied force [N]: [0.0, 250.0, 0.0]
+Dialogue: 0,0:00:16.40,0:00:20.40,Accent,,0,0,0,,{\an7\pos(25,132)\q2}PAUSED FOR EXPLANATION
+Dialogue: 0,0:00:16.40,0:00:20.40,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:16.40,0:00:20.40,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:16.40,0:00:20.40,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:16.40,0:00:20.40,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:16.40,0:00:20.40,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.202s | Tilt 10.1 deg | Pelvis height 0.757 m\NScored forward progress: 0.569 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:20.40,0:00:20.44,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:20.40,0:00:20.44,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:20.40,0:00:20.44,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:20.40,0:00:20.44,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:20.40,0:00:20.44,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:20.40,0:00:20.44,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.202s | Tilt 10.1 deg | Pelvis height 0.757 m\NScored forward progress: 0.569 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:20.44,0:00:20.48,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:20.44,0:00:20.48,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:20.44,0:00:20.48,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:20.44,0:00:20.48,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:20.44,0:00:20.48,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:20.44,0:00:20.48,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.222s | Tilt 12.2 deg | Pelvis height 0.759 m\NScored forward progress: 0.577 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:20.48,0:00:20.52,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:20.48,0:00:20.52,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:20.48,0:00:20.52,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:20.48,0:00:20.52,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:20.48,0:00:20.52,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:20.48,0:00:20.52,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.242s | Tilt 14.1 deg | Pelvis height 0.761 m\NScored forward progress: 0.586 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:20.52,0:00:20.56,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:20.52,0:00:20.56,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:20.52,0:00:20.56,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:20.52,0:00:20.56,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:20.52,0:00:20.56,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:20.52,0:00:20.56,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.262s | Tilt 16.0 deg | Pelvis height 0.763 m\NScored forward progress: 0.596 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:20.56,0:00:20.60,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:20.56,0:00:20.60,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:20.56,0:00:20.60,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:20.56,0:00:20.60,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:20.56,0:00:20.60,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:20.56,0:00:20.60,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.282s | Tilt 17.8 deg | Pelvis height 0.764 m\NScored forward progress: 0.607 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:20.60,0:00:20.64,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:20.60,0:00:20.64,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:20.60,0:00:20.64,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:20.60,0:00:20.64,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:20.60,0:00:20.64,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:20.60,0:00:20.64,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.302s | Tilt 19.7 deg | Pelvis height 0.762 m\NScored forward progress: 0.618 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:20.64,0:00:20.68,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:20.64,0:00:20.68,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:20.64,0:00:20.68,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:20.64,0:00:20.68,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:20.64,0:00:20.68,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:20.64,0:00:20.68,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.322s | Tilt 22.0 deg | Pelvis height 0.756 m\NScored forward progress: 0.629 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:20.68,0:00:20.72,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:20.68,0:00:20.72,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:20.68,0:00:20.72,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:20.68,0:00:20.72,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:20.68,0:00:20.72,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:20.68,0:00:20.72,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.342s | Tilt 24.6 deg | Pelvis height 0.745 m\NScored forward progress: 0.638 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:20.72,0:00:20.76,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:20.72,0:00:20.76,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:20.72,0:00:20.76,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:20.72,0:00:20.76,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:20.72,0:00:20.76,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:20.72,0:00:20.76,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.362s | Tilt 27.0 deg | Pelvis height 0.728 m\NScored forward progress: 0.647 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:20.76,0:00:20.80,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:20.76,0:00:20.80,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:20.76,0:00:20.80,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:20.76,0:00:20.80,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:20.76,0:00:20.80,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:20.76,0:00:20.80,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.382s | Tilt 29.2 deg | Pelvis height 0.707 m\NScored forward progress: 0.656 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:20.80,0:00:20.84,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:20.80,0:00:20.84,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:20.80,0:00:20.84,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:20.80,0:00:20.84,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:20.80,0:00:20.84,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:20.80,0:00:20.84,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.402s | Tilt 31.7 deg | Pelvis height 0.686 m\NScored forward progress: 0.664 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:20.84,0:00:20.88,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:20.84,0:00:20.88,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:20.84,0:00:20.88,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:20.84,0:00:20.88,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:20.84,0:00:20.88,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:20.84,0:00:20.88,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.422s | Tilt 35.1 deg | Pelvis height 0.663 m\NScored forward progress: 0.673 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:20.88,0:00:20.92,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:20.88,0:00:20.92,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:20.88,0:00:20.92,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:20.88,0:00:20.92,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:20.88,0:00:20.92,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:20.88,0:00:20.92,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.442s | Tilt 39.9 deg | Pelvis height 0.641 m\NScored forward progress: 0.681 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:20.92,0:00:20.96,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:20.92,0:00:20.96,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:20.92,0:00:20.96,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:20.92,0:00:20.96,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:20.92,0:00:20.96,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:20.92,0:00:20.96,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.462s | Tilt 45.1 deg | Pelvis height 0.616 m\NScored forward progress: 0.688 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:20.96,0:00:21.00,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:20.96,0:00:21.00,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:20.96,0:00:21.00,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:20.96,0:00:21.00,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:20.96,0:00:21.00,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:20.96,0:00:21.00,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.482s | Tilt 50.4 deg | Pelvis height 0.586 m\NScored forward progress: 0.695 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:21.00,0:00:21.04,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:21.00,0:00:21.04,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:21.00,0:00:21.04,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:21.00,0:00:21.04,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:21.00,0:00:21.04,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:21.00,0:00:21.04,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.502s | Tilt 55.8 deg | Pelvis height 0.551 m\NScored forward progress: 0.703 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:21.04,0:00:21.08,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:21.04,0:00:21.08,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:21.04,0:00:21.08,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:21.04,0:00:21.08,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:21.04,0:00:21.08,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:21.04,0:00:21.08,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.522s | Tilt 61.5 deg | Pelvis height 0.513 m\NScored forward progress: 0.710 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:21.08,0:00:21.12,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:21.08,0:00:21.12,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:21.08,0:00:21.12,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:21.08,0:00:21.12,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:21.08,0:00:21.12,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:21.08,0:00:21.12,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.542s | Tilt 67.4 deg | Pelvis height 0.471 m\NScored forward progress: 0.716 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:21.12,0:00:21.16,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:21.12,0:00:21.16,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:21.12,0:00:21.16,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:21.12,0:00:21.16,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:21.12,0:00:21.16,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:21.12,0:00:21.16,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.562s | Tilt 73.6 deg | Pelvis height 0.427 m\NScored forward progress: 0.721 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:21.16,0:00:21.20,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:21.16,0:00:21.20,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:21.16,0:00:21.20,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:21.16,0:00:21.20,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:21.16,0:00:21.20,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:21.16,0:00:21.20,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.582s | Tilt 79.9 deg | Pelvis height 0.380 m\NScored forward progress: 0.725 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:21.20,0:00:21.24,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:21.20,0:00:21.24,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:21.20,0:00:21.24,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:21.20,0:00:21.24,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:21.20,0:00:21.24,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:21.20,0:00:21.24,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.602s | Tilt 86.2 deg | Pelvis height 0.329 m\NScored forward progress: 0.729 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:21.24,0:00:21.28,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:21.24,0:00:21.28,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:21.24,0:00:21.28,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:21.24,0:00:21.28,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:21.24,0:00:21.28,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:21.24,0:00:21.28,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.622s | Tilt 92.5 deg | Pelvis height 0.274 m\NScored forward progress: 0.733 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:21.28,0:00:21.32,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:21.28,0:00:21.32,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:21.28,0:00:21.32,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:21.28,0:00:21.32,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:21.28,0:00:21.32,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:21.28,0:00:21.32,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.642s | Tilt 99.1 deg | Pelvis height 0.218 m\NScored forward progress: 0.738 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:21.32,0:00:21.36,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:21.32,0:00:21.36,Heading,,0,0,0,,{\an7\pos(25,180)\q2}The push has ended
+Dialogue: 0,0:00:21.32,0:00:21.36,Body,,0,0,0,,{\an7\pos(25,270)\q2}External force is zero again. The\Nexisting walking policy continues. We\Nnow observe whether balance and task\Nprogress recover.
+Dialogue: 0,0:00:21.32,0:00:21.36,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The robot response is measured from\Nsimulator posture, velocity and\Ncontacts.
+Dialogue: 0,0:00:21.32,0:00:21.36,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:21.32,0:00:21.36,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.662s | Tilt 101.2 deg | Pelvis height 0.190 m\NScored forward progress: 0.728 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:21.36,0:00:28.36,Accent,,0,0,0,,{\an7\pos(25,132)\q2}PAUSED FOR EXPLANATION
+Dialogue: 0,0:00:21.36,0:00:28.36,Heading,,0,0,0,,{\an7\pos(25,180)\q2}Outcome: FALL
+Dialogue: 0,0:00:21.36,0:00:28.36,Body,,0,0,0,,{\an7\pos(25,270)\q2}Pelvis/rigid-torso floor contact\Npersisted for 0.02 simulated seconds.\NThe evaluator confirms FALL and\Nterminates this episode.
+Dialogue: 0,0:00:21.36,0:00:28.36,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The policy is not asked to get up. A\Nfall is not an infrastructure crash.
+Dialogue: 0,0:00:21.36,0:00:28.36,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:21.36,0:00:28.36,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.664s | Tilt 101.1 deg | Pelvis height 0.190 m\NScored forward progress: 0.726 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]
+Dialogue: 0,0:00:28.36,0:00:28.40,Accent,,0,0,0,,{\an7\pos(25,132)\q2}RECORDED MOTION PLAYING AT 0.5x
+Dialogue: 0,0:00:28.36,0:00:28.40,Heading,,0,0,0,,{\an7\pos(25,180)\q2}Outcome: FALL
+Dialogue: 0,0:00:28.36,0:00:28.40,Body,,0,0,0,,{\an7\pos(25,270)\q2}Pelvis/rigid-torso floor contact\Npersisted for 0.02 simulated seconds.\NThe evaluator confirms FALL and\Nterminates this episode.
+Dialogue: 0,0:00:28.36,0:00:28.40,Proof,,0,0,0,,{\an7\pos(25,540)\q2}The policy is not asked to get up. A\Nfall is not an infrastructure crash.
+Dialogue: 0,0:00:28.36,0:00:28.40,Data,,0,0,0,,{\an7\pos(25,775)\q2}Reading pauses freeze this replay frame.\NThey are not extra robot stops.
+Dialogue: 0,0:00:28.36,0:00:28.40,Data,,0,0,0,,{\an7\pos(520,805)\q2}Source 3.664s | Tilt 101.1 deg | Pelvis height 0.190 m\NScored forward progress: 0.726 m / required 2.000 m\NRecorded applied force [N]: [0, 0, 0]

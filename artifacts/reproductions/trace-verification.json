@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "note": "Identical local joint traces, not a cross-machine determinism guarantee",
+  "comparisons": [
+    {
+      "repeat": 0,
+      "trace_samples": 211,
+      "max_qpos_difference": 0.0
+    },
+    {
+      "repeat": 1,
+      "trace_samples": 211,
+      "max_qpos_difference": 0.0
+    },
+    {
+      "repeat": 2,
+      "trace_samples": 211,
+      "max_qpos_difference": 0.0
+    }
+  ]
+}

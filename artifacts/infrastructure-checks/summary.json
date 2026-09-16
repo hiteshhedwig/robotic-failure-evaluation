@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "status": "INFRASTRUCTURE_ERROR",
+      "reason": "Worker exited without an atomic result receipt",
+      "scenario_id": "baseline",
+      "seed": 0,
+      "worker_returncode": -9,
+      "worker_pid": 71372,
+      "supervisor_wall_seconds": 1.650895942999341,
+      "wall_timeout_s": 30,
+      "crash_injected": true
+    },
+    {
+      "status": "INFRASTRUCTURE_TIMEOUT",
+      "reason": "Parent wall-clock deadline",
+      "scenario_id": "baseline",
+      "seed": 0,
+      "worker_returncode": -15,
+      "worker_pid": 71389,
+      "supervisor_wall_seconds": 0.1095458529998723,
+      "wall_timeout_s": 0.1,
+      "crash_injected": false
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "source_trial": "artifacts/boundary/boundary-seed1",
+  "source_outcome": "TASK_TIMEOUT",
+  "duration_seconds": 46.04,
+  "note": "Recorded physics-state replay at 0.5x with labeled editorial holds. Force arrows are explanatory graphics.",
+  "checkpoints": [
+    {
+      "source_time_s": 0,
+      "hold_s": 5,
+      "heading": "The experiment"
+    },
+    {
+      "source_time_s": 3.455999999999841,
+      "hold_s": 5,
+      "heading": "Inject a measured push"
+    },
+    {
+      "source_time_s": 3.655999999999819,
+      "hold_s": 4,
+      "heading": "The push has ended"
+    },
+    {
+      "source_time_s": 5.327999999999635,
+      "hold_s": 5,
+      "heading": "Balance recovery confirmed"
+    },
+    {
+      "source_time_s": 10.000000000000009,
+      "hold_s": 7,
+      "heading": "Outcome: TASK_TIMEOUT"
+    }
+  ]
+}

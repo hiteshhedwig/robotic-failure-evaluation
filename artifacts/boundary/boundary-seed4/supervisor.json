@@ -1,0 +1,47 @@
+{
+  "status": "TASK_TIMEOUT",
+  "scenario_id": "boundary-seed4",
+  "seed": 4,
+  "progress_m": 1.688957287663488,
+  "lateral_displacement_m": -0.7715419465242331,
+  "min_pelvis_height_m": 0.6584949095565492,
+  "max_tilt_deg": 10.835836555210237,
+  "peak_tilt_after_push_deg": 10.835836555210237,
+  "fall_time_s": null,
+  "posture_violation_time_s": null,
+  "recovery_confirmed_time_s": 5.6339999999996015,
+  "recovery_latency_s": 2.1919999999996014,
+  "injected_push": {
+    "force_n": [
+      -175.0,
+      0.0,
+      0.0
+    ],
+    "start_s": 3.242,
+    "duration_s": 0.2
+  },
+  "actual_impulse_ns": [
+    -35.000000000000064,
+    0.0,
+    0.0
+  ],
+  "final_position": [
+    2.492686343303568,
+    -0.7935549746046311,
+    0.7681815454587261
+  ],
+  "simulated_seconds": 10.000000000000009,
+  "trace_samples": 501,
+  "physics_steps": 5000,
+  "initial_evaluation_position": [
+    0.8037290556400803,
+    -0.02201302808039793,
+    0.7675421288773143
+  ],
+  "wall_seconds": 2.1074092740000196,
+  "worker_returncode": 2,
+  "worker_pid": 68758,
+  "supervisor_wall_seconds": 3.720638198001325,
+  "wall_timeout_s": 30,
+  "crash_injected": false
+}

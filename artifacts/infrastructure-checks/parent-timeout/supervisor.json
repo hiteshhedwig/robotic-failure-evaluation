@@ -1,0 +1,11 @@
+{
+  "status": "INFRASTRUCTURE_TIMEOUT",
+  "reason": "Parent wall-clock deadline",
+  "scenario_id": "baseline",
+  "seed": 0,
+  "worker_returncode": -15,
+  "worker_pid": 71389,
+  "supervisor_wall_seconds": 0.1095458529998723,
+  "wall_timeout_s": 0.1,
+  "crash_injected": false
+}

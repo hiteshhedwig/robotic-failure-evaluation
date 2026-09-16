@@ -1,0 +1,42 @@
+{
+  "status": "COMPLETED",
+  "scenario_id": "moderate-seed7",
+  "seed": 7,
+  "progress_m": 3.5186014738085745,
+  "lateral_displacement_m": 0.9600740297618133,
+  "min_pelvis_height_m": 0.6937682926219428,
+  "max_tilt_deg": 11.25701761580387,
+  "peak_tilt_after_push_deg": 11.25701761580387,
+  "fall_time_s": null,
+  "posture_violation_time_s": null,
+  "recovery_confirmed_time_s": 5.413999999999626,
+  "recovery_latency_s": 1.4559999999996256,
+  "injected_push": {
+    "force_n": [
+      0,
+      100,
+      0
+    ],
+    "start_s": 3.758,
+    "duration_s": 0.2
+  },
+  "actual_impulse_ns": [
+    0.0,
+    19.99999999999996,
+    0.0
+  ],
+  "final_position": [
+    4.322330529448655,
+    0.9380610016814154,
+    0.7680901087801216
+  ],
+  "simulated_seconds": 10.000000000000009,
+  "trace_samples": 501,
+  "physics_steps": 5000,
+  "initial_evaluation_position": [
+    0.8037290556400803,
+    -0.02201302808039793,
+    0.7675421288773143
+  ],
+  "wall_seconds": 2.060488508999697
+}

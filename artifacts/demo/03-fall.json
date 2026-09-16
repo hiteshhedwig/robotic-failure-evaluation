@@ -1,0 +1,28 @@
+{
+  "source_trial": "artifacts/push-pilot/push-y-250",
+  "source_outcome": "FALL",
+  "duration_seconds": 28.4,
+  "note": "Recorded physics-state replay at 0.5x with labeled editorial holds. Force arrows are explanatory graphics.",
+  "checkpoints": [
+    {
+      "source_time_s": 0,
+      "hold_s": 5,
+      "heading": "The experiment"
+    },
+    {
+      "source_time_s": 2.999999999999891,
+      "hold_s": 5,
+      "heading": "Inject a measured push"
+    },
+    {
+      "source_time_s": 3.199999999999869,
+      "hold_s": 4,
+      "heading": "The push has ended"
+    },
+    {
+      "source_time_s": 3.663999999999818,
+      "hold_s": 7,
+      "heading": "Outcome: FALL"
+    }
+  ]
+}

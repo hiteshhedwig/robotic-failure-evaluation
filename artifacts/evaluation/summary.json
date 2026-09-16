@@ -1,0 +1,120 @@
+{
+  "conditions": [
+    {
+      "condition": "reference",
+      "force_n": 0.0,
+      "attempted": 8,
+      "valid": 8,
+      "infrastructure_failures": 0,
+      "outcomes": {
+        "COMPLETED": 8
+      },
+      "success_rate": 1.0,
+      "fall_rate": 0.0,
+      "success_wilson95": null,
+      "fall_wilson95": null,
+      "median_progress_m": 3.781271703705525,
+      "balance_recovered_and_completed": 0,
+      "median_recovery_latency_s": null
+    },
+    {
+      "condition": "mild",
+      "force_n": 25.0,
+      "attempted": 8,
+      "valid": 8,
+      "infrastructure_failures": 0,
+      "outcomes": {
+        "COMPLETED": 8
+      },
+      "success_rate": 1.0,
+      "fall_rate": 0.0,
+      "success_wilson95": [
+        0.6755924351161198,
+        1
+      ],
+      "fall_wilson95": [
+        0,
+        0.3244075648838801
+      ],
+      "median_progress_m": 3.77342137145891,
+      "balance_recovered_and_completed": 8,
+      "median_recovery_latency_s": 0.410999999999794
+    },
+    {
+      "condition": "moderate",
+      "force_n": 100.0,
+      "attempted": 8,
+      "valid": 8,
+      "infrastructure_failures": 0,
+      "outcomes": {
+        "COMPLETED": 8
+      },
+      "success_rate": 1.0,
+      "fall_rate": 0.0,
+      "success_wilson95": [
+        0.6755924351161198,
+        1
+      ],
+      "fall_wilson95": [
+        0,
+        0.3244075648838801
+      ],
+      "median_progress_m": 3.4954553630413567,
+      "balance_recovered_and_completed": 8,
+      "median_recovery_latency_s": 1.589999999999647
+    },
+    {
+      "condition": "boundary",
+      "force_n": 175.0,
+      "attempted": 8,
+      "valid": 8,
+      "infrastructure_failures": 0,
+      "outcomes": {
+        "FALL": 2,
+        "TASK_TIMEOUT": 2,
+        "COMPLETED": 4
+      },
+      "success_rate": 0.5,
+      "fall_rate": 0.25,
+      "success_wilson95": [
+        0.21521606221387762,
+        0.7847839377861223
+      ],
+      "fall_wilson95": [
+        0.07147921275210906,
+        0.5907245696898311
+      ],
+      "median_progress_m": 1.9719450643846768,
+      "balance_recovered_and_completed": 4,
+      "median_recovery_latency_s": 2.0379999999996197
+    },
+    {
+      "condition": "strong",
+      "force_n": 250.0,
+      "attempted": 8,
+      "valid": 8,
+      "infrastructure_failures": 0,
+      "outcomes": {
+        "FALL": 8
+      },
+      "success_rate": 0.0,
+      "fall_rate": 1.0,
+      "success_wilson95": [
+        0,
+        0.3244075648838801
+      ],
+      "fall_wilson95": [
+        0.6755924351161198,
+        1
+      ],
+      "median_progress_m": 1.0513337690479858,
+      "balance_recovered_and_completed": 0,
+      "median_recovery_latency_s": null
+    }
+  ],
+  "statistical_scope": "Exploratory, conditional on this G1 model, policy, ground, pulse duration and direction/onset sampling. Eight matched seeded schedules per pushed condition; no physical-robot inference.",
+  "reference_note": "Nominal reference repetitions are identical and do not supply independent reliability samples; no binomial interval is reported for them.",
+  "selection_note": "175 N is an exploratory follow-up chosen after the initial 100/250 N bracket, not held-out confirmation.",
+  "recovery_definition": "Return to a predefined posture/velocity band for 0.4 simulated seconds after the pulse ends; this is balance recovery, not getting up.",
+  "attribution": "The logs establish injection and observed outcomes. They do not identify an internal policy failure mechanism."
+}

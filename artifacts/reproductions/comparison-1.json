@@ -1,0 +1,15 @@
+{
+  "matched": true,
+  "pairs": [
+    {
+      "id": "strong-seed0",
+      "reference": "FALL",
+      "candidate": "FALL",
+      "new_task_failure": false,
+      "infrastructure_error": false,
+      "changed_fingerprints": []
+    }
+  ],
+  "regression": false,
+  "outcome_agreement": true
+}
