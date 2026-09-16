@@ -1,3 +1,5 @@
+> Historical G1-only checkpoint. See [the current two-robot verification](two-robot-verification.md) for the extension.
+
 # Verification record
 
 ## Gate 1 — working walking baseline

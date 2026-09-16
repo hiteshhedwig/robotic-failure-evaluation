@@ -1,0 +1,5 @@
+{"event": "RUN_STARTED", "time_s": 0, "physics_dt_s": 0.004, "policy_dt_s": 0.02}
+{"event": "EVALUATION_STARTED", "time_s": 2.0040000000000013, "position": [0.9176558993163006, 0.033480905734419614, 0.29661012243742335]}
+{"event": "PUSH_STARTED", "time_s": 3.5920000000000027, "force_world_n": [0.0, 250.0, 0.0], "body": "trunk", "point": "body center of mass"}
+{"event": "PUSH_ENDED", "time_s": 3.792000000000003, "impulse_ns": [0.0, 50.0, 0.0]}
+{"event": "RUN_FINISHED", "time_s": 9.999999999999343, "outcome": "COMPLETED"}

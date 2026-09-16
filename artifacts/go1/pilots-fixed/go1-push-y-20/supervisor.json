@@ -1,0 +1,49 @@
+{
+  "status": "COMPLETED",
+  "scenario_id": "go1-push-y-20",
+  "seed": 0,
+  "robot": "go1",
+  "progress_m": 3.9972404902461234,
+  "min_root_height_m": 0.28549008825055844,
+  "lateral_displacement_m": 0.47060912799877497,
+  "min_pelvis_height_m": 0.28549008825055844,
+  "max_tilt_deg": 2.154702198288957,
+  "peak_tilt_after_push_deg": 2.154702198288957,
+  "fall_time_s": null,
+  "posture_violation_time_s": null,
+  "recovery_confirmed_time_s": 3.6000000000000028,
+  "recovery_latency_s": 0.4000000000000026,
+  "injected_push": {
+    "force_n": [
+      0,
+      20,
+      0
+    ],
+    "start_s": 3,
+    "duration_s": 0.2
+  },
+  "actual_impulse_ns": [
+    0.0,
+    4.000000000000002,
+    0.0
+  ],
+  "final_position": [
+    4.914896389562424,
+    0.5040900337331946,
+    0.293170897519703
+  ],
+  "simulated_seconds": 9.999999999999343,
+  "trace_samples": 501,
+  "physics_steps": 2500,
+  "initial_evaluation_position": [
+    0.9176558993163006,
+    0.033480905734419614,
+    0.29661012243742335
+  ],
+  "wall_seconds": 1.0588922629995068,
+  "worker_returncode": 0,
+  "worker_pid": 75238,
+  "supervisor_wall_seconds": 2.4960745879998285,
+  "wall_timeout_s": 30,
+  "crash_injected": false
+}

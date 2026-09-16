@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/hedwig/capstone_proj/humanoid-failure-evaluation/scripts/run_trial.py", line 80, in main
+    meta={**sim.fingerprint(),"python":sys.version,"platform":platform.platform(),
+            ^^^^^^^^^^^^^^^^^
+  File "/home/hedwig/capstone_proj/humanoid-failure-evaluation/robot_eval/go1.py", line 82, in fingerprint
+    meta.update(robot="go1",**lock,onnxruntime=self.ort_version,
+TypeError: dict.update() got multiple values for keyword argument 'onnxruntime'

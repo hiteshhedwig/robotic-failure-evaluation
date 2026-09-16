@@ -1,0 +1,5 @@
+{
+  "passed": true,
+  "progress_difference_m": 0.0,
+  "note": "Current shared adapter preserves archived G1 nominal progress; source fingerprint changed during package refactor."
+}

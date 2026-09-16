@@ -1,3 +1,5 @@
+> Historical G1-only checkpoint. See [the current two-robot verification](two-robot-verification.md) for the extension.
+
 # Gate 1 — verified before adding disturbances
 
 The pinned G1 TorchScript policy ran with the supplied model, effort gains, observation

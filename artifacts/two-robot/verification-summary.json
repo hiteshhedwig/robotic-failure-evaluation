@@ -1,0 +1,153 @@
+{
+  "passed": true,
+  "robots": [
+    "g1",
+    "go1"
+  ],
+  "evaluation_episodes": 72,
+  "g1_evaluation_episodes": 40,
+  "go1_evaluation_episodes": 32,
+  "evaluation_infrastructure_failures": 0,
+  "tests_passed": 22,
+  "go1_fresh_process_failure_reproductions": 2,
+  "g1_fresh_process_failure_reproductions": 3,
+  "go1_campaign_current_fingerprints_match": true,
+  "g1_current_baseline_preserved": {
+    "passed": true,
+    "progress_difference_m": 0.0,
+    "note": "Current shared adapter preserves archived G1 nominal progress; source fingerprint changed during package refactor."
+  },
+  "go1_media": {
+    "passed": true,
+    "files": [
+      {
+        "file": "00-go1-walkthrough.mp4",
+        "fully_decoded": true,
+        "programs": [],
+        "streams": [
+          {
+            "width": 1440,
+            "height": 900,
+            "nb_frames": "3865"
+          }
+        ],
+        "format": {
+          "duration": "154.600000",
+          "size": "10778195"
+        }
+      },
+      {
+        "file": "01-baseline.mp4",
+        "fully_decoded": true,
+        "programs": [],
+        "streams": [
+          {
+            "width": 1440,
+            "height": 900,
+            "nb_frames": "901"
+          }
+        ],
+        "format": {
+          "duration": "36.040000",
+          "size": "2949131"
+        }
+      },
+      {
+        "file": "02-balance-recovery.mp4",
+        "fully_decoded": true,
+        "programs": [],
+        "streams": [
+          {
+            "width": 1440,
+            "height": 900,
+            "nb_frames": "1151"
+          }
+        ],
+        "format": {
+          "duration": "46.040000",
+          "size": "3243357"
+        }
+      },
+      {
+        "file": "03-fall.mp4",
+        "fully_decoded": true,
+        "programs": [],
+        "streams": [
+          {
+            "width": 1440,
+            "height": 900,
+            "nb_frames": "787"
+          }
+        ],
+        "format": {
+          "duration": "31.480000",
+          "size": "2102984"
+        }
+      },
+      {
+        "file": "04-posture-violation.mp4",
+        "fully_decoded": true,
+        "programs": [],
+        "streams": [
+          {
+            "width": 1440,
+            "height": 900,
+            "nb_frames": "1026"
+          }
+        ],
+        "format": {
+          "duration": "41.040000",
+          "size": "2484555"
+        }
+      }
+    ]
+  },
+  "combined_media": {
+    "passed": true,
+    "file": "00-two-robot-walkthrough.mp4",
+    "fully_decoded": true,
+    "sources": [
+      "artifacts/demo/00-complete-walkthrough.mp4",
+      "artifacts/go1/demo/00-go1-walkthrough.mp4"
+    ],
+    "programs": [],
+    "streams": [
+      {
+        "width": 1440,
+        "height": 900,
+        "nb_frames": "7778"
+      }
+    ],
+    "format": {
+      "duration": "311.120000",
+      "size": "20764946"
+    }
+  },
+  "readme_animation": {
+    "passed": true,
+    "fully_decoded": true,
+    "selected_video_excerpts": [
+      [
+        "artifacts/demo/02-balance-recovery.mp4",
+        10,
+        26
+      ],
+      [
+        "artifacts/demo/03-fall.mp4",
+        16,
+        24
+      ],
+      [
+        "artifacts/go1/demo/02-balance-recovery.mp4",
+        11,
+        28
+      ],
+      [
+        "artifacts/go1/demo/03-fall.mp4",
+        18,
+        29
+      ]
+    ],
+    "note": "Selected saved-state replay excerpts; no extra robot rollout. Reading holds and 0.5x playback retained."
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "runs": 4,
+  "robot_trials": 0,
+  "infrastructure_failures": 4,
+  "results": [
+    {
+      "status": "INFRASTRUCTURE_ERROR",
+      "scenario_id": "go1-push-y-0",
+      "seed": 0,
+      "error": "dict.update() got multiple values for keyword argument 'onnxruntime'",
+      "wall_seconds": 0.35539681800037215,
+      "worker_returncode": 3,
+      "worker_pid": 74971,
+      "supervisor_wall_seconds": 1.8120062079997297,
+      "wall_timeout_s": 30,
+      "crash_injected": false
+    },
+    {
+      "status": "INFRASTRUCTURE_ERROR",
+      "scenario_id": "go1-push-y-20",
+      "seed": 0,
+      "error": "dict.update() got multiple values for keyword argument 'onnxruntime'",
+      "wall_seconds": 0.38005874099872017,
+      "worker_returncode": 3,
+      "worker_pid": 74970,
+      "supervisor_wall_seconds": 1.8321281609987636,
+      "wall_timeout_s": 30,
+      "crash_injected": false
+    },
+    {
+      "status": "INFRASTRUCTURE_ERROR",
+      "scenario_id": "go1-push-y-60",
+      "seed": 0,
+      "error": "dict.update() got multiple values for keyword argument 'onnxruntime'",
+      "wall_seconds": 0.3344450330005202,
+      "worker_returncode": 3,
+      "worker_pid": 75153,
+      "supervisor_wall_seconds": 1.7930598969996936,
+      "wall_timeout_s": 30,
+      "crash_injected": false
+    },
+    {
+      "status": "INFRASTRUCTURE_ERROR",
+      "scenario_id": "go1-push-y-120",
+      "seed": 0,
+      "error": "dict.update() got multiple values for keyword argument 'onnxruntime'",
+      "wall_seconds": 0.3464754119995632,
+      "worker_returncode": 3,
+      "worker_pid": 75154,
+      "supervisor_wall_seconds": 1.7732363390005048,
+      "wall_timeout_s": 30,
+      "crash_injected": false
+    }
+  ]
+}

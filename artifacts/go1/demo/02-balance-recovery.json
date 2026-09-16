@@ -1,0 +1,33 @@
+{
+  "source_trial": "artifacts/go1/campaign/moderate-seed0",
+  "source_outcome": "COMPLETED",
+  "duration_seconds": 46.04,
+  "note": "Recorded physics-state replay at 0.5x with labeled editorial holds. Force arrows are explanatory graphics.",
+  "checkpoints": [
+    {
+      "source_time_s": 0,
+      "hold_s": 5,
+      "heading": "The experiment"
+    },
+    {
+      "source_time_s": 3.6080000000000028,
+      "hold_s": 5,
+      "heading": "Inject a measured push"
+    },
+    {
+      "source_time_s": 3.808000000000003,
+      "hold_s": 4,
+      "heading": "The push has ended"
+    },
+    {
+      "source_time_s": 4.823999999999912,
+      "hold_s": 5,
+      "heading": "Balance recovery confirmed"
+    },
+    {
+      "source_time_s": 9.999999999999343,
+      "hold_s": 7,
+      "heading": "Outcome: COMPLETED"
+    }
+  ]
+}

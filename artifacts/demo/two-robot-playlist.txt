@@ -1,0 +1,2 @@
+file '/home/hedwig/capstone_proj/humanoid-failure-evaluation/artifacts/demo/00-complete-walkthrough.mp4'
+file '/home/hedwig/capstone_proj/humanoid-failure-evaluation/artifacts/go1/demo/00-go1-walkthrough.mp4'

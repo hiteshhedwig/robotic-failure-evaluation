@@ -1,0 +1,49 @@
+{
+  "status": "FALL",
+  "scenario_id": "strong-seed4",
+  "seed": 4,
+  "robot": "go1",
+  "progress_m": -2.016002324949296,
+  "min_root_height_m": 0.06958049797661149,
+  "lateral_displacement_m": -0.20177199685595454,
+  "min_pelvis_height_m": 0.06958049797661149,
+  "max_tilt_deg": 167.1014847521069,
+  "peak_tilt_after_push_deg": 167.1014847521069,
+  "fall_time_s": 3.848000000000003,
+  "posture_violation_time_s": 3.692000000000003,
+  "recovery_confirmed_time_s": null,
+  "recovery_latency_s": null,
+  "injected_push": {
+    "force_n": [
+      -500,
+      0,
+      0
+    ],
+    "start_s": 3.244,
+    "duration_s": 0.2
+  },
+  "actual_impulse_ns": [
+    -100.0,
+    0.0,
+    0.0
+  ],
+  "final_position": [
+    -1.0983464256329958,
+    -0.16829109112153492,
+    0.07071966691561041
+  ],
+  "simulated_seconds": 3.848000000000003,
+  "trace_samples": 194,
+  "physics_steps": 962,
+  "initial_evaluation_position": [
+    0.9176558993163006,
+    0.033480905734419614,
+    0.29661012243742335
+  ],
+  "wall_seconds": 0.630230061000475,
+  "worker_returncode": 2,
+  "worker_pid": 76229,
+  "supervisor_wall_seconds": 2.113486299000215,
+  "wall_timeout_s": 30,
+  "crash_injected": false
+}

@@ -1,106 +1,111 @@
-# Focused evaluation architecture
+# Architecture
 
-The system evaluates one stock Unitree G1 walking policy in one flat-ground MuJoCo
-model. It is a compact CLI workflow, not general-purpose robotics middleware.
+The project evaluates two existing locomotion policies through one experiment path.
+G1 and Go1 use independent model/policy adapters; the rest of the workflow is shared.
 
-## Ownership
+## Episode lifecycle and isolation
 
-Upstream provides the twelve-leg-joint robot model, pretrained recurrent policy,
-observation scaling, default pose, PD gains, gait-phase input and control cadence.
-The adapter imports upstream PD and gravity-orientation math. This project owns
-experiment isolation, pulse scheduling, ground-truth monitoring, outcome classification,
-artifact persistence, analysis, matched comparison and recorded-state replay.
+A scenario selects robot g1 or go1 (missing robot retains the original G1 default),
+initial reset seed, velocity command, duration/warmup, progress objective and optional
+world-frame force pulse. Validation rejects unsupported robots and malformed inputs.
 
-The upstream observation buffer defaults to float64, which the supplied float32
-checkpoint rejects in the inspected PyTorch version. The adapter uses float32 input.
-It removes viewer pacing and uses simulation-step counts rather than wall time for
-episode length. Vendor files are not patched.
+The parent creates a fresh worker process group with a monotonic wall-clock deadline.
+Each worker loads a new model, data and policy instance. It writes its manifest before
+stepping, records sparse evidence, and atomically renames a complete result receipt.
+The parent checks the receipt against the worker exit code. Missing/malformed receipts,
+crashes and deadline expiry remain infrastructure outcomes. Process groups are
+terminated and reaped; result directories are never overwritten. Batch concurrency
+is bounded at two workers. No shared MuJoCo globals or control callbacks are installed.
 
-## Timing and reset
+## Robot adapters and reuse
 
-- Physics step: 0.002 s (500 Hz).
-- Policy update: every ten physics steps (50 Hz).
-- One fresh process and freshly loaded/reset LSTM per episode.
-- Policy hidden/cell state, previous action, phase counter and physics all start fresh.
-- Task horizon and force scheduling use simulation time.
-- Parent deadlines use monotonic wall time; process groups are terminated and reaped.
-- Up to two worker processes per batch; policy inference has one Torch CPU thread.
-- A new run directory is required. Existing evidence is never silently overwritten.
+| Component | G1 | Go1 |
+| --- | --- | --- |
+| Model/policy | Unitree RL Gym pinned assets | MuJoCo Playground policy/XML + Menagerie meshes |
+| Policy observations | Angular velocity, gravity, command, joints, previous action, phase | Local linear velocity, gyro, gravity, joints, previous action, command |
+| Policy state | LSTM hidden/cell reset per episode | Feedforward ONNX; previous action reset |
+| Control | Existing PD calculation driving torque actuators | Existing position-actuator model and policy target scaling |
+| Physics step | 2 ms | 4 ms |
+| Policy update | Every 10 steps | Every 5 steps |
+| Trace sampling | Every 20 ms plus terminal sample | Every 20 ms plus terminal sample |
 
-Each pulse is an actual external Cartesian force applied through MuJoCo's
-xfrc_applied array, at the center of mass of the rigid upper-body/pelvis body.
-The force is cleared every physics step outside its scheduled interval. Actual
-onset/end and integrated impulse are recorded. Directions are in world coordinates.
+The Go1 adapter reproduces the upstream deployment's observation order and
+callback-before-step timing without requiring its gamepad or training imports.
+Its full-collision flat-floor XML makes trunk contact observable. Both adapters
+return position, velocity, tilt, contacts, qpos/qvel, actions and actual efforts.
+Go1 also records its position targets separately.
 
-## Task and outcome definitions
+The Go1 adapter reuses the G1 class's state/fingerprint helpers. This is intentionally
+a small shared implementation, not a dynamically extensible middleware layer.
 
-The robot receives a forward velocity command of 0.5 m/s. The task is to cover at
-least 2 m in world +X during the eight-second scoring interval after a two-second
-warmup, without a confirmed fall or persistent posture violation. There is no
-lateral corridor constraint in this prototype.
+## Simulation and wall time
 
-| Outcome | Evidence |
-| --- | --- |
-| COMPLETED | Full task horizon, progress >=2 m, no confirmed fall or persistent posture violation |
-| FALL | Ground contact on the model's pelvis/rigid-upper-body body persists for 0.02 s |
-| POSTURE_VIOLATION | Tilt >60 degrees or root height <0.45 m persists for 0.1 s, without a confirmed fall |
-| TASK_TIMEOUT | Valid simulation reaches the task horizon without required forward progress |
-| INVALID_SIMULATION | Simulator warning or invalid numerical state makes the episode unsuitable for robot reliability inference |
-| INFRASTRUCTURE_ERROR | Setup/worker/receipt failure, including worker death without a completed result |
-| INFRASTRUCTURE_TIMEOUT | Parent wall-clock budget expires |
+Task horizon, warmup, force schedule, contact dwell, posture dwell and recovery are
+evaluated in simulation time. Force onset/duration are quantized to each physics
+step; the realized interval and impulse are logged. Wall time is used only by the
+supervisor deadline and runtime measurements.
 
-The reduced model's head and fixed arms share the pelvis body. Thus FALL is an
-operational upper-body-contact criterion for this model, not a universal fall detector.
-Foot-floor contact is normal. Tests exercise actual walking and physically fallen
-states; threshold correctness is not claimed for all imaginable poses or models.
+The same controller and observation cadence is used regardless of how quickly the
+machine can advance simulation. Physics/policy execution is CPU-only. EGL rendering
+is an optional offline artifact-generation step.
 
-Balance recovery is observed, not implemented by the evaluator. It requires tilt
-<=10 degrees, height >=0.65 m, |world vx - commanded vx| <=0.25 m/s and
-|world vy| <=0.25 m/s for 0.4 s after the pulse ends. A trial can recover balance
-and still miss the forward task. No getting-up policy is provided.
+## Monitoring and classification
 
-Contacts and kinematics are inspected at physics-step resolution; sampled traces
-are written at 50 Hz with terminal event samples. Timing precision is bounded by
-physics stepping and trace sampling, not by an infinitely precise sensor.
+Physics-step ground truth is evaluated independently of policy output:
+- FALL: G1 pelvis or Go1 trunk contacts the floor continuously for 0.02 s.
+- POSTURE_VIOLATION: tilt >60 degrees or root height below 0.45 m (G1) / 0.12 m (Go1)
+  continuously for 0.1 s.
+- Recovery after a pulse: tilt <=10 degrees, height >=0.65 m (G1) / 0.22 m (Go1),
+  world vx within 0.25 m/s of command and |vy|<=0.25 m/s for 0.4 s.
+- At the full horizon, require at least 2 m of scored world-X progress after warmup.
 
-## Evidence and reproduction
+Fall ends the episode. Persistent posture violations remain recorded even if posture
+later improves. Final precedence is fall, posture violation, distance completion,
+then task timeout. Infrastructure/invalid simulation outcomes are separate.
+A root-contact detector is deliberately narrower than every colloquial meaning of
+falling; other unstable postures are not silently promoted to FALL.
 
-The immutable run input is scenario.json. Manifest metadata includes model-tree,
-checkpoint and configuration hashes, upstream revision, package versions, initial
-qpos/qvel and recurrent-reset semantics. Evaluation source hashes identify the worker
-and monitor implementation.
+Floor contacts are identified by actual MuJoCo geometry/body IDs. Ordinary foot
+contacts are expected. G1's fixed head/arms share the pelvis body. Go1's calf bodies
+contain foot geometries; the fall check concerns the trunk, not ordinary leg contact.
 
-trace.jsonl contains position, velocity, joint state, policy output, applied force and
-floor-contact bodies. events.jsonl records injection, task start, posture/fall detection,
-recovery and termination. result.json is written atomically by the worker;
-supervisor.json records exit status, wall deadline and infrastructure classification.
-A crash may leave only partial traces and a parent receipt; that is not a robot fall.
+## Evidence and provenance
 
-No database, broker, ROS graph or policy training is required. Failed case
-reproduction reruns the recorded scenario from the initial state. Full checkpoints of
-arbitrary mid-episode LSTM state are not implemented.
+Each episode stores a resolved scenario, software/model/policy/source fingerprints,
+initial state, detector limits, 50 Hz state/action/contact/force trace, physics-step
+events, atomic task result and supervisor receipt. Failed infrastructure attempts
+retain partial artifacts instead of inventing task outcomes.
 
-## Statistical scope and regression comparison
+Numerical warnings invalidate an episode; non-finite state or execution exceptions
+are excluded from robot-outcome statistics. Cached MuJoCo kinematics/contact state
+can lag qpos by one physics step. Detection and sampled trace resolution are recorded
+rather than presented as continuous physical measurement.
 
-Eight seeded direction/onset schedules are matched across force levels. Initial
-reference repeats are identical and do not justify independent reliability intervals.
-Pushed-condition Wilson intervals are conditional on the stated sampling distribution,
-fixed model, policy, floor and task. The 175 N tier is explicitly exploratory, selected
-after the initial 100/250 N bracket; it is not a held-out benchmark.
+Source fingerprints changed during the package rename to robot_eval. Original G1
+evidence remains archived under its original fingerprint. A fresh G1 baseline
+verified unchanged nominal progress after the refactor.
 
-scripts/compare.py refuses differing scenario inputs/IDs and compares categorical
-outcomes for matched runs. It flags new task failures or infrastructure errors.
-It is checked against actual reproduced failures. No improved controller or new policy
-version is claimed. Formal statistical software-version regression testing is outside
-this small prototype.
+## Reproduction and comparison
 
-## Replay provenance
+The runner can execute a saved scenario unchanged in a new directory. Fresh reset,
+fixed policy assets and recorded versions support reproduction; seeding alone is not
+a guarantee of bitwise determinism. Selected local G1/Go1 failure repeats did match.
 
-Videos render saved physical qpos/qvel records through MuJoCo. They do not rerun the
-policy or synthesize a new trajectory. Source states are sampled at 50 Hz and played
-at 25 fps (0.5x). Explicit reading holds freeze a source frame and its telemetry.
-Force arrows are explanatory geometry added only during rendering.
+The comparator requires identical scenario IDs and resolved configurations. It flags
+new task/infrastructure failures and reports changed fingerprints. It does not claim
+statistical significance from one matched run or proof of a policy improvement.
 
-CPU OSMesa rendering was verified but slow; EGL rendering was used for the exported
-clips. Simulator execution and policy inference remain CPU-only. GUI startup is not
-required or claimed as verified.
+Reports group by both robot and condition, so equal condition names are never pooled.
+Within-robot force tiers use matched seeded schedules. Wilson intervals describe the
+conditional pushed-trial proportions; identical nominal resets receive no interval.
+The exploratory choice of severity ranges is disclosed. Cross-robot force sweeps are
+not a fair robustness ranking.
+
+## Demo provenance
+
+Replay exports load recorded qpos/qvel into the matching model and render them
+without running inference or advancing a new episode. States recorded at 50 Hz play
+at 25 fps, plus labeled editorial holds. Checkpoint holds select the first saved
+sample at or after the event, so displayed force/state has reached the event.
+A red force arrow is an explanatory overlay, not another physical interaction.
+Video manifests map source trials and hold checkpoints; FFmpeg fully decodes exports.

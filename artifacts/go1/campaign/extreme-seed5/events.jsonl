@@ -1,0 +1,6 @@
+{"event": "RUN_STARTED", "time_s": 0, "physics_dt_s": 0.004, "policy_dt_s": 0.02}
+{"event": "EVALUATION_STARTED", "time_s": 2.0040000000000013, "position": [0.9176558993163006, 0.033480905734419614, 0.29661012243742335]}
+{"event": "PUSH_STARTED", "time_s": 3.5920000000000027, "force_world_n": [0.0, 1000.0, 0.0], "body": "trunk", "point": "body center of mass"}
+{"event": "PUSH_ENDED", "time_s": 3.792000000000003, "impulse_ns": [0.0, 200.0, 0.0]}
+{"event": "POSTURE_VIOLATION", "time_s": 3.824000000000003, "position": [1.7832496399204139, 2.0211771627887662, 0.1858142776610285], "tilt_deg": 118.99255603261881, "floor_contact_bodies": []}
+{"event": "RUN_FINISHED", "time_s": 9.999999999999343, "outcome": "POSTURE_VIOLATION"}

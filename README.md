@@ -1,216 +1,198 @@
-# Humanoid Failure Evaluation
+# Robotic Failure Evaluation
 
-[![G1 walking, push recovery, fall detection and task failure — animated recorded simulation](artifacts/demo/walkthrough.gif)](artifacts/demo/00-complete-walkthrough.mp4)
+[![G1 humanoid and Go1 quadruped: recorded push response and failure evaluation](artifacts/demo/two-robot-preview.gif)](artifacts/demo/00-two-robot-walkthrough.mp4)
 
-**[Watch the full MP4 walkthrough](artifacts/demo/00-complete-walkthrough.mp4)** · Animated preview of selected recorded results; full walkthrough includes 0.5× playback and explanation pauses.
+**[Watch the full two-robot walkthrough](artifacts/demo/00-two-robot-walkthrough.mp4)** · Animated excerpts above; full clips use 0.5× recorded-state playback and labeled reading pauses.
 
-**Test how a pretrained G1 walking policy responds to controlled pushes in MuJoCo.**
+Evaluate **two existing walking policies** in MuJoCo: a Unitree G1 humanoid and a Unitree Go1 quadruped. Define scenarios, apply controlled disturbances, monitor simulator ground truth, reconstruct failures, and compare matched runs.
 
-One humanoid, one walking task, one disturbance family, and a small experiment pipeline.
-The work is in orchestration, ground-truth monitoring, outcome classification,
-reproduction and evaluation. The robot model and walking policy come from Unitree;
-no policy is trained here.
+The current scope is deliberately small: **two robots, one forward-walking task, one external-push disturbance family**. Both use the same runner, logging format, outcome reporting and comparison tools. Robot adapters provide the different policy interfaces, models and monitoring thresholds. No policy training, new motion controller or physical hardware is involved.
 
-## Watch the experiment
+## What the demos actually show
 
-| Chapter | What happens | What it demonstrates |
+| Robot | Clip | What happens and how it is evaluated |
 | --- | --- | --- |
-| [Walking baseline](artifacts/demo/01-baseline.mp4) | No push; the robot completes the forward-distance task | Establish normal behavior first |
-| [Balance recovery](artifacts/demo/02-balance-recovery.mp4) | A 100 N sideways pulse disturbs the robot; it regains its balance band and completes | A disturbance is not automatically a failure |
-| [Fall](artifacts/demo/03-fall.mp4) | A 250 N pulse leads to sustained upper-body ground contact | Failure detection uses physical state/contact evidence |
-| [Upright but unsuccessful](artifacts/demo/04-upright-task-failure.mp4) | A 175 N backward pulse leaves the robot upright, but it advances only 1.819 m of the required 2 m | No fall does not imply task success |
+| G1 | [Normal walking](artifacts/demo/01-baseline.mp4) | The robot advances without a disturbance and completes the distance objective. |
+| G1 | [Balance recovery](artifacts/demo/02-balance-recovery.mp4) | A 100 N sideways pulse disturbs walking. Posture and velocity return to the required band for 0.4 s; the robot then completes the task. |
+| G1 | [Confirmed fall](artifacts/demo/03-fall.mp4) | A 250 N pulse leads to sustained pelvis/rigid-upper-body floor contact. The evaluator detects the contact and ends the episode. |
+| G1 | [Upright task failure](artifacts/demo/04-upright-task-failure.mp4) | A 175 N backward pulse leaves the robot upright, but it advances only 1.819 m of the required 2 m: TASK_TIMEOUT. |
+| Go1 | [Normal walking](artifacts/go1/demo/01-baseline.mp4) | Its pretrained policy drives twelve leg joints and completes the same distance objective. Normal foot contacts are accepted. |
+| Go1 | [Balance recovery](artifacts/go1/demo/02-balance-recovery.mp4) | A 250 N lateral pulse is tolerated. The monitor independently checks body posture, velocity, and subsequent task completion. |
+| Go1 | [Confirmed fall](artifacts/go1/demo/03-fall.mp4) | A matched 500 N pulse leads to sustained trunk-floor contact: FALL. |
+| Go1 | [Posture violation](artifacts/go1/demo/04-posture-violation.mp4) | A 1000 N pulse violates the posture constraint. Sustained trunk-floor contact is not confirmed, so it is classified separately from FALL. |
 
-Clips render **actual saved physics states at 0.5× speed with labeled reading pauses**.
-Force arrows are explanatory graphics. Frozen reading frames are not extra robot stops.
-The footer shows the original simulation clock and measurements. Replays do not claim
-additional policy rollouts. All five exports were fully decoded and representative
-frames were visually checked.
+The videos replay **saved physics states from real policy rollouts**, rather than running scripted robot animations. The original simulation clock, applied force, body tilt, height and progress remain visible. Red force arrows are explanatory graphics. Reading pauses freeze the replay; they are not extra robot stops or additional rollouts.
 
-### The exact task and disturbance
+The G1 clips retain their original experiment title. The broader project now includes Go1 as well.
 
-- Command forward walking at 0.5 m/s.
-- Run for 10 simulated seconds, including 2 seconds of warmup.
-- Require at least **2 m of world +X progress** during the remaining 8 seconds.
-- Require no confirmed fall or persistent posture violation.
-- Optionally apply one 0.2 s external force pulse to the rigid pelvis/upper-body body.
-- Record the applied interval, impulse, physical response and outcome separately.
+## The task, disturbance and detectors
 
-The model has **12 controlled leg joints; its arms are fixed**. This is an existing
-recurrent walking policy acting through simulated joint efforts, not scripted pose
-animation. There is no lateral corridor constraint; lateral displacement is recorded.
+Each episode commands forward walking at 0.5 m/s for 10 simulated seconds. The first 2 s are warmup; the robot must advance at least **2 m in world +X** during the remaining 8 s without a confirmed fall or persistent posture violation.
 
-### What is a failure or recovery?
+There is no lateral corridor constraint. Lateral displacement is recorded, so successful completion does not imply precise path tracking.
 
-| Outcome | Evidence |
+One optional **0.2 s world-frame force pulse** acts at the root body's center of mass. Its actual onset, end and integrated impulse are logged. This is an external physical disturbance, not simulated packet loss or a hardware fault.
+
+| Check | G1 humanoid | Go1 quadruped |
+| --- | --- | --- |
+| Controlled joints | 12 leg joints; upper body/arms fixed | 12 leg joints |
+| Existing policy | Unitree RL Gym recurrent TorchScript policy | MuJoCo Playground feedforward ONNX policy |
+| Physics / policy / trace period | 2 ms / 20 ms / 20 ms | 4 ms / 20 ms / 20 ms |
+| Confirmed FALL | Pelvis/rigid-upper-body floor contact for 0.02 s | Trunk-floor contact for 0.02 s |
+| POSTURE_VIOLATION | Tilt >60° or root height <0.45 m for 0.1 s | Tilt >60° or root height <0.12 m for 0.1 s |
+| Balance recovery | Tilt ≤10°, root height ≥0.65 m | Tilt ≤10°, root height ≥0.22 m |
+
+Recovery additionally requires |world vx − commanded vx| ≤0.25 m/s and |world vy| ≤0.25 m/s continuously for 0.4 s after the pulse ends. The evaluator **observes recovery by the existing policy**. It does not add a recovery controller or implement getting up.
+
+G1's fixed arms/head share the pelvis rigid body. Go1 uses the upstream **full-collision** flat-floor model, rather than the deployment example's feet-only terrain model, so trunk-floor contact is observable. These are operational model-specific detectors, not universal definitions of every possible robotic fall.
+
+| Final outcome | Required evidence |
 | --- | --- |
-| COMPLETED | Full horizon, >=2 m scored progress, no confirmed fall or persistent posture violation |
-| FALL | Ground contact on the model's pelvis/rigid-upper-body body persists for 0.02 s |
-| POSTURE_VIOLATION | Tilt >60 degrees or root height <0.45 m persists for 0.1 s, without a confirmed fall |
-| TASK_TIMEOUT | Valid simulation reaches its task horizon without the required progress |
-| INFRASTRUCTURE_ERROR / TIMEOUT | Setup, worker, receipt or wall-clock failure; excluded from robot-failure counts |
+| COMPLETED | Full horizon, sufficient scored progress, no confirmed fall or persistent posture violation |
+| FALL | Sustained root-body floor contact; terminate the episode |
+| POSTURE_VIOLATION | Persistent tilt/height constraint violation without confirmed FALL |
+| TASK_TIMEOUT | Valid simulation reaches the task horizon without sufficient progress |
+| INFRASTRUCTURE_ERROR / TIMEOUT | Setup, worker, receipt or parent wall-clock failure; excluded from robot-failure counts |
 | INVALID_SIMULATION | Numerical state/warnings invalidate the episode |
 
-Foot-floor contact is normal. The model's head and fixed arms share the pelvis body;
-this operational contact criterion is specific to the reduced model.
+Priority is FALL, then POSTURE_VIOLATION, then distance-based completion/timeout. A past posture violation remains a task failure even if the policy later changes posture. An injected push is not automatically a failure.
 
-Balance recovery is a return to predefined posture/velocity bands for 0.4 s after the
-pulse ends. The evaluator **observes recovery by the existing policy**, rather than
-adding a recovery controller. It does not implement getting up. The fourth clip shows
-that balance recovery and task completion are separate outcomes.
+## Measured results
 
-## Measured evaluation
+**72 evaluation episodes: 40 G1 and 32 Go1. Zero infrastructure failures in these batches.** Pilots, reset checks, infrastructure-injection checks and reproduction runs are stored separately and are not added to this denominator.
 
-Forty episodes covered eight matched direction/onset schedules across five conditions.
-The initial 32 used reference, 25 N, 100 N and 250 N conditions. An exploratory midpoint
-follow-up added eight 175 N cases after the initial 100/250 N bracket was observed.
+| Robot | Pulse force for 0.2 s | Completed | Falls | Posture violations | Task timeouts |
+| --- | --- | --- | --- | --- | --- |
+| G1 | None | 8 | 0 | 0 | 0 |
+| G1 | 25 N | 8 | 0 | 0 | 0 |
+| G1 | 100 N | 8 | 0 | 0 | 0 |
+| G1 | 175 N | 4 | 2 | 0 | 2 |
+| G1 | 250 N | 0 | 8 | 0 | 0 |
+| Go1 | None | 8 | 0 | 0 | 0 |
+| Go1 | 250 N | 7 | 1 | 0 | 0 |
+| Go1 | 500 N | 0 | 7 | 1 | 0 |
+| Go1 | 1000 N | 0 | 4 | 4 | 0 |
 
-| Force for 0.2 s | Completed | Falls | Task timeouts |
-| --- | --- | --- | --- |
-| None | 8/8 | 0/8 | 0/8 |
-| 25 N | 8/8 | 0/8 | 0/8 |
-| 100 N | 8/8 | 0/8 | 0/8 |
-| 175 N | 4/8 | 2/8 | 2/8 |
-| 250 N | 0/8 | 8/8 | 0/8 |
+Each robot uses eight matched seeded direction/onset schedules per pushed condition. Directions are world ±X/±Y; onset is sampled in [3.0, 3.8] s and quantized to the robot's physics step.
 
-**Zero infrastructure failures occurred in these 40 evaluation episodes.** Separate
-checks killed an initialized worker and enforced a parent deadline.
+**These tables do not rank the robots.** Masses, policies, collision models, physics steps and chosen force ranges differ. Go1 having fewer confirmed falls at 1000 N than 500 N does not indicate improvement: every episode in both conditions failed, with different observed failure categories.
 
-These are conditional, exploratory results for one model, policy, floor and disturbance
-distribution. Eight zero-fall trials still have an approximate **32% upper 95% Wilson
-limit**. They do not establish a fall-free robot. Reference repeats are identical
-nominal resets, not independent reliability samples. Force tiers use matched schedules.
+This is an exploratory campaign. G1's 175 N follow-up was chosen after initial bracketing; Go1's force tiers were chosen after its pilots. Nominal references are identical reset repetitions, not independent reliability samples. Zero falls among eight trials still leaves an approximately **32% upper 95% Wilson limit** under the stated sampling interpretation.
 
-One selected fall was reproduced three times in fresh processes at the same simulated
-time. Recorded joint traces matched exactly locally; bitwise cross-machine determinism
-is not promised. **16 tests passed**, covering actual contacts, recurrent reset,
-process failures, comparison and uncertainty calculations.
+- [Combined evaluation report and uncertainty](artifacts/two-robot/evaluation/report.md)
+- [Machine-readable results](artifacts/two-robot/evaluation/summary.json)
+- [Original G1 report](artifacts/evaluation/report.md)
+- [Go1 campaign receipts](artifacts/go1/campaign/batch.json)
 
-- [Evaluation report and uncertainty](artifacts/evaluation/report.md)
-- [Machine-readable summary](artifacts/evaluation/summary.json)
-- [Initial batch](artifacts/campaign/batch.json) and [midpoint follow-up](artifacts/boundary/batch.json)
-- [Failure reproduction](artifacts/reproductions/summary.json)
-- [Test output](artifacts/tests.log) and [verification record](docs/verification.md)
+## Verification and failure reconstruction
+
+**22 tests pass**, including real foot/body contacts, policy resets, process failures, robot-specific manifests, matched comparisons, uncertainty calculations and separate aggregation for both robots.
+
+A selected G1 fall was reproduced three times; a selected Go1 fall was reproduced twice in fresh processes. Their recorded joint traces matched exactly locally. That is evidence about this environment, not a cross-machine determinism guarantee.
+
+The Go1 worker was also deliberately killed after execution began, and a separate run exceeded its parent's wall-clock deadline. These were correctly classified as infrastructure failures, not robot falls. A current-code G1 baseline check preserved the original nominal progress after the adapter refactor.
+
+- [Current test output](artifacts/two-robot-tests.log)
+- [Go1 reproduction evidence](artifacts/go1/reproductions/summary.json)
+- [Go1 infrastructure checks](artifacts/go1/infrastructure/summary.json)
+- [G1 compatibility check](artifacts/two-robot/g1-compatibility-check.json)
+- [Two-robot verification record](docs/two-robot-verification.md)
 
 ## Architecture and reuse
 
 ~~~mermaid
 flowchart TD
-    A[Scenario JSON] --> B[Parent runner with wall timeout]
-    B --> C[Fresh G1 worker]
-    C --> D[Existing Unitree walking policy]
-    D --> E[MuJoCo robot physics]
-    F[Scheduled external push] --> E
-    E --> G[Ground-truth monitor]
-    G --> H[Outcome, trace, events and manifest]
-    H --> I[Comparison and report]
-    H --> J[Annotated state replay]
+    A[Scenario JSON: g1 or go1] --> B[Shared parent runner]
+    B --> C[Fresh episode process]
+    C --> D[G1 TorchScript adapter]
+    C --> E[Go1 ONNX adapter]
+    D --> F[Existing MuJoCo model and actuators]
+    E --> F
+    G[Scheduled external force] --> F
+    F --> H[Ground-truth monitor with robot-specific limits]
+    H --> I[Scenario, manifest, trace, events and result]
+    I --> J[Shared report and matched-run comparison]
+    I --> K[Annotated recorded-state replay]
 ~~~
 
-| Reused | Implemented here |
+| Reused | Project implementation |
 | --- | --- |
-| Unitree model, meshes, pretrained LSTM and configuration | Scenario definitions and isolated episode execution |
-| Upstream PD and gravity-orientation math | Timed force injection and impulse records |
-| MuJoCo physics, contacts and rendering | Outcome/recovery monitoring and process-failure handling |
-| NumPy, PyTorch, pytest | Evidence collection, comparison, analysis and replay |
+| MuJoCo physics, contacts, sensors, actuator dynamics and rendering | Fresh-process orchestration, scenario validation, wall deadlines and cleanup |
+| Unitree G1 model, trained policy, PD/observation math | Headless G1 adapter; float32 observations and recurrent reset |
+| MuJoCo Playground Go1 model/policy/deployment convention; Menagerie meshes | Headless Go1 adapter; direct command input replacing gamepad, local ONNX session |
+| pytest, NumPy, FFmpeg | Robot-specific outcome monitoring, force scheduling, compact evidence, reporting and demo annotations |
 
-The upstream deployment is pinned at `276801e46c5d433564f24658bac64f254b7d2d4b`.
-Vendor files are not patched. The adapter removes GUI pacing, uses simulation-step
-termination, and supplies float32 observations because the checkpoint rejects the
-original example's float64 buffer in the tested environment.
+The adapters share state and provenance helpers; no plugin framework, database or distributed scheduler is introduced. The source package is `robot_eval`. Old G1 artifacts remain immutable with their original source fingerprints.
 
-Each episode resets **physics, LSTM memory, previous action and phase**. A random seed
-alone would not reset the recurrent policy.
+## Setup
 
-## Setup and run
-
-Validated with Python 3.12.15, MuJoCo 3.5.0, PyTorch 2.10.0, NumPy 2.2.6,
-PyYAML 6.0.3 and pytest 9.1.1. Physics and policy inference are CPU-only.
-
-On the inspected machine, reuse the existing environment without modifying it:
+Validated with Python 3.12.15, MuJoCo 3.5.0, PyTorch 2.10.0, NumPy 2.2.6 and ONNX Runtime 1.20.1. Physics and policy inference run on CPU. Video export additionally needs FFmpeg and an EGL-capable graphics setup; tests and headless experiments do not need a simulator window.
 
 ~~~bash
-conda activate lerobot
-python scripts/bootstrap.py --verify
-~~~
-
-For a fresh setup, provide Python 3.12 in an isolated environment, then:
-
-~~~bash
+git clone https://github.com/hiteshhedwig/robotic-failure-evaluation.git
+cd robotic-failure-evaluation
+# Use an isolated Python 3.12 environment.
 python -m pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu
 python -m pip install -r requirements.txt
 python scripts/bootstrap.py
+python scripts/bootstrap.py --verify
 ~~~
 
-Bootstrap fetches only the pinned model/deployment subset, checks the policy checksum,
-and refuses to overwrite a mismatched or modified checkout. The validated checkout
-occupies about 82 MB. Fresh installation is a recipe, not a claim of portability to
-every OS or package build.
+Bootstrap fetches pinned sparse upstream checkouts, verifies policy hashes, and refuses modified or mismatched dependencies. ONNX Runtime is installed under `.runtime/python` without changing the active environment's packages. Training frameworks, Isaac Gym, JAX and physical robot SDKs are not required.
 
-Run one protected episode into a **new** directory:
+The inspected machine reuses its existing `lerobot` environment. Fresh setup instructions are a reproducible recipe, not a claim that every operating system/package combination was tested.
+
+## Run and inspect
+
+One G1 or Go1 episode, each into a **new** output directory:
 
 ~~~bash
-python scripts/run_experiment.py \
-  --scenario configs/push-y-100.json --output artifacts/my-trial
+python scripts/run_experiment.py --scenario configs/push-y-100.json --output artifacts/my-g1
+python scripts/run_experiment.py --scenario configs/go1/push-y-120.json --output artifacts/my-go1
 ~~~
 
-Run the matched experiments and report:
+Run a Go1 batch and produce a report with the archived G1 campaigns:
 
 ~~~bash
-python scripts/run_experiment.py \
-  --suite configs/campaign.json --output artifacts/my-campaign --workers 2
-python scripts/run_experiment.py \
-  --suite configs/boundary.json --output artifacts/my-boundary --workers 2
-python scripts/report.py artifacts/my-campaign artifacts/my-boundary \
-  --output artifacts/my-evaluation
+python scripts/run_experiment.py --suite configs/go1/campaign.json --output artifacts/my-go1-campaign --workers 2
+python scripts/report.py artifacts/campaign artifacts/boundary artifacts/my-go1-campaign --output artifacts/my-report
 ~~~
 
-Runner exit zero means valid evidence was collected, not that every robot task
-succeeded. A robot FALL is distinct from a crashed experiment process.
-
-Reproduce a failure and compare the matched execution:
+Rerun a recorded failure and compare matched receipts:
 
 ~~~bash
-python scripts/run_experiment.py \
-  --scenario artifacts/campaign/strong-seed0/scenario.json \
-  --output artifacts/my-reproduced-fall
-python scripts/compare.py \
-  --reference artifacts/campaign/strong-seed0 \
-  --candidate artifacts/my-reproduced-fall \
-  --output artifacts/my-comparison.json
-~~~
-
-The comparator rejects unmatched inputs and can flag new task failures or infrastructure
-errors in a future version. Current verification compares unchanged reproduced runs;
-no controller improvement or statistical software-version regression is claimed.
-
-~~~bash
+python scripts/run_experiment.py --scenario artifacts/go1/campaign/strong-seed0/scenario.json --output artifacts/my-go1-reproduction
+python scripts/compare.py --reference artifacts/go1/campaign/strong-seed0 --candidate artifacts/my-go1-reproduction --output artifacts/my-go1-comparison.json
 python -m pytest tests -q
-python scripts/render_demo.py
 ~~~
 
-Rendering rebuilds videos from recorded states, without a new policy rollout. It needs
-ffmpeg/ffprobe and an OpenGL backend. EGL was used; CPU OSMesa works but is slower.
-The experiment runner requires no GUI, ROS, training stack, physical robot or paid service.
+The supervisor CLI returns success when it records a valid robot outcome, including FALL. Inspect the outcome in `supervisor.json`; an exit code of zero is not proof of task completion. Infrastructure failures return a nonzero supervisor exit code.
 
-## Evidence and scope
+Every trial saves:
+- `scenario.json`: robot, seed, command, objective and pulse.
+- `manifest.json`: versions, upstream revisions, model/policy/source hashes, initial state, timing and detector configuration.
+- `trace.jsonl`: 50 Hz sampled state, actual actuator efforts, policy actions, contacts and applied forces.
+- `events.jsonl`: physics-step detection timestamps and injection intervals.
+- `result.json` and `supervisor.json`: task outcome and process-level receipt.
 
-Valid runs contain `scenario.json`, `manifest.json`, `trace.jsonl`, `events.jsonl`,
-`result.json` and `supervisor.json`. Together these record realized inputs, software
-and model hashes, initial conditions, policy output, physical state, contact events,
-timing and process status. A crash can leave a partial trace and no worker result;
-the parent records that absence as infrastructure failure.
+For Go1, position targets are separate from actual actuator efforts. G1's effort commands drive torque actuators. Physics-step monitoring is finer than the sampled trace; cached simulator kinematics may lag the integrated state by one physics step.
 
-One end-to-end milestone was built through four verified gates: baseline, measurable
-disturbance outcomes, isolated runs/reproduction, and evaluation/demo. Read the
-[architecture and definitions](docs/architecture.md) and [baseline notes](docs/gate1.md).
+## Rebuild the demos
 
-This prototype does not train a controller, diagnose a policy's internal failure
-mechanism, provide a universal fall detector, validate physical safety, or establish
-a large-scale benchmark. Eight schedules and an exploratory refinement provide limited
-evidence. Simulation fidelity and fixed upper-body geometry limit hardware transfer.
+~~~bash
+python scripts/render_go1_demo.py
+python scripts/assemble_demo.py
+python scripts/make_readme_gif.py
+~~~
 
-## Upstream credit
+The current G1 videos and their export sources are archived under `artifacts/demo`. Go1 replay generation loads its pinned model and saved states without executing a new policy rollout. Rebuilding the full G1 render is available through `scripts/render_demo.py`.
 
-Model, policy and deployment math: [Unitree RL Gym](https://github.com/unitreerobotics/unitree_rl_gym).
-Physics/rendering: [MuJoCo](https://github.com/google-deepmind/mujoco).
-[Upstream license and attribution](THIRD_PARTY_NOTICES.md) are retained.
+## Limits and next scope
+
+This is a compact **two-robot evaluation platform**, not a general robotics benchmark. The current scenarios cover flat-floor walking and one external disturbance family. There are no perception faults, navigation tasks, manipulation tasks, learned diagnosis, get-up controller or hardware validation.
+
+Contact/posture detectors establish measurable outcomes; they do not establish why a learned policy failed internally. A robot can violate posture without satisfying this project's root-contact fall definition. Both are retained as task failures.
+
+Future robot support should reuse the runner and evidence format while supplying a validated model, existing controller/policy, and task-specific monitors. The current implementation remains limited to G1 and Go1.
+
+[Architecture](docs/architecture.md) · [Two-robot verification](docs/two-robot-verification.md) · [Upstream attribution](THIRD_PARTY_NOTICES.md)

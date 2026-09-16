@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "scope": "Two fresh-process Go1 repeats; identical locally, not a cross-machine determinism guarantee",
+  "checks": [
+    {
+      "repeat": 0,
+      "status": "FALL",
+      "fall_time_s": 5.20799999999987,
+      "trace_samples": 262,
+      "max_qpos_difference": 0.0
+    },
+    {
+      "repeat": 1,
+      "status": "FALL",
+      "fall_time_s": 5.20799999999987,
+      "trace_samples": 262,
+      "max_qpos_difference": 0.0
+    }
+  ]
+}

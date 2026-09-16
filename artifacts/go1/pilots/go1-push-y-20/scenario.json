@@ -1,0 +1,22 @@
+{
+  "id": "go1-push-y-20",
+  "robot": "go1",
+  "seed": 0,
+  "duration_s": 10,
+  "warmup_s": 2,
+  "command": [
+    0.5,
+    0,
+    0
+  ],
+  "minimum_progress_m": 2,
+  "push": {
+    "force_n": [
+      0,
+      20,
+      0
+    ],
+    "start_s": 3,
+    "duration_s": 0.2
+  }
+}

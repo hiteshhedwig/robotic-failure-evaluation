@@ -1,0 +1,154 @@
+{
+  "runs": 3,
+  "robot_trials": 3,
+  "infrastructure_failures": 0,
+  "results": [
+    {
+      "status": "COMPLETED",
+      "scenario_id": "go1-push-y-250",
+      "seed": 0,
+      "robot": "go1",
+      "progress_m": 2.975446138265169,
+      "min_root_height_m": 0.19686592622131463,
+      "lateral_displacement_m": 3.3722193351297407,
+      "min_pelvis_height_m": 0.19686592622131463,
+      "max_tilt_deg": 9.920255738708862,
+      "peak_tilt_after_push_deg": 9.920255738708862,
+      "fall_time_s": null,
+      "posture_violation_time_s": null,
+      "recovery_confirmed_time_s": null,
+      "recovery_latency_s": null,
+      "injected_push": {
+        "force_n": [
+          0,
+          250,
+          0
+        ],
+        "start_s": 3,
+        "duration_s": 0.2
+      },
+      "actual_impulse_ns": [
+        0.0,
+        50.0,
+        0.0
+      ],
+      "final_position": [
+        3.8931020375814698,
+        3.40570024086416,
+        0.2959022221117854
+      ],
+      "simulated_seconds": 9.999999999999343,
+      "trace_samples": 501,
+      "physics_steps": 2500,
+      "initial_evaluation_position": [
+        0.9176558993163006,
+        0.033480905734419614,
+        0.29661012243742335
+      ],
+      "wall_seconds": 1.082013282000844,
+      "worker_returncode": 0,
+      "worker_pid": 75390,
+      "supervisor_wall_seconds": 2.496389479001664,
+      "wall_timeout_s": 30,
+      "crash_injected": false
+    },
+    {
+      "status": "POSTURE_VIOLATION",
+      "scenario_id": "go1-push-y-500",
+      "seed": 0,
+      "robot": "go1",
+      "progress_m": 0.45927272893063686,
+      "min_root_height_m": 0.1358442719802102,
+      "lateral_displacement_m": 4.008325754397942,
+      "min_pelvis_height_m": 0.1358442719802102,
+      "max_tilt_deg": 112.48954666061559,
+      "peak_tilt_after_push_deg": 112.48954666061559,
+      "fall_time_s": null,
+      "posture_violation_time_s": 3.4000000000000026,
+      "recovery_confirmed_time_s": null,
+      "recovery_latency_s": null,
+      "injected_push": {
+        "force_n": [
+          0,
+          500,
+          0
+        ],
+        "start_s": 3,
+        "duration_s": 0.2
+      },
+      "actual_impulse_ns": [
+        0.0,
+        100.0,
+        0.0
+      ],
+      "final_position": [
+        1.3769286282469375,
+        4.0418066601323615,
+        0.14152707909098658
+      ],
+      "simulated_seconds": 9.999999999999343,
+      "trace_samples": 501,
+      "physics_steps": 2500,
+      "initial_evaluation_position": [
+        0.9176558993163006,
+        0.033480905734419614,
+        0.29661012243742335
+      ],
+      "wall_seconds": 1.0610883789995569,
+      "worker_returncode": 2,
+      "worker_pid": 75391,
+      "supervisor_wall_seconds": 2.496156807999796,
+      "wall_timeout_s": 30,
+      "crash_injected": false
+    },
+    {
+      "status": "FALL",
+      "scenario_id": "go1-push-y-1000",
+      "seed": 0,
+      "robot": "go1",
+      "progress_m": -2.557867504086124,
+      "min_root_height_m": 0.06279423317621333,
+      "lateral_displacement_m": 9.236271723171336,
+      "min_pelvis_height_m": 0.06279423317621333,
+      "max_tilt_deg": 174.87744416126432,
+      "peak_tilt_after_push_deg": 174.87744416126432,
+      "fall_time_s": 4.975999999999895,
+      "posture_violation_time_s": 3.2400000000000024,
+      "recovery_confirmed_time_s": null,
+      "recovery_latency_s": null,
+      "injected_push": {
+        "force_n": [
+          0,
+          1000,
+          0
+        ],
+        "start_s": 3,
+        "duration_s": 0.2
+      },
+      "actual_impulse_ns": [
+        0.0,
+        200.0,
+        0.0
+      ],
+      "final_position": [
+        -1.640211604769823,
+        9.269752628905756,
+        0.06279423317621333
+      ],
+      "simulated_seconds": 4.975999999999895,
+      "trace_samples": 250,
+      "physics_steps": 1244,
+      "initial_evaluation_position": [
+        0.9176558993163006,
+        0.033480905734419614,
+        0.29661012243742335
+      ],
+      "wall_seconds": 0.6902713230010704,
+      "worker_returncode": 2,
+      "worker_pid": 75416,
+      "supervisor_wall_seconds": 2.0770331589992566,
+      "wall_timeout_s": 30,
+      "crash_injected": false
+    }
+  ]
+}

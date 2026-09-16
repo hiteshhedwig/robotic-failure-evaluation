@@ -1,0 +1,12 @@
+{
+  "status": "INFRASTRUCTURE_ERROR",
+  "reason": "Worker exited without an atomic result receipt",
+  "scenario_id": "go1-push-y-0",
+  "seed": 0,
+  "robot": "go1",
+  "worker_returncode": -9,
+  "worker_pid": 76982,
+  "supervisor_wall_seconds": 1.7121452120009053,
+  "wall_timeout_s": 30,
+  "crash_injected": true
+}

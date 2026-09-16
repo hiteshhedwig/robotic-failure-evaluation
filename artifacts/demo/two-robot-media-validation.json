@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "file": "00-two-robot-walkthrough.mp4",
+  "fully_decoded": true,
+  "sources": [
+    "artifacts/demo/00-complete-walkthrough.mp4",
+    "artifacts/go1/demo/00-go1-walkthrough.mp4"
+  ],
+  "programs": [],
+  "streams": [
+    {
+      "width": 1440,
+      "height": 900,
+      "nb_frames": "7778"
+    }
+  ],
+  "format": {
+    "duration": "311.120000",
+    "size": "20764946"
+  }
+}

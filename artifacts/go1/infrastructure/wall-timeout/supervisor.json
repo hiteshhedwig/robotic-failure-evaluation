@@ -1,0 +1,12 @@
+{
+  "status": "INFRASTRUCTURE_TIMEOUT",
+  "reason": "Parent wall-clock deadline",
+  "scenario_id": "go1-push-y-0",
+  "seed": 0,
+  "robot": "go1",
+  "worker_returncode": -15,
+  "worker_pid": 77000,
+  "supervisor_wall_seconds": 0.104790420999052,
+  "wall_timeout_s": 0.1,
+  "crash_injected": false
+}

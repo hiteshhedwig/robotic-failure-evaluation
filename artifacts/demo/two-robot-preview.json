@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "fully_decoded": true,
+  "selected_video_excerpts": [
+    [
+      "artifacts/demo/02-balance-recovery.mp4",
+      10,
+      26
+    ],
+    [
+      "artifacts/demo/03-fall.mp4",
+      16,
+      24
+    ],
+    [
+      "artifacts/go1/demo/02-balance-recovery.mp4",
+      11,
+      28
+    ],
+    [
+      "artifacts/go1/demo/03-fall.mp4",
+      18,
+      29
+    ]
+  ],
+  "note": "Selected saved-state replay excerpts; no extra robot rollout. Reading holds and 0.5x playback retained."
+}

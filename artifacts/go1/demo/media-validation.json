@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "file": "00-go1-walkthrough.mp4",
+      "fully_decoded": true,
+      "programs": [],
+      "streams": [
+        {
+          "width": 1440,
+          "height": 900,
+          "nb_frames": "3865"
+        }
+      ],
+      "format": {
+        "duration": "154.600000",
+        "size": "10778195"
+      }
+    },
+    {
+      "file": "01-baseline.mp4",
+      "fully_decoded": true,
+      "programs": [],
+      "streams": [
+        {
+          "width": 1440,
+          "height": 900,
+          "nb_frames": "901"
+        }
+      ],
+      "format": {
+        "duration": "36.040000",
+        "size": "2949131"
+      }
+    },
+    {
+      "file": "02-balance-recovery.mp4",
+      "fully_decoded": true,
+      "programs": [],
+      "streams": [
+        {
+          "width": 1440,
+          "height": 900,
+          "nb_frames": "1151"
+        }
+      ],
+      "format": {
+        "duration": "46.040000",
+        "size": "3243357"
+      }
+    },
+    {
+      "file": "03-fall.mp4",
+      "fully_decoded": true,
+      "programs": [],
+      "streams": [
+        {
+          "width": 1440,
+          "height": 900,
+          "nb_frames": "787"
+        }
+      ],
+      "format": {
+        "duration": "31.480000",
+        "size": "2102984"
+      }
+    },
+    {
+      "file": "04-posture-violation.mp4",
+      "fully_decoded": true,
+      "programs": [],
+      "streams": [
+        {
+          "width": 1440,
+          "height": 900,
+          "nb_frames": "1026"
+        }
+      ],
+      "format": {
+        "duration": "41.040000",
+        "size": "2484555"
+      }
+    }
+  ]
+}

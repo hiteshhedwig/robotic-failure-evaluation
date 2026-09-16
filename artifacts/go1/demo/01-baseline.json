@@ -1,0 +1,23 @@
+{
+  "source_trial": "artifacts/go1/campaign/reference-seed0",
+  "source_outcome": "COMPLETED",
+  "duration_seconds": 36.04,
+  "note": "Recorded physics-state replay at 0.5x with labeled editorial holds. Force arrows are explanatory graphics.",
+  "checkpoints": [
+    {
+      "source_time_s": 0,
+      "hold_s": 5,
+      "heading": "The experiment"
+    },
+    {
+      "source_time_s": 2,
+      "hold_s": 4,
+      "heading": "Start scoring the task"
+    },
+    {
+      "source_time_s": 9.999999999999343,
+      "hold_s": 7,
+      "heading": "Outcome: COMPLETED"
+    }
+  ]
+}
