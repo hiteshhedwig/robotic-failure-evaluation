@@ -1,0 +1,9 @@
+{
+  "playground_repository": "https://github.com/google-deepmind/mujoco_playground",
+  "playground_revision": "56420458c8d81acd6942779d9dab327382117175",
+  "menagerie_repository": "https://github.com/google-deepmind/mujoco_menagerie",
+  "menagerie_revision": "370c43965323c0944b433b202aac5058b5f907a9",
+  "policy_sha256": "386cde6a1eac679e2f2a313ade2b395d9f26905b151ee3b019c2c4163d49b6f2",
+  "onnxruntime": "1.20.1",
+  "scene": "scene_mjx_fullcollisions_flat_terrain.xml"
+}

@@ -7,7 +7,7 @@ import pytest
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from humanoid_eval.runner import run_one
+from robot_eval.runner import run_one
 
 def scenario():
     return json.loads((ROOT/"configs/baseline.json").read_text())

@@ -5,8 +5,8 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 import mujoco
 import numpy as np
-from humanoid_eval.simulation import G1Simulation
-from humanoid_eval.monitor import WalkingMonitor
+from robot_eval.simulation import G1Simulation
+from robot_eval.monitor import WalkingMonitor
 
 def test_walking_foot_contacts_are_not_falls():
     sim=G1Simulation([0.5,0,0])

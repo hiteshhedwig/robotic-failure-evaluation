@@ -47,3 +47,14 @@ def test_comparator_flags_a_new_task_failure(tmp_path):
     report=compare(tmp_path/"reference",tmp_path/"candidate")
     assert report["regression"]
     assert report["pairs"][0]["new_task_failure"]
+
+def test_reports_keep_same_named_conditions_separate_by_robot():
+    from scripts.report import summarize
+    rows=summarize([ROOT/"artifacts/campaign",ROOT/"artifacts/boundary",
+                    ROOT/"artifacts/go1/campaign"])
+    assert len(rows)==9
+    assert {row["robot"] for row in rows}=={"g1","go1"}
+    assert all(row["valid"]==8 for row in rows)
+    references=[row for row in rows if row["condition"]=="reference"]
+    assert len(references)==2
+    assert all(row["fall_wilson95"] is None for row in references)

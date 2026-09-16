@@ -28,3 +28,30 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ```
+
+## Go1 deployment and assets
+
+The Go1 observation/action adapter follows Google DeepMind's MuJoCo Playground
+play_go1_joystick.py. Copyright 2026 Google LLC, licensed under Apache License 2.0.
+The model, supplied ONNX walking policy, and XML assets are fetched from the
+pinned upstream checkout; their complete license remains in
+.deps/mujoco_playground/LICENSE. Source:
+https://github.com/google-deepmind/mujoco_playground/tree/56420458c8d81acd6942779d9dab327382117175/rss2025/mujoco_playground
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+the adapted Go1 deployment code except in compliance with the License.
+You may obtain a copy at https://www.apache.org/licenses/LICENSE-2.0 .
+Unless required by applicable law or agreed to in writing, software distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND, either express or implied. See the License for the
+specific language governing permissions and limitations under the License.
+
+The Unitree Go1 mesh assets are supplied by MuJoCo Menagerie, pinned at
+370c43965323c0944b433b202aac5058b5f907a9. Their model-specific BSD license is retained
+in .deps/mujoco_menagerie/unitree_go1/LICENSE. Source:
+https://github.com/google-deepmind/mujoco_menagerie/tree/370c43965323c0944b433b202aac5058b5f907a9/unitree_go1
+
+ONNX Runtime is a project-local dependency distributed under its upstream MIT
+license, retained in .runtime/python/onnxruntime/LICENSE.
+
+Copies of the Go1 upstream licenses are also included under docs/licenses/.

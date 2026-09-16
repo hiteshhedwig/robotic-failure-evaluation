@@ -11,12 +11,13 @@ import traceback
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 import numpy as np
-from humanoid_eval.simulation import G1Simulation
-from humanoid_eval.monitor import WalkingMonitor
+from robot_eval.simulation import G1Simulation
+from robot_eval.monitor import WalkingMonitor
 
-ALLOWED={"id","seed","duration_s","warmup_s","command","minimum_progress_m","push"}
+ALLOWED={"id","seed","duration_s","warmup_s","command","minimum_progress_m","push","robot"}
 
 def validate(c):
+    if c.get("robot","g1") not in ("g1","go1"): raise ValueError("Unsupported robot")
     extra=set(c)-ALLOWED
     if extra:
         raise ValueError("Unknown scenario keys: "+str(sorted(extra)))
@@ -61,7 +62,12 @@ def main():
             log.write(json.dumps(events[-1],allow_nan=False)+"\n")
     try:
         validate(config)
-        sim=G1Simulation(config["command"],config["seed"])
+        robot=config.get("robot","g1")
+        if robot=="go1":
+            from robot_eval.go1 import Go1Simulation
+            sim=Go1Simulation(config["command"],config["seed"])
+        else:
+            sim=G1Simulation(config["command"],config["seed"])
         dt=float(sim.model.opt.timestep)
         steps=round(config["duration_s"]/dt)
         warmup=round(config["warmup_s"]/dt)
@@ -69,14 +75,17 @@ def main():
         begin=round(push["start_s"]/dt) if push else None
         finish=begin+round(push["duration_s"]/dt) if push else None
         force=np.array(push["force_n"],dtype=float) if push else np.zeros(3)
-        monitor=WalkingMonitor(config["command"][0])
+        monitor=WalkingMonitor(config["command"][0],robot=robot)
         initial=sim.state()
         meta={**sim.fingerprint(),"python":sys.version,"platform":platform.platform(),
               "initial_qpos":sim.data.qpos.tolist(),"initial_qvel":sim.data.qvel.tolist(),
-              "policy_recurrent_state":"Fresh checkpoint; hidden_state and cell_state start at zero",
-              "detectors":{"fall":"pelvis-floor contact persists 0.02 s",
-                           "posture_violation":"tilt > 60 deg OR pelvis height < 0.45 m for 0.1 s",
-                           "recovery":"tilt <=10 deg, height >=0.65 m, |vx-command| <=0.25 m/s, |vy| <=0.25 m/s for 0.4 s"}}
+              "robot":robot,
+              "policy_state":"Fresh LSTM reset" if robot=="g1" else "Feedforward policy; previous action reset to zero",
+              "detectors":{"fall":monitor.root_body+"-floor contact persists 0.02 s",
+                           "posture_tilt_deg":60,"posture_min_height_m":monitor.low_height,
+                           "posture_hold_s":0.1,"recovery_tilt_deg":10,
+                           "recovery_min_height_m":monitor.recovery_height,
+                           "recovery_velocity_tolerance_m_s":0.25,"recovery_hold_s":0.4}}
         (out/"manifest.json").write_text(json.dumps(meta,indent=2)+"\n")
         event("RUN_STARTED",time_s=0,physics_dt_s=dt,policy_dt_s=dt*sim.config["control_decimation"])
         origin=None
@@ -94,7 +103,7 @@ def main():
                     impulse+=force*dt
                 if push and i==begin:
                     event("PUSH_STARTED",time_s=float(sim.data.time),force_world_n=force.tolist(),
-                          body="pelvis (rigid torso/arms share this body)",point="body center of mass")
+                          body=monitor.root_body,point="body center of mass")
                 if push and i==finish:
                     event("PUSH_ENDED",time_s=float(sim.data.time),impulse_ns=impulse.tolist())
                 sim.step()
@@ -121,7 +130,7 @@ def main():
                     max_tilt=max(max_tilt,state["tilt_deg"])
                 if push and i>=begin:
                     peak_after_push=max(peak_after_push,state["tilt_deg"])
-                if i%10==0 or monitor.fall_time is not None or i==steps-1:
+                if i%round(0.02/dt)==0 or monitor.fall_time is not None or i==steps-1:
                     state["push_active"]=bool(active)
                     state["applied_force_world_n"]=force.tolist() if active else [0,0,0]
                     trace.write(json.dumps(state,allow_nan=False)+"\n")
@@ -136,7 +145,8 @@ def main():
             result["status"]=("FALL" if monitor.fall_time is not None else
                               "POSTURE_VIOLATION" if monitor.posture_time is not None else
                               "COMPLETED" if progress>=config["minimum_progress_m"] else "TASK_TIMEOUT")
-        result.update(progress_m=progress,lateral_displacement_m=end["position"][1]-origin[1],
+        result.update(robot=robot,progress_m=progress,
+                      min_root_height_m=min_height if np.isfinite(min_height) else None,lateral_displacement_m=end["position"][1]-origin[1],
                       min_pelvis_height_m=min_height if np.isfinite(min_height) else None,
                       max_tilt_deg=max_tilt,peak_tilt_after_push_deg=peak_after_push if push else None,
                       fall_time_s=monitor.fall_time,posture_violation_time_s=monitor.posture_time,

@@ -1,0 +1,638 @@
+{
+  "note": "Exploratory campaign selected after pilot bracketing. Separate from G1; no cross-robot ranking.",
+  "sampling": "8 direction/onset schedules, world +/-X or +/-Y, onset uniform [3,3.8] quantized to 4 ms; schedules matched across Go1 force tiers",
+  "scenarios": [
+    {
+      "id": "reference-seed0",
+      "robot": "go1",
+      "seed": 0,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2
+    },
+    {
+      "id": "moderate-seed0",
+      "robot": "go1",
+      "seed": 0,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          0,
+          -250,
+          0
+        ],
+        "start_s": 3.608,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "strong-seed0",
+      "robot": "go1",
+      "seed": 0,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          0,
+          -500,
+          0
+        ],
+        "start_s": 3.608,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "extreme-seed0",
+      "robot": "go1",
+      "seed": 0,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          0,
+          -1000,
+          0
+        ],
+        "start_s": 3.608,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "reference-seed1",
+      "robot": "go1",
+      "seed": 1,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2
+    },
+    {
+      "id": "moderate-seed1",
+      "robot": "go1",
+      "seed": 1,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          -250,
+          0,
+          0
+        ],
+        "start_s": 3.456,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "strong-seed1",
+      "robot": "go1",
+      "seed": 1,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          -500,
+          0,
+          0
+        ],
+        "start_s": 3.456,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "extreme-seed1",
+      "robot": "go1",
+      "seed": 1,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          -1000,
+          0,
+          0
+        ],
+        "start_s": 3.456,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "reference-seed2",
+      "robot": "go1",
+      "seed": 2,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2
+    },
+    {
+      "id": "moderate-seed2",
+      "robot": "go1",
+      "seed": 2,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          250,
+          0,
+          0
+        ],
+        "start_s": 3.072,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "strong-seed2",
+      "robot": "go1",
+      "seed": 2,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          500,
+          0,
+          0
+        ],
+        "start_s": 3.072,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "extreme-seed2",
+      "robot": "go1",
+      "seed": 2,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          1000,
+          0,
+          0
+        ],
+        "start_s": 3.072,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "reference-seed3",
+      "robot": "go1",
+      "seed": 3,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2
+    },
+    {
+      "id": "moderate-seed3",
+      "robot": "go1",
+      "seed": 3,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          -250,
+          0,
+          0
+        ],
+        "start_s": 3.476,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "strong-seed3",
+      "robot": "go1",
+      "seed": 3,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          -500,
+          0,
+          0
+        ],
+        "start_s": 3.476,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "extreme-seed3",
+      "robot": "go1",
+      "seed": 3,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          -1000,
+          0,
+          0
+        ],
+        "start_s": 3.476,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "reference-seed4",
+      "robot": "go1",
+      "seed": 4,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2
+    },
+    {
+      "id": "moderate-seed4",
+      "robot": "go1",
+      "seed": 4,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          -250,
+          0,
+          0
+        ],
+        "start_s": 3.244,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "strong-seed4",
+      "robot": "go1",
+      "seed": 4,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          -500,
+          0,
+          0
+        ],
+        "start_s": 3.244,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "extreme-seed4",
+      "robot": "go1",
+      "seed": 4,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          -1000,
+          0,
+          0
+        ],
+        "start_s": 3.244,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "reference-seed5",
+      "robot": "go1",
+      "seed": 5,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2
+    },
+    {
+      "id": "moderate-seed5",
+      "robot": "go1",
+      "seed": 5,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          0,
+          250,
+          0
+        ],
+        "start_s": 3.592,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "strong-seed5",
+      "robot": "go1",
+      "seed": 5,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          0,
+          500,
+          0
+        ],
+        "start_s": 3.592,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "extreme-seed5",
+      "robot": "go1",
+      "seed": 5,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          0,
+          1000,
+          0
+        ],
+        "start_s": 3.592,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "reference-seed6",
+      "robot": "go1",
+      "seed": 6,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2
+    },
+    {
+      "id": "moderate-seed6",
+      "robot": "go1",
+      "seed": 6,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          250,
+          0,
+          0
+        ],
+        "start_s": 3.388,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "strong-seed6",
+      "robot": "go1",
+      "seed": 6,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          500,
+          0,
+          0
+        ],
+        "start_s": 3.388,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "extreme-seed6",
+      "robot": "go1",
+      "seed": 6,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          1000,
+          0,
+          0
+        ],
+        "start_s": 3.388,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "reference-seed7",
+      "robot": "go1",
+      "seed": 7,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2
+    },
+    {
+      "id": "moderate-seed7",
+      "robot": "go1",
+      "seed": 7,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          0,
+          250,
+          0
+        ],
+        "start_s": 3.7600000000000002,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "strong-seed7",
+      "robot": "go1",
+      "seed": 7,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          0,
+          500,
+          0
+        ],
+        "start_s": 3.7600000000000002,
+        "duration_s": 0.2
+      }
+    },
+    {
+      "id": "extreme-seed7",
+      "robot": "go1",
+      "seed": 7,
+      "duration_s": 10,
+      "warmup_s": 2,
+      "command": [
+        0.5,
+        0,
+        0
+      ],
+      "minimum_progress_m": 2,
+      "push": {
+        "force_n": [
+          0,
+          1000,
+          0
+        ],
+        "start_s": 3.7600000000000002,
+        "duration_s": 0.2
+      }
+    }
+  ]
+}

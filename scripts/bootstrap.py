@@ -40,7 +40,9 @@ def main():
     if digest!=lock["policy_sha256"]:
         raise SystemExit("Pretrained policy checksum mismatch")
     print("Pinned upstream revision and policy checksum verified")
-    print("No system packages or Python environments were modified")
+    from bootstrap_go1 import setup
+    setup(args.verify)
+    print("System packages and existing Python environments remain unchanged; ONNX runtime is project-local")
 
 if __name__=="__main__":
     main()

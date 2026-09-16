@@ -8,3 +8,6 @@ __pycache__/
 .aws/
 artifacts/demo/*-source.mp4
 artifacts/demo/*-encode.log
+
+artifacts/**/*-source.mp4
+artifacts/**/*-encode.log

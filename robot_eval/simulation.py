@@ -88,7 +88,7 @@ class G1Simulation:
                 digest.update(str(path.relative_to(self.model_path.parent)).encode())
                 digest.update(hashlib.sha256(path.read_bytes()).digest())
         code = hashlib.sha256()
-        for path in sorted((ROOT/"humanoid_eval").glob("*.py")) + [ROOT/"scripts/run_trial.py"]:
+        for path in sorted((ROOT/"robot_eval").glob("*.py")) + [ROOT/"scripts/run_trial.py"]:
             code.update(path.name.encode())
             code.update(path.read_bytes())
         return {"upstream_revision": REVISION, "evaluation_code_sha256":code.hexdigest(),

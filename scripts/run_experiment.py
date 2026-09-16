@@ -8,7 +8,7 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from humanoid_eval.runner import run_one,ROBOT_OUTCOMES
+from robot_eval.runner import run_one,ROBOT_OUTCOMES
 
 def main():
     p=argparse.ArgumentParser()

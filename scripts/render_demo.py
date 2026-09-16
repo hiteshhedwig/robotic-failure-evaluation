@@ -5,6 +5,7 @@ The replay does not rerun a policy or invent motion. 50 Hz recorded state sample
 play at 25 fps (0.5x), with explicitly labeled reading holds at recorded events.
 """
 import os
+import sys
 os.environ.setdefault("MUJOCO_GL","egl")
 import json
 from pathlib import Path
@@ -14,6 +15,7 @@ import numpy as np
 import mujoco
 
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
 OUTPUT=ROOT/"artifacts/demo"
 MODEL=ROOT/".deps/unitree_rl_gym/resources/robots/g1_description/scene.xml"
 FPS=25
@@ -39,7 +41,7 @@ def render(slug,source,title,intro):
         off=next(x["time_s"] for x in events if x["event"]=="PUSH_ENDED")
         strength=np.linalg.norm(push["force_n"])
         marks += [(on,5,"Inject a measured push",
-                   "Apply {} N in world direction {} for {:.1f} simulated seconds. The arrow illustrates the recorded force on the rigid pelvis/torso body.".format(strength,push["force_n"],push["duration_s"]),
+                   "Apply {} N in world direction {} for {:.1f} simulated seconds. The arrow illustrates the recorded force on the root body.".format(strength,push["force_n"],push["duration_s"]),
                    "The pulse is an input disturbance. Its presence alone is not a robot failure."),
                   (off,4,"The push has ended",
                    "External force is zero again. The existing walking policy continues. We now observe whether balance and task progress recover.",
@@ -51,11 +53,14 @@ def render(slug,source,title,intro):
     recovery=result.get("recovery_confirmed_time_s")
     if recovery is not None:
         marks += [(recovery,5,"Balance recovery confirmed",
-                   "Torso tilt, pelvis height and horizontal velocity have returned to the specified band for 0.4 simulated seconds.",
+                   "Body tilt, root height and horizontal velocity have returned to the specified band for 0.4 simulated seconds.",
                    "Balance recovery is separate from task completion. The robot still needs 2 m of scored forward progress.")]
     if result["status"]=="FALL":
-        detail="Pelvis/rigid-torso floor contact persisted for 0.02 simulated seconds. The evaluator confirms FALL and terminates this episode."
+        detail="Root-body floor contact persisted for 0.02 simulated seconds. The evaluator confirms FALL and terminates this episode."
         proof="The policy is not asked to get up. A fall is not an infrastructure crash."
+    elif result["status"]=="POSTURE_VIOLATION":
+        detail="Tilt exceeded 60 degrees or root height fell below the robot-specific limit for 0.1 simulated seconds. No sustained root-floor contact was confirmed."
+        proof="A posture violation and a confirmed fall are separate observable outcomes."
     elif result["status"]=="TASK_TIMEOUT":
         detail="The robot is upright, but scored progress is only {:.3f} m at the 10 s task horizon. The required 2 m was not reached.".format(result["progress_m"])
         proof="TASK_TIMEOUT is a measured task failure, not a hung worker or a wall-clock timeout."
@@ -67,14 +72,20 @@ def render(slug,source,title,intro):
     # Map each checkpoint to a nearby recorded sample; no interpolated states.
     at={}
     for mark in marks:
-        index=min(range(len(states)),key=lambda i:abs(states[i]["time_s"]-mark[0]))
+        index=next((i for i,state in enumerate(states)
+                    if state["time_s"]>=mark[0]-1e-9),len(states)-1)
         at.setdefault(index,[]).append(mark)
-    model=mujoco.MjModel.from_xml_path(str(MODEL))
+    robot=c.get("robot","g1")
+    if robot=="go1":
+        from robot_eval.go1 import load_model
+        model=load_model()
+    else:
+        model=mujoco.MjModel.from_xml_path(str(MODEL))
     data=mujoco.MjData(model)
     model.vis.global_.offwidth=800
     model.vis.global_.offheight=600
     camera=mujoco.MjvCamera()
-    camera.distance=2.6
+    camera.distance=1.7 if robot=="go1" else 2.6
     camera.azimuth=135
     camera.elevation=-14
     raw=OUTPUT/(slug+"-source.mp4")
@@ -93,13 +104,13 @@ def render(slug,source,title,intro):
                 data.qvel[:]=state["qvel"]
                 mujoco.mj_forward(model,data)
                 camera.lookat[:]=data.qpos[:3]
-                camera.lookat[2]=max(0.55,float(data.qpos[2]))
+                camera.lookat[2]=max(0.18 if robot=="go1" else 0.55,float(data.qpos[2]))
                 renderer.update_scene(data,camera=camera)
                 force=np.array(state["applied_force_world_n"])
                 if state["push_active"] and np.linalg.norm(force)>0:
                     scene=renderer.scene
-                    start=data.xipos[model.body("pelvis").id]-force/np.linalg.norm(force)*0.55
-                    end=data.xipos[model.body("pelvis").id]
+                    start=data.xipos[model.body("trunk" if robot=="go1" else "pelvis").id]-force/np.linalg.norm(force)*0.55
+                    end=data.xipos[model.body("trunk" if robot=="go1" else "pelvis").id]
                     geom=scene.geoms[scene.ngeom]
                     mujoco.mjv_initGeom(geom,mujoco.mjtGeom.mjGEOM_ARROW,np.zeros(3),np.zeros(3),np.eye(3).reshape(-1),np.array([1,0.2,0.1,1]))
                     mujoco.mjv_connector(geom,mujoco.mjtGeom.mjGEOM_ARROW,0.025,start,end)
@@ -147,8 +158,8 @@ def subtitles(path,timeline,title,c,result):
     def text(a,b,style,x,y,value):
         lines.append("Dialogue: 0,{},{},{},,0,0,0,,{{\\an7\\pos({},{})\\q2}}{}\n".format(ts(a),ts(b),style,x,y,value))
     total=timeline[-1]["end"]
-    text(0,total,"Title",25,18,"Humanoid Failure Evaluation | "+title)
-    text(0,total,"Accent",25,62,"RECORDED STATE REPLAY | 0.5x + reading pauses | Pretrained G1 policy | SIMULATION ONLY")
+    text(0,total,"Title",25,18,"Robotic Failure Evaluation | "+c.get("robot","g1").upper()+" | "+title)
+    text(0,total,"Accent",25,62,"RECORDED STATE REPLAY | 0.5x + reading pauses | Pretrained "+c.get("robot","g1").upper()+" policy | SIMULATION ONLY")
     for part in timeline:
         a,b=part["start"],part["end"]
         s=part["state"]
@@ -159,7 +170,7 @@ def subtitles(path,timeline,title,c,result):
         text(a,b,"Data",25,775,wrapped("Reading pauses freeze this replay frame. They are not extra robot stops.",43))
         progress=s["position"][0]-result["initial_evaluation_position"][0]
         scored="warmup / not scored" if s["time_s"]<c["warmup_s"] else "{:.3f} m / required 2.000 m".format(progress)
-        line="Source {:.3f}s | Tilt {:.1f} deg | Pelvis height {:.3f} m".format(s["time_s"],s["tilt_deg"],s["position"][2])
+        line="Source {:.3f}s | Tilt {:.1f} deg | Root height {:.3f} m".format(s["time_s"],s["tilt_deg"],s["position"][2])
         line+=r"\NScored forward progress: "+scored
         line+=r"\NRecorded applied force [N]: "+str(s["applied_force_world_n"])
         text(a,b,"Data",520,805,line)

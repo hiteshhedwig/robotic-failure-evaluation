@@ -73,7 +73,7 @@ def run_one(scenario,output,timeout_s=30,kill_when_trace_ready=False):
                 result={"status":"INFRASTRUCTURE_ERROR","reason":"Worker result/exit-code inconsistency"}
         except (ValueError,KeyError):
             result={"status":"INFRASTRUCTURE_ERROR","reason":"Malformed worker receipt"}
-    result.update(scenario_id=scenario["id"],seed=scenario["seed"],
+    result.update(scenario_id=scenario["id"],seed=scenario["seed"],robot=scenario.get("robot","g1"),
                   worker_returncode=process.returncode,worker_pid=process.pid,
                   supervisor_wall_seconds=time.monotonic()-started,
                   wall_timeout_s=timeout_s,crash_injected=injected_crash)
