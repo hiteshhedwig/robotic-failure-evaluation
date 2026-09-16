@@ -1,0 +1,45 @@
+{
+  "id": "go1-reference-seed0",
+  "robot": "go1",
+  "robot_profile": {
+    "schema_version": 1,
+    "id": "go1",
+    "label": "Unitree Go1 quadruped",
+    "adapter": "robot_eval.go1:Go1Simulation",
+    "adapter_options": {},
+    "root_body": "trunk",
+    "floor_geom": "floor",
+    "policy_state": "Feedforward policy; previous action reset to zero",
+    "monitor": {
+      "fall_contact_bodies": [
+        "trunk"
+      ],
+      "fall_hold_s": 0.02,
+      "posture_tilt_deg": 60,
+      "posture_min_height_m": 0.12,
+      "posture_hold_s": 0.1,
+      "recovery_tilt_deg": 10,
+      "recovery_min_height_m": 0.22,
+      "recovery_velocity_tolerance_m_s": 0.25,
+      "recovery_hold_s": 0.4
+    }
+  },
+  "seed": 0,
+  "duration_s": 10,
+  "warmup_s": 2,
+  "command": [
+    0.5,
+    0,
+    0
+  ],
+  "minimum_progress_m": 2,
+  "experiment": {
+    "id": "shared-walking-push-v1",
+    "condition": "reference",
+    "schedule_id": "seed0",
+    "force_mode": "newtons",
+    "magnitude": 0,
+    "body_mass_kg": 12.743448,
+    "gravity_m_s2": 9.81
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "status": "FALL",
+  "scenario_id": "g1-weight-and-half-seed0",
+  "seed": 0,
+  "robot": "g1",
+  "robot_profile_sha256": "e76edaa7002f49f0200021e05c3890506a24b0db531d133a87afa3de10afbbf4",
+  "experiment": {
+    "id": "body-weight-walking-v1",
+    "condition": "weight-and-half",
+    "schedule_id": "seed0",
+    "force_mode": "body_weight",
+    "magnitude": 1.5,
+    "body_mass_kg": 32.106899999999996,
+    "gravity_m_s2": 9.81
+  },
+  "progress_m": 0.9417911543073304,
+  "lateral_displacement_m": -1.3331875076364712,
+  "min_root_height_m": 0.2212179557497333,
+  "max_tilt_deg": 102.74947734970317,
+  "peak_tilt_after_push_deg": 102.74947734970317,
+  "fall_time_s": 4.071999999999774,
+  "posture_violation_time_s": 4.00999999999978,
+  "recovery_confirmed_time_s": null,
+  "recovery_latency_s": null,
+  "injected_push": {
+    "force_n": [
+      0.0,
+      -472.45303349999995,
+      0.0
+    ],
+    "start_s": 3.606363522352242,
+    "duration_s": 0.2
+  },
+  "actual_impulse_ns": [
+    0.0,
+    -94.49060670000013,
+    0.0
+  ],
+  "final_position": [
+    1.7455202099474108,
+    -1.355200535716869,
+    0.2212179557497333
+  ],
+  "simulated_seconds": 4.071999999999774,
+  "trace_samples": 205,
+  "physics_steps": 2036,
+  "initial_evaluation_position": [
+    0.8037290556400803,
+    -0.02201302808039793,
+    0.7675421288773143
+  ],
+  "wall_seconds": 2.0352100050004083
+}

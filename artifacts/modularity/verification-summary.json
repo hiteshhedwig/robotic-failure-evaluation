@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "tests_passed": 41,
+  "evaluation_code_sha256": "d9e19b4dfcedcd4b3a31ba06da288bf9004b8e15d87100be5d8b1587de23a9b0",
+  "integration_experiments": [
+    {
+      "experiment": "newton-sweep",
+      "valid_episodes": 12,
+      "infrastructure_failures": 0,
+      "current_code_fingerprint_matches": true
+    },
+    {
+      "experiment": "body-weight-sweep",
+      "valid_episodes": 6,
+      "infrastructure_failures": 0,
+      "current_code_fingerprint_matches": true
+    },
+    {
+      "experiment": "external-profile",
+      "valid_episodes": 2,
+      "infrastructure_failures": 0,
+      "current_code_fingerprint_matches": true
+    }
+  ],
+  "integration_episodes": 20,
+  "archived_motion_cases_preserved": 8,
+  "maximum_joint_trace_difference": 0.0,
+  "historical_campaign_reported_episodes": 72,
+  "historical_conditions": 9,
+  "generic_profile_replay": {
+    "passed": true,
+    "file": "trial.mp4",
+    "fully_decoded": true
+  },
+  "note": "Integration smoke checks and local motion-preservation runs are separate from historical campaign reliability statistics. External profile uses the existing Go1, not a third robot."
+}

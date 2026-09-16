@@ -1,0 +1,14 @@
+.........................................                                [100%]
+=============================== warnings summary ===============================
+tests/test_extension.py::test_recipe_expands_matched_force_schedules_and_snapshots
+tests/test_extension.py::test_generation_is_repeatable
+tests/test_extension.py::test_body_weight_units_use_actual_model_mass_and_gravity
+tests/test_monitor.py::test_walking_foot_contacts_are_not_falls
+tests/test_monitor.py::test_a_physically_fallen_body_is_detected
+tests/test_monitor.py::test_recurrent_policy_is_fresh_per_episode
+tests/test_monitor.py::test_recurrent_policy_is_fresh_per_episode
+  /home/hedwig/anaconda3/envs/lerobot/lib/python3.12/site-packages/torch/jit/_serialization.py:176: DeprecationWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+41 passed, 7 warnings in 21.43s

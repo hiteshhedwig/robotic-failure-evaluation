@@ -1,0 +1,50 @@
+{
+  "status": "COMPLETED",
+  "scenario_id": "go1-reference-seed0",
+  "seed": 0,
+  "robot": "go1",
+  "robot_profile_sha256": "3de15ada6118fe7628303fa93e7b21df3f32c22d08eec38140fce724ac709762",
+  "experiment": {
+    "id": "body-weight-walking-v1",
+    "condition": "reference",
+    "schedule_id": "seed0",
+    "force_mode": "body_weight",
+    "magnitude": 0,
+    "body_mass_kg": 12.743448,
+    "gravity_m_s2": 9.81
+  },
+  "progress_m": 4.034631003098734,
+  "lateral_displacement_m": 0.31490706173185035,
+  "min_root_height_m": 0.2871867628173837,
+  "max_tilt_deg": 1.787449992086362,
+  "peak_tilt_after_push_deg": null,
+  "fall_time_s": null,
+  "posture_violation_time_s": null,
+  "recovery_confirmed_time_s": null,
+  "recovery_latency_s": null,
+  "injected_push": null,
+  "actual_impulse_ns": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "final_position": [
+    4.952286902415034,
+    0.34838796746627,
+    0.29946422045472965
+  ],
+  "simulated_seconds": 9.999999999999343,
+  "trace_samples": 501,
+  "physics_steps": 2500,
+  "initial_evaluation_position": [
+    0.9176558993163006,
+    0.033480905734419614,
+    0.29661012243742335
+  ],
+  "wall_seconds": 1.027182683999854,
+  "worker_returncode": 0,
+  "worker_pid": 82091,
+  "supervisor_wall_seconds": 1.2482646969983762,
+  "wall_timeout_s": 30.0,
+  "crash_injected": false
+}

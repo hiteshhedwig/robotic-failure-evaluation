@@ -1,0 +1,53 @@
+{
+  "status": "COMPLETED",
+  "scenario_id": "go1-light-seed0",
+  "seed": 0,
+  "robot": "go1",
+  "robot_profile_sha256": "3de15ada6118fe7628303fa93e7b21df3f32c22d08eec38140fce724ac709762",
+  "experiment": {
+    "id": "shared-walking-push-v1",
+    "condition": "light",
+    "schedule_id": "seed0",
+    "force_mode": "newtons",
+    "magnitude": 100,
+    "body_mass_kg": 12.743448,
+    "gravity_m_s2": 9.81
+  },
+  "progress_m": 3.9620901855469226,
+  "lateral_displacement_m": -0.4319611925903347,
+  "min_root_height_m": 0.24892896390926186,
+  "max_tilt_deg": 9.202144678683622,
+  "peak_tilt_after_push_deg": 9.202144678683622,
+  "fall_time_s": null,
+  "posture_violation_time_s": null,
+  "recovery_confirmed_time_s": 4.359999999999963,
+  "recovery_latency_s": 0.5519999999999627,
+  "injected_push": {
+    "force_n": [
+      0.0,
+      -100.0,
+      0.0
+    ],
+    "start_s": 3.606363522352242,
+    "duration_s": 0.2
+  },
+  "actual_impulse_ns": [
+    0.0,
+    -19.999999999999993,
+    0.0
+  ],
+  "final_position": [
+    4.879746084863223,
+    -0.3984802868559151,
+    0.2998727629043086
+  ],
+  "simulated_seconds": 9.999999999999343,
+  "trace_samples": 501,
+  "physics_steps": 2500,
+  "initial_evaluation_position": [
+    0.9176558993163006,
+    0.033480905734419614,
+    0.29661012243742335
+  ],
+  "wall_seconds": 1.0311238080030307
+}

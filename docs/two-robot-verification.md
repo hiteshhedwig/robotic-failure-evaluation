@@ -1,3 +1,5 @@
+> Historical two-robot integration checkpoint. See [modular workflow verification](modularity-verification.md) for the current architecture and tests.
+
 # Two-robot extension verification
 
 The shared runner now dispatches G1 or Go1 based on the scenario's robot field. Missing robot retains G1 compatibility. Unsupported robots fail before simulation as infrastructure errors. The package was renamed from humanoid_eval to robot_eval.

@@ -8,6 +8,27 @@ Evaluate **two existing walking policies** in MuJoCo: a Unitree G1 humanoid and 
 
 The current scope is deliberately small: **two robots, one forward-walking task, one external-push disturbance family**. Both use the same runner, logging format, outcome reporting and comparison tools. Robot adapters provide the different policy interfaces, models and monitoring thresholds. No policy training, new motion controller or physical hardware is involved.
 
+## Define experiments and add robots
+
+Robot profiles live in [configs/robots](configs/robots); reusable experiment recipes
+live in [configs/experiments](configs/experiments). Choose robots, seeds, force levels,
+directions and timing in JSON, then generate, execute and report with one command:
+
+~~~bash
+python scripts/evaluate.py --experiment configs/experiments/walking-push-sweep.json --output artifacts/my-evaluation --workers 2
+~~~
+
+A new compatible robot needs a JSON profile and an adapter for its existing
+model/controller. The runner, disturbance scheduler, monitor and report require no
+robot-name branches. If an existing adapter already supports its model/controller,
+a profile alone is sufficient. Generated scenarios embed the profile and resolved
+force vectors for reruns.
+
+Forces support absolute newtons or multiples of simulated root-subtree body weight.
+Reports separate robot/configuration/software versions and use actual sample counts.
+
+**[How to add a robot, configure a sweep and generate reports](docs/extending.md)**
+
 ## What the demos actually show
 
 | Robot | Clip | What happens and how it is evaluated |
@@ -59,6 +80,8 @@ Priority is FALL, then POSTURE_VIOLATION, then distance-based completion/timeout
 
 ## Measured results
 
+These are the archived two-robot campaign results. New modular workflow checks are reported separately in [the extension verification](docs/modularity-verification.md).
+
 **72 evaluation episodes: 40 G1 and 32 Go1. Zero infrastructure failures in these batches.** Pilots, reset checks, infrastructure-injection checks and reproduction runs are stored separately and are not added to this denominator.
 
 | Robot | Pulse force for 0.2 s | Completed | Falls | Posture violations | Task timeouts |
@@ -86,17 +109,18 @@ This is an exploratory campaign. G1's 175 N follow-up was chosen after initial b
 
 ## Verification and failure reconstruction
 
-**22 tests pass**, including real foot/body contacts, policy resets, process failures, robot-specific manifests, matched comparisons, uncertainty calculations and separate aggregation for both robots.
+**41 tests pass**, including real foot/body contacts, policy resets, process failures, robot-specific manifests, matched comparisons, uncertainty calculations and separate aggregation for both robots.
 
 A selected G1 fall was reproduced three times; a selected Go1 fall was reproduced twice in fresh processes. Their recorded joint traces matched exactly locally. That is evidence about this environment, not a cross-machine determinism guarantee.
 
 The Go1 worker was also deliberately killed after execution began, and a separate run exceeded its parent's wall-clock deadline. These were correctly classified as infrastructure failures, not robot falls. A current-code G1 baseline check preserved the original nominal progress after the adapter refactor.
 
-- [Current test output](artifacts/two-robot-tests.log)
+- [Current test output](artifacts/modularity/tests.log)
 - [Go1 reproduction evidence](artifacts/go1/reproductions/summary.json)
 - [Go1 infrastructure checks](artifacts/go1/infrastructure/summary.json)
 - [G1 compatibility check](artifacts/two-robot/g1-compatibility-check.json)
 - [Two-robot verification record](docs/two-robot-verification.md)
+- [Modular extension verification](docs/modularity-verification.md)
 
 ## Architecture and reuse
 
@@ -122,7 +146,7 @@ flowchart TD
 | MuJoCo Playground Go1 model/policy/deployment convention; Menagerie meshes | Headless Go1 adapter; direct command input replacing gamepad, local ONNX session |
 | pytest, NumPy, FFmpeg | Robot-specific outcome monitoring, force scheduling, compact evidence, reporting and demo annotations |
 
-The adapters share state and provenance helpers; no plugin framework, database or distributed scheduler is introduced. The source package is `robot_eval`. Old G1 artifacts remain immutable with their original source fingerprints.
+The adapters share robot-independent state and provenance helpers. JSON profiles select adapter factories and monitoring limits; experiment recipes resolve into explicit scenarios. No database or distributed scheduler is introduced. The source package is `robot_eval`. Old G1 artifacts remain immutable with their original source fingerprints.
 
 ## Setup
 
@@ -193,6 +217,6 @@ This is a compact **two-robot evaluation platform**, not a general robotics benc
 
 Contact/posture detectors establish measurable outcomes; they do not establish why a learned policy failed internally. A robot can violate posture without satisfying this project's root-contact fall definition. Both are retained as task failures.
 
-Future robot support should reuse the runner and evidence format while supplying a validated model, existing controller/policy, and task-specific monitors. The current implementation remains limited to G1 and Go1.
+Future robot support should reuse the runner and evidence format while supplying a validated model, existing controller/policy, and task-specific monitors. G1 and Go1 remain the two validated robot models. The adapter/profile contract supports adding future MuJoCo walking robots without changing experiment execution or reporting.
 
 [Architecture](docs/architecture.md) · [Two-robot verification](docs/two-robot-verification.md) · [Upstream attribution](THIRD_PARTY_NOTICES.md)

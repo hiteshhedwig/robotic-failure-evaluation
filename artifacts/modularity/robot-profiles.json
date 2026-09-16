@@ -1,0 +1,48 @@
+{
+  "g1": {
+    "schema_version": 1,
+    "id": "g1",
+    "label": "Unitree G1 humanoid",
+    "adapter": "robot_eval.simulation:G1Simulation",
+    "adapter_options": {},
+    "root_body": "pelvis",
+    "floor_geom": "floor",
+    "policy_state": "Fresh LSTM hidden/cell reset",
+    "monitor": {
+      "fall_contact_bodies": [
+        "pelvis"
+      ],
+      "fall_hold_s": 0.02,
+      "posture_tilt_deg": 60,
+      "posture_min_height_m": 0.45,
+      "posture_hold_s": 0.1,
+      "recovery_tilt_deg": 10,
+      "recovery_min_height_m": 0.65,
+      "recovery_velocity_tolerance_m_s": 0.25,
+      "recovery_hold_s": 0.4
+    }
+  },
+  "go1": {
+    "schema_version": 1,
+    "id": "go1",
+    "label": "Unitree Go1 quadruped",
+    "adapter": "robot_eval.go1:Go1Simulation",
+    "adapter_options": {},
+    "root_body": "trunk",
+    "floor_geom": "floor",
+    "policy_state": "Feedforward policy; previous action reset to zero",
+    "monitor": {
+      "fall_contact_bodies": [
+        "trunk"
+      ],
+      "fall_hold_s": 0.02,
+      "posture_tilt_deg": 60,
+      "posture_min_height_m": 0.12,
+      "posture_hold_s": 0.1,
+      "recovery_tilt_deg": 10,
+      "recovery_min_height_m": 0.22,
+      "recovery_velocity_tolerance_m_s": 0.25,
+      "recovery_hold_s": 0.4
+    }
+  }
+}

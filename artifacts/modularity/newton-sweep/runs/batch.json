@@ -1,0 +1,671 @@
+{
+  "runs": 12,
+  "robot_trials": 12,
+  "infrastructure_failures": 0,
+  "results": [
+    {
+      "status": "COMPLETED",
+      "scenario_id": "g1-reference-seed0",
+      "seed": 0,
+      "robot": "g1",
+      "robot_profile_sha256": "e76edaa7002f49f0200021e05c3890506a24b0db531d133a87afa3de10afbbf4",
+      "experiment": {
+        "id": "shared-walking-push-v1",
+        "condition": "reference",
+        "schedule_id": "seed0",
+        "force_mode": "newtons",
+        "magnitude": 0,
+        "body_mass_kg": 32.106899999999996,
+        "gravity_m_s2": 9.81
+      },
+      "progress_m": 3.781271703705525,
+      "lateral_displacement_m": -0.3672305020332678,
+      "min_root_height_m": 0.7624979845860228,
+      "max_tilt_deg": 3.662856075610611,
+      "peak_tilt_after_push_deg": null,
+      "fall_time_s": null,
+      "posture_violation_time_s": null,
+      "recovery_confirmed_time_s": null,
+      "recovery_latency_s": null,
+      "injected_push": null,
+      "actual_impulse_ns": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "final_position": [
+        4.585000759345605,
+        -0.38924353011366575,
+        0.7679260230722138
+      ],
+      "simulated_seconds": 10.000000000000009,
+      "trace_samples": 501,
+      "physics_steps": 5000,
+      "initial_evaluation_position": [
+        0.8037290556400803,
+        -0.02201302808039793,
+        0.7675421288773143
+      ],
+      "wall_seconds": 3.315526877002412,
+      "worker_returncode": 0,
+      "worker_pid": 81773,
+      "supervisor_wall_seconds": 3.884439436998946,
+      "wall_timeout_s": 30.0,
+      "crash_injected": false
+    },
+    {
+      "status": "COMPLETED",
+      "scenario_id": "g1-light-seed0",
+      "seed": 0,
+      "robot": "g1",
+      "robot_profile_sha256": "e76edaa7002f49f0200021e05c3890506a24b0db531d133a87afa3de10afbbf4",
+      "experiment": {
+        "id": "shared-walking-push-v1",
+        "condition": "light",
+        "schedule_id": "seed0",
+        "force_mode": "newtons",
+        "magnitude": 100,
+        "body_mass_kg": 32.106899999999996,
+        "gravity_m_s2": 9.81
+      },
+      "progress_m": 3.472309252274139,
+      "lateral_displacement_m": -1.8711163569935396,
+      "min_root_height_m": 0.7360999158305954,
+      "max_tilt_deg": 9.212781446467094,
+      "peak_tilt_after_push_deg": 9.212781446467094,
+      "fall_time_s": null,
+      "posture_violation_time_s": null,
+      "recovery_confirmed_time_s": 5.683999999999596,
+      "recovery_latency_s": 1.877999999999596,
+      "injected_push": {
+        "force_n": [
+          0.0,
+          -100.0,
+          0.0
+        ],
+        "start_s": 3.606363522352242,
+        "duration_s": 0.2
+      },
+      "actual_impulse_ns": [
+        0.0,
+        -19.99999999999996,
+        0.0
+      ],
+      "final_position": [
+        4.276038307914219,
+        -1.8931293850739375,
+        0.7681942378896341
+      ],
+      "simulated_seconds": 10.000000000000009,
+      "trace_samples": 501,
+      "physics_steps": 5000,
+      "initial_evaluation_position": [
+        0.8037290556400803,
+        -0.02201302808039793,
+        0.7675421288773143
+      ],
+      "wall_seconds": 3.384631332999561,
+      "worker_returncode": 0,
+      "worker_pid": 81774,
+      "supervisor_wall_seconds": 3.9644199600006687,
+      "wall_timeout_s": 30.0,
+      "crash_injected": false
+    },
+    {
+      "status": "FALL",
+      "scenario_id": "g1-strong-seed0",
+      "seed": 0,
+      "robot": "g1",
+      "robot_profile_sha256": "e76edaa7002f49f0200021e05c3890506a24b0db531d133a87afa3de10afbbf4",
+      "experiment": {
+        "id": "shared-walking-push-v1",
+        "condition": "strong",
+        "schedule_id": "seed0",
+        "force_mode": "newtons",
+        "magnitude": 500,
+        "body_mass_kg": 32.106899999999996,
+        "gravity_m_s2": 9.81
+      },
+      "progress_m": 0.9443722021026354,
+      "lateral_displacement_m": -1.364289052229687,
+      "min_root_height_m": 0.2294390340978404,
+      "max_tilt_deg": 106.29370238150051,
+      "peak_tilt_after_push_deg": 106.29370238150051,
+      "fall_time_s": 4.0639999999997745,
+      "posture_violation_time_s": 3.9959999999997815,
+      "recovery_confirmed_time_s": null,
+      "recovery_latency_s": null,
+      "injected_push": {
+        "force_n": [
+          0.0,
+          -500.0,
+          0.0
+        ],
+        "start_s": 3.606363522352242,
+        "duration_s": 0.2
+      },
+      "actual_impulse_ns": [
+        0.0,
+        -100.0,
+        0.0
+      ],
+      "final_position": [
+        1.7481012577427157,
+        -1.386302080310085,
+        0.22984595805432873
+      ],
+      "simulated_seconds": 4.0639999999997745,
+      "trace_samples": 205,
+      "physics_steps": 2032,
+      "initial_evaluation_position": [
+        0.8037290556400803,
+        -0.02201302808039793,
+        0.7675421288773143
+      ],
+      "wall_seconds": 2.1439909910004644,
+      "worker_returncode": 2,
+      "worker_pid": 81851,
+      "supervisor_wall_seconds": 2.8376584820034623,
+      "wall_timeout_s": 30.0,
+      "crash_injected": false
+    },
+    {
+      "status": "COMPLETED",
+      "scenario_id": "go1-reference-seed0",
+      "seed": 0,
+      "robot": "go1",
+      "robot_profile_sha256": "3de15ada6118fe7628303fa93e7b21df3f32c22d08eec38140fce724ac709762",
+      "experiment": {
+        "id": "shared-walking-push-v1",
+        "condition": "reference",
+        "schedule_id": "seed0",
+        "force_mode": "newtons",
+        "magnitude": 0,
+        "body_mass_kg": 12.743448,
+        "gravity_m_s2": 9.81
+      },
+      "progress_m": 4.034631003098734,
+      "lateral_displacement_m": 0.31490706173185035,
+      "min_root_height_m": 0.2871867628173837,
+      "max_tilt_deg": 1.787449992086362,
+      "peak_tilt_after_push_deg": null,
+      "fall_time_s": null,
+      "posture_violation_time_s": null,
+      "recovery_confirmed_time_s": null,
+      "recovery_latency_s": null,
+      "injected_push": null,
+      "actual_impulse_ns": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "final_position": [
+        4.952286902415034,
+        0.34838796746627,
+        0.29946422045472965
+      ],
+      "simulated_seconds": 9.999999999999343,
+      "trace_samples": 501,
+      "physics_steps": 2500,
+      "initial_evaluation_position": [
+        0.9176558993163006,
+        0.033480905734419614,
+        0.29661012243742335
+      ],
+      "wall_seconds": 1.0600935699985712,
+      "worker_returncode": 0,
+      "worker_pid": 81853,
+      "supervisor_wall_seconds": 1.3494440859976748,
+      "wall_timeout_s": 30.0,
+      "crash_injected": false
+    },
+    {
+      "status": "COMPLETED",
+      "scenario_id": "go1-light-seed0",
+      "seed": 0,
+      "robot": "go1",
+      "robot_profile_sha256": "3de15ada6118fe7628303fa93e7b21df3f32c22d08eec38140fce724ac709762",
+      "experiment": {
+        "id": "shared-walking-push-v1",
+        "condition": "light",
+        "schedule_id": "seed0",
+        "force_mode": "newtons",
+        "magnitude": 100,
+        "body_mass_kg": 12.743448,
+        "gravity_m_s2": 9.81
+      },
+      "progress_m": 3.9620901855469226,
+      "lateral_displacement_m": -0.4319611925903347,
+      "min_root_height_m": 0.24892896390926186,
+      "max_tilt_deg": 9.202144678683622,
+      "peak_tilt_after_push_deg": 9.202144678683622,
+      "fall_time_s": null,
+      "posture_violation_time_s": null,
+      "recovery_confirmed_time_s": 4.359999999999963,
+      "recovery_latency_s": 0.5519999999999627,
+      "injected_push": {
+        "force_n": [
+          0.0,
+          -100.0,
+          0.0
+        ],
+        "start_s": 3.606363522352242,
+        "duration_s": 0.2
+      },
+      "actual_impulse_ns": [
+        0.0,
+        -19.999999999999993,
+        0.0
+      ],
+      "final_position": [
+        4.879746084863223,
+        -0.3984802868559151,
+        0.2998727629043086
+      ],
+      "simulated_seconds": 9.999999999999343,
+      "trace_samples": 501,
+      "physics_steps": 2500,
+      "initial_evaluation_position": [
+        0.9176558993163006,
+        0.033480905734419614,
+        0.29661012243742335
+      ],
+      "wall_seconds": 1.0311238080030307,
+      "worker_returncode": 0,
+      "worker_pid": 81877,
+      "supervisor_wall_seconds": 1.24852168399957,
+      "wall_timeout_s": 30.0,
+      "crash_injected": false
+    },
+    {
+      "status": "FALL",
+      "scenario_id": "go1-strong-seed0",
+      "seed": 0,
+      "robot": "go1",
+      "robot_profile_sha256": "3de15ada6118fe7628303fa93e7b21df3f32c22d08eec38140fce724ac709762",
+      "experiment": {
+        "id": "shared-walking-push-v1",
+        "condition": "strong",
+        "schedule_id": "seed0",
+        "force_mode": "newtons",
+        "magnitude": 500,
+        "body_mass_kg": 12.743448,
+        "gravity_m_s2": 9.81
+      },
+      "progress_m": 1.7587801505940932,
+      "lateral_displacement_m": -4.639626775882747,
+      "min_root_height_m": 0.056380548692053466,
+      "max_tilt_deg": 178.43291069760213,
+      "peak_tilt_after_push_deg": 178.43291069760213,
+      "fall_time_s": 5.20799999999987,
+      "posture_violation_time_s": 3.900000000000003,
+      "recovery_confirmed_time_s": null,
+      "recovery_latency_s": null,
+      "injected_push": {
+        "force_n": [
+          0.0,
+          -500.0,
+          0.0
+        ],
+        "start_s": 3.606363522352242,
+        "duration_s": 0.2
+      },
+      "actual_impulse_ns": [
+        0.0,
+        -100.0,
+        0.0
+      ],
+      "final_position": [
+        2.676436049910394,
+        -4.606145870148327,
+        0.056380548692053466
+      ],
+      "simulated_seconds": 5.20799999999987,
+      "trace_samples": 262,
+      "physics_steps": 1302,
+      "initial_evaluation_position": [
+        0.9176558993163006,
+        0.033480905734419614,
+        0.29661012243742335
+      ],
+      "wall_seconds": 0.719035599999188,
+      "worker_returncode": 2,
+      "worker_pid": 81894,
+      "supervisor_wall_seconds": 0.9665459159987222,
+      "wall_timeout_s": 30.0,
+      "crash_injected": false
+    },
+    {
+      "status": "COMPLETED",
+      "scenario_id": "g1-reference-seed1",
+      "seed": 1,
+      "robot": "g1",
+      "robot_profile_sha256": "e76edaa7002f49f0200021e05c3890506a24b0db531d133a87afa3de10afbbf4",
+      "experiment": {
+        "id": "shared-walking-push-v1",
+        "condition": "reference",
+        "schedule_id": "seed1",
+        "force_mode": "newtons",
+        "magnitude": 0,
+        "body_mass_kg": 32.106899999999996,
+        "gravity_m_s2": 9.81
+      },
+      "progress_m": 3.781271703705525,
+      "lateral_displacement_m": -0.3672305020332678,
+      "min_root_height_m": 0.7624979845860228,
+      "max_tilt_deg": 3.662856075610611,
+      "peak_tilt_after_push_deg": null,
+      "fall_time_s": null,
+      "posture_violation_time_s": null,
+      "recovery_confirmed_time_s": null,
+      "recovery_latency_s": null,
+      "injected_push": null,
+      "actual_impulse_ns": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "final_position": [
+        4.585000759345605,
+        -0.38924353011366575,
+        0.7679260230722138
+      ],
+      "simulated_seconds": 10.000000000000009,
+      "trace_samples": 501,
+      "physics_steps": 5000,
+      "initial_evaluation_position": [
+        0.8037290556400803,
+        -0.02201302808039793,
+        0.7675421288773143
+      ],
+      "wall_seconds": 3.094555132000096,
+      "worker_returncode": 0,
+      "worker_pid": 81905,
+      "supervisor_wall_seconds": 3.682062268999289,
+      "wall_timeout_s": 30.0,
+      "crash_injected": false
+    },
+    {
+      "status": "COMPLETED",
+      "scenario_id": "g1-light-seed1",
+      "seed": 1,
+      "robot": "g1",
+      "robot_profile_sha256": "e76edaa7002f49f0200021e05c3890506a24b0db531d133a87afa3de10afbbf4",
+      "experiment": {
+        "id": "shared-walking-push-v1",
+        "condition": "light",
+        "schedule_id": "seed1",
+        "force_mode": "newtons",
+        "magnitude": 100,
+        "body_mass_kg": 32.106899999999996,
+        "gravity_m_s2": 9.81
+      },
+      "progress_m": 2.6499117655360673,
+      "lateral_displacement_m": -0.5586588329874124,
+      "min_root_height_m": 0.7384253905475174,
+      "max_tilt_deg": 7.694684996860246,
+      "peak_tilt_after_push_deg": 7.694684996860246,
+      "fall_time_s": null,
+      "posture_violation_time_s": null,
+      "recovery_confirmed_time_s": 5.299999999999638,
+      "recovery_latency_s": 1.6439999999996382,
+      "injected_push": {
+        "force_n": [
+          -100.0,
+          0.0,
+          0.0
+        ],
+        "start_s": 3.45536309985777,
+        "duration_s": 0.2
+      },
+      "actual_impulse_ns": [
+        -19.99999999999996,
+        0.0,
+        0.0
+      ],
+      "final_position": [
+        3.4536408211761476,
+        -0.5806718610678103,
+        0.7682012739744283
+      ],
+      "simulated_seconds": 10.000000000000009,
+      "trace_samples": 501,
+      "physics_steps": 5000,
+      "initial_evaluation_position": [
+        0.8037290556400803,
+        -0.02201302808039793,
+        0.7675421288773143
+      ],
+      "wall_seconds": 3.1734516939977766,
+      "worker_returncode": 0,
+      "worker_pid": 81925,
+      "supervisor_wall_seconds": 3.700005257000157,
+      "wall_timeout_s": 30.0,
+      "crash_injected": false
+    },
+    {
+      "status": "FALL",
+      "scenario_id": "g1-strong-seed1",
+      "seed": 1,
+      "robot": "g1",
+      "robot_profile_sha256": "e76edaa7002f49f0200021e05c3890506a24b0db531d133a87afa3de10afbbf4",
+      "experiment": {
+        "id": "shared-walking-push-v1",
+        "condition": "strong",
+        "schedule_id": "seed1",
+        "force_mode": "newtons",
+        "magnitude": 500,
+        "body_mass_kg": 32.106899999999996,
+        "gravity_m_s2": 9.81
+      },
+      "progress_m": -0.368285786943782,
+      "lateral_displacement_m": -0.0673135175182894,
+      "min_root_height_m": 0.0904051310852513,
+      "max_tilt_deg": 97.24805138484385,
+      "peak_tilt_after_push_deg": 97.24805138484385,
+      "fall_time_s": 3.9439999999997872,
+      "posture_violation_time_s": 3.9039999999997916,
+      "recovery_confirmed_time_s": null,
+      "recovery_latency_s": null,
+      "injected_push": {
+        "force_n": [
+          -500.0,
+          0.0,
+          0.0
+        ],
+        "start_s": 3.45536309985777,
+        "duration_s": 0.2
+      },
+      "actual_impulse_ns": [
+        -100.0,
+        0.0,
+        0.0
+      ],
+      "final_position": [
+        0.43544326869629835,
+        -0.08932654559868733,
+        0.0904051310852513
+      ],
+      "simulated_seconds": 3.9439999999997872,
+      "trace_samples": 199,
+      "physics_steps": 1972,
+      "initial_evaluation_position": [
+        0.8037290556400803,
+        -0.02201302808039793,
+        0.7675421288773143
+      ],
+      "wall_seconds": 1.9830202759985696,
+      "worker_returncode": 2,
+      "worker_pid": 81965,
+      "supervisor_wall_seconds": 2.516485748001287,
+      "wall_timeout_s": 30.0,
+      "crash_injected": false
+    },
+    {
+      "status": "COMPLETED",
+      "scenario_id": "go1-reference-seed1",
+      "seed": 1,
+      "robot": "go1",
+      "robot_profile_sha256": "3de15ada6118fe7628303fa93e7b21df3f32c22d08eec38140fce724ac709762",
+      "experiment": {
+        "id": "shared-walking-push-v1",
+        "condition": "reference",
+        "schedule_id": "seed1",
+        "force_mode": "newtons",
+        "magnitude": 0,
+        "body_mass_kg": 12.743448,
+        "gravity_m_s2": 9.81
+      },
+      "progress_m": 4.034631003098734,
+      "lateral_displacement_m": 0.31490706173185035,
+      "min_root_height_m": 0.2871867628173837,
+      "max_tilt_deg": 1.787449992086362,
+      "peak_tilt_after_push_deg": null,
+      "fall_time_s": null,
+      "posture_violation_time_s": null,
+      "recovery_confirmed_time_s": null,
+      "recovery_latency_s": null,
+      "injected_push": null,
+      "actual_impulse_ns": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "final_position": [
+        4.952286902415034,
+        0.34838796746627,
+        0.29946422045472965
+      ],
+      "simulated_seconds": 9.999999999999343,
+      "trace_samples": 501,
+      "physics_steps": 2500,
+      "initial_evaluation_position": [
+        0.9176558993163006,
+        0.033480905734419614,
+        0.29661012243742335
+      ],
+      "wall_seconds": 1.0403111150008044,
+      "worker_returncode": 0,
+      "worker_pid": 81970,
+      "supervisor_wall_seconds": 1.2681082119997882,
+      "wall_timeout_s": 30.0,
+      "crash_injected": false
+    },
+    {
+      "status": "COMPLETED",
+      "scenario_id": "go1-light-seed1",
+      "seed": 1,
+      "robot": "go1",
+      "robot_profile_sha256": "3de15ada6118fe7628303fa93e7b21df3f32c22d08eec38140fce724ac709762",
+      "experiment": {
+        "id": "shared-walking-push-v1",
+        "condition": "light",
+        "schedule_id": "seed1",
+        "force_mode": "newtons",
+        "magnitude": 100,
+        "body_mass_kg": 12.743448,
+        "gravity_m_s2": 9.81
+      },
+      "progress_m": 3.829292190824284,
+      "lateral_displacement_m": 0.4393596626641363,
+      "min_root_height_m": 0.2760800152562536,
+      "max_tilt_deg": 1.5885770562355543,
+      "peak_tilt_after_push_deg": 1.5885770562355543,
+      "fall_time_s": null,
+      "posture_violation_time_s": null,
+      "recovery_confirmed_time_s": 4.167999999999984,
+      "recovery_latency_s": 0.511999999999984,
+      "injected_push": {
+        "force_n": [
+          -100.0,
+          0.0,
+          0.0
+        ],
+        "start_s": 3.45536309985777,
+        "duration_s": 0.2
+      },
+      "actual_impulse_ns": [
+        -19.999999999999993,
+        0.0,
+        0.0
+      ],
+      "final_position": [
+        4.7469480901405845,
+        0.47284056839855587,
+        0.2996028645963523
+      ],
+      "simulated_seconds": 9.999999999999343,
+      "trace_samples": 501,
+      "physics_steps": 2500,
+      "initial_evaluation_position": [
+        0.9176558993163006,
+        0.033480905734419614,
+        0.29661012243742335
+      ],
+      "wall_seconds": 1.0423698100021284,
+      "worker_returncode": 0,
+      "worker_pid": 81993,
+      "supervisor_wall_seconds": 1.2678254189995641,
+      "wall_timeout_s": 30.0,
+      "crash_injected": false
+    },
+    {
+      "status": "FALL",
+      "scenario_id": "go1-strong-seed1",
+      "seed": 1,
+      "robot": "go1",
+      "robot_profile_sha256": "3de15ada6118fe7628303fa93e7b21df3f32c22d08eec38140fce724ac709762",
+      "experiment": {
+        "id": "shared-walking-push-v1",
+        "condition": "strong",
+        "schedule_id": "seed1",
+        "force_mode": "newtons",
+        "magnitude": 500,
+        "body_mass_kg": 12.743448,
+        "gravity_m_s2": 9.81
+      },
+      "progress_m": -2.496922717687182,
+      "lateral_displacement_m": 0.4120813126479731,
+      "min_root_height_m": 0.06136234089190452,
+      "max_tilt_deg": 172.04173029891172,
+      "peak_tilt_after_push_deg": 172.04173029891172,
+      "fall_time_s": 5.255999999999864,
+      "posture_violation_time_s": 4.1919999999999815,
+      "recovery_confirmed_time_s": null,
+      "recovery_latency_s": null,
+      "injected_push": {
+        "force_n": [
+          -500.0,
+          0.0,
+          0.0
+        ],
+        "start_s": 3.45536309985777,
+        "duration_s": 0.2
+      },
+      "actual_impulse_ns": [
+        -100.0,
+        0.0,
+        0.0
+      ],
+      "final_position": [
+        -1.5792668183708813,
+        0.4455622183823927,
+        0.06136234089190452
+      ],
+      "simulated_seconds": 5.255999999999864,
+      "trace_samples": 264,
+      "physics_steps": 1314,
+      "initial_evaluation_position": [
+        0.9176558993163006,
+        0.033480905734419614,
+        0.29661012243742335
+      ],
+      "wall_seconds": 0.7358881149993977,
+      "worker_returncode": 2,
+      "worker_pid": 82005,
+      "supervisor_wall_seconds": 0.9670839230020647,
+      "wall_timeout_s": 30.0,
+      "crash_injected": false
+    }
+  ]
+}

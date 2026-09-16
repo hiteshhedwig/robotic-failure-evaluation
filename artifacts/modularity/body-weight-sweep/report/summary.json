@@ -1,0 +1,358 @@
+{
+  "conditions": [
+    {
+      "robot": "g1",
+      "experiment_id": "body-weight-walking-v1",
+      "condition": "reference",
+      "force_n": 0.0,
+      "force_mode": "body_weight",
+      "requested_magnitude": 0,
+      "pulse_duration_s": null,
+      "task": {
+        "command": [
+          0.5,
+          0,
+          0
+        ],
+        "duration_s": 10,
+        "warmup_s": 2,
+        "minimum_progress_m": 2
+      },
+      "fingerprints": {
+        "robot_profile_sha256": "e76edaa7002f49f0200021e05c3890506a24b0db531d133a87afa3de10afbbf4",
+        "policy_sha256": "cf668f75b90d1abf73d2b87612a6e76bccc61ff7e083b63582d3f6aaa3c1759d",
+        "model_tree_sha256": "f92529072acc10d877fe5f5392d80ae42158ac82f5b8d4a28212b6ca52e20f2d",
+        "evaluation_code_sha256": "d9e19b4dfcedcd4b3a31ba06da288bf9004b8e15d87100be5d8b1587de23a9b0",
+        "adapter_source_sha256": "74086b2b4d0fbf55cc789559b59b228b40b692df100df56dc57ec27fd0f9dd14"
+      },
+      "attempted": 1,
+      "valid": 1,
+      "infrastructure_failures": 0,
+      "outcomes": {
+        "COMPLETED": 1
+      },
+      "success_rate": 1.0,
+      "fall_rate": 0.0,
+      "success_wilson95": null,
+      "fall_wilson95": null,
+      "interval_note": "No interval: nominal reset repetitions",
+      "median_progress_m": 3.781271703705525,
+      "balance_recovered_and_completed": 0,
+      "median_recovery_latency_s": null
+    },
+    {
+      "robot": "g1",
+      "experiment_id": "body-weight-walking-v1",
+      "condition": "quarter-weight",
+      "force_n": 78.74217225,
+      "force_mode": "body_weight",
+      "requested_magnitude": 0.25,
+      "pulse_duration_s": 0.2,
+      "task": {
+        "command": [
+          0.5,
+          0,
+          0
+        ],
+        "duration_s": 10,
+        "warmup_s": 2,
+        "minimum_progress_m": 2
+      },
+      "fingerprints": {
+        "robot_profile_sha256": "e76edaa7002f49f0200021e05c3890506a24b0db531d133a87afa3de10afbbf4",
+        "policy_sha256": "cf668f75b90d1abf73d2b87612a6e76bccc61ff7e083b63582d3f6aaa3c1759d",
+        "model_tree_sha256": "f92529072acc10d877fe5f5392d80ae42158ac82f5b8d4a28212b6ca52e20f2d",
+        "evaluation_code_sha256": "d9e19b4dfcedcd4b3a31ba06da288bf9004b8e15d87100be5d8b1587de23a9b0",
+        "adapter_source_sha256": "74086b2b4d0fbf55cc789559b59b228b40b692df100df56dc57ec27fd0f9dd14"
+      },
+      "attempted": 1,
+      "valid": 1,
+      "infrastructure_failures": 0,
+      "outcomes": {
+        "COMPLETED": 1
+      },
+      "success_rate": 1.0,
+      "fall_rate": 0.0,
+      "success_wilson95": [
+        0.20654931437723745,
+        1
+      ],
+      "fall_wilson95": [
+        0,
+        0.7934506856227626
+      ],
+      "interval_note": "Conditional pushed-trial interval",
+      "median_progress_m": 3.6369774047448993,
+      "balance_recovered_and_completed": 1,
+      "median_recovery_latency_s": 1.1679999999996742
+    },
+    {
+      "robot": "g1",
+      "experiment_id": "body-weight-walking-v1",
+      "condition": "weight-and-half",
+      "force_n": 472.4530335,
+      "force_mode": "body_weight",
+      "requested_magnitude": 1.5,
+      "pulse_duration_s": 0.2,
+      "task": {
+        "command": [
+          0.5,
+          0,
+          0
+        ],
+        "duration_s": 10,
+        "warmup_s": 2,
+        "minimum_progress_m": 2
+      },
+      "fingerprints": {
+        "robot_profile_sha256": "e76edaa7002f49f0200021e05c3890506a24b0db531d133a87afa3de10afbbf4",
+        "policy_sha256": "cf668f75b90d1abf73d2b87612a6e76bccc61ff7e083b63582d3f6aaa3c1759d",
+        "model_tree_sha256": "f92529072acc10d877fe5f5392d80ae42158ac82f5b8d4a28212b6ca52e20f2d",
+        "evaluation_code_sha256": "d9e19b4dfcedcd4b3a31ba06da288bf9004b8e15d87100be5d8b1587de23a9b0",
+        "adapter_source_sha256": "74086b2b4d0fbf55cc789559b59b228b40b692df100df56dc57ec27fd0f9dd14"
+      },
+      "attempted": 1,
+      "valid": 1,
+      "infrastructure_failures": 0,
+      "outcomes": {
+        "FALL": 1
+      },
+      "success_rate": 0.0,
+      "fall_rate": 1.0,
+      "success_wilson95": [
+        0,
+        0.7934506856227626
+      ],
+      "fall_wilson95": [
+        0.20654931437723745,
+        1
+      ],
+      "interval_note": "Conditional pushed-trial interval",
+      "median_progress_m": 0.9417911543073304,
+      "balance_recovered_and_completed": 0,
+      "median_recovery_latency_s": null
+    },
+    {
+      "robot": "go1",
+      "experiment_id": "body-weight-walking-v1",
+      "condition": "reference",
+      "force_n": 0.0,
+      "force_mode": "body_weight",
+      "requested_magnitude": 0,
+      "pulse_duration_s": null,
+      "task": {
+        "command": [
+          0.5,
+          0,
+          0
+        ],
+        "duration_s": 10,
+        "warmup_s": 2,
+        "minimum_progress_m": 2
+      },
+      "fingerprints": {
+        "robot_profile_sha256": "3de15ada6118fe7628303fa93e7b21df3f32c22d08eec38140fce724ac709762",
+        "policy_sha256": "386cde6a1eac679e2f2a313ade2b395d9f26905b151ee3b019c2c4163d49b6f2",
+        "model_tree_sha256": "a0601c3e734bba4e195fcd3c7957dab678dca02742c7eff6cd935185a32f6999",
+        "evaluation_code_sha256": "d9e19b4dfcedcd4b3a31ba06da288bf9004b8e15d87100be5d8b1587de23a9b0",
+        "adapter_source_sha256": "1005ed9b80cbc0de78edded439088055f55df5af1e718bd6da5f9b45ba1cf121"
+      },
+      "attempted": 1,
+      "valid": 1,
+      "infrastructure_failures": 0,
+      "outcomes": {
+        "COMPLETED": 1
+      },
+      "success_rate": 1.0,
+      "fall_rate": 0.0,
+      "success_wilson95": null,
+      "fall_wilson95": null,
+      "interval_note": "No interval: nominal reset repetitions",
+      "median_progress_m": 4.034631003098734,
+      "balance_recovered_and_completed": 0,
+      "median_recovery_latency_s": null
+    },
+    {
+      "robot": "go1",
+      "experiment_id": "body-weight-walking-v1",
+      "condition": "quarter-weight",
+      "force_n": 31.25330622,
+      "force_mode": "body_weight",
+      "requested_magnitude": 0.25,
+      "pulse_duration_s": 0.2,
+      "task": {
+        "command": [
+          0.5,
+          0,
+          0
+        ],
+        "duration_s": 10,
+        "warmup_s": 2,
+        "minimum_progress_m": 2
+      },
+      "fingerprints": {
+        "robot_profile_sha256": "3de15ada6118fe7628303fa93e7b21df3f32c22d08eec38140fce724ac709762",
+        "policy_sha256": "386cde6a1eac679e2f2a313ade2b395d9f26905b151ee3b019c2c4163d49b6f2",
+        "model_tree_sha256": "a0601c3e734bba4e195fcd3c7957dab678dca02742c7eff6cd935185a32f6999",
+        "evaluation_code_sha256": "d9e19b4dfcedcd4b3a31ba06da288bf9004b8e15d87100be5d8b1587de23a9b0",
+        "adapter_source_sha256": "1005ed9b80cbc0de78edded439088055f55df5af1e718bd6da5f9b45ba1cf121"
+      },
+      "attempted": 1,
+      "valid": 1,
+      "infrastructure_failures": 0,
+      "outcomes": {
+        "COMPLETED": 1
+      },
+      "success_rate": 1.0,
+      "fall_rate": 0.0,
+      "success_wilson95": [
+        0.20654931437723745,
+        1
+      ],
+      "fall_wilson95": [
+        0,
+        0.7934506856227626
+      ],
+      "interval_note": "Conditional pushed-trial interval",
+      "median_progress_m": 4.018731920579831,
+      "balance_recovered_and_completed": 1,
+      "median_recovery_latency_s": 0.4479999999999742
+    },
+    {
+      "robot": "go1",
+      "experiment_id": "body-weight-walking-v1",
+      "condition": "weight-and-half",
+      "force_n": 187.51983732,
+      "force_mode": "body_weight",
+      "requested_magnitude": 1.5,
+      "pulse_duration_s": 0.2,
+      "task": {
+        "command": [
+          0.5,
+          0,
+          0
+        ],
+        "duration_s": 10,
+        "warmup_s": 2,
+        "minimum_progress_m": 2
+      },
+      "fingerprints": {
+        "robot_profile_sha256": "3de15ada6118fe7628303fa93e7b21df3f32c22d08eec38140fce724ac709762",
+        "policy_sha256": "386cde6a1eac679e2f2a313ade2b395d9f26905b151ee3b019c2c4163d49b6f2",
+        "model_tree_sha256": "a0601c3e734bba4e195fcd3c7957dab678dca02742c7eff6cd935185a32f6999",
+        "evaluation_code_sha256": "d9e19b4dfcedcd4b3a31ba06da288bf9004b8e15d87100be5d8b1587de23a9b0",
+        "adapter_source_sha256": "1005ed9b80cbc0de78edded439088055f55df5af1e718bd6da5f9b45ba1cf121"
+      },
+      "attempted": 1,
+      "valid": 1,
+      "infrastructure_failures": 0,
+      "outcomes": {
+        "COMPLETED": 1
+      },
+      "success_rate": 1.0,
+      "fall_rate": 0.0,
+      "success_wilson95": [
+        0.20654931437723745,
+        1
+      ],
+      "fall_wilson95": [
+        0,
+        0.7934506856227626
+      ],
+      "interval_note": "Conditional pushed-trial interval",
+      "median_progress_m": 3.561402701885756,
+      "balance_recovered_and_completed": 0,
+      "median_recovery_latency_s": null
+    }
+  ],
+  "campaigns": [
+    "artifacts/modularity/body-weight-sweep/runs"
+  ],
+  "runs": 6,
+  "robot_trials": 6,
+  "infrastructure_failures": 0,
+  "robots": [
+    "g1",
+    "go1"
+  ],
+  "statistical_scope": "Exploratory and conditional on recorded models, policies, task and disturbance sampling. No physical-robot inference.",
+  "aggregation_note": "Robots, experiment IDs, conditions, task settings, force magnitude/mode/duration and available fingerprints define separate groups. Historical missing fingerprints stay explicit.",
+  "comparison_note": "Matched schedules and normalized body-weight forces do not establish equivalent difficulty or a cross-robot ranking.",
+  "uncertainty_note": "Wilson intervals are conditional proportions, not a guarantee of independence. Nominal repeats and duplicate seed/push configurations receive no interval. Inspect the experiment design.",
+  "attribution": "Injected disturbance, system response and measured outcome are distinct. Outcome detection does not establish internal policy cause.",
+  "designs": [
+    {
+      "path": "artifacts/modularity/body-weight-sweep/runs",
+      "experiment": {
+        "schema_version": 1,
+        "id": "body-weight-walking-v1",
+        "robots": [
+          "g1",
+          "go1"
+        ],
+        "seeds": [
+          0
+        ],
+        "task": {
+          "duration_s": 10,
+          "warmup_s": 2,
+          "command": [
+            0.5,
+            0,
+            0
+          ],
+          "minimum_progress_m": 2
+        },
+        "disturbance": {
+          "type": "root_force_pulse",
+          "force_mode": "body_weight",
+          "duration_s": 0.2,
+          "onset_range_s": [
+            3,
+            3.8
+          ],
+          "directions": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              -1,
+              0
+            ]
+          ],
+          "levels": [
+            {
+              "name": "reference",
+              "magnitude": 0
+            },
+            {
+              "name": "quarter-weight",
+              "magnitude": 0.25
+            },
+            {
+              "name": "weight-and-half",
+              "magnitude": 1.5
+            }
+          ]
+        },
+        "notes": "Small integration demonstration, not a held-out reliability campaign. Change robots, seeds and levels here; do not edit runner/report code."
+      },
+      "note": null,
+      "sampling": null,
+      "sampling_note": "Seeded direction/onset schedules matched across robots and levels; realized physics-grid times are in each manifest. No cross-robot robustness ranking."
+    }
+  ]
+}

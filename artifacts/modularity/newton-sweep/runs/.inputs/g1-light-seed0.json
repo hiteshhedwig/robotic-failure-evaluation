@@ -1,0 +1,54 @@
+{
+  "id": "g1-light-seed0",
+  "robot": "g1",
+  "robot_profile": {
+    "schema_version": 1,
+    "id": "g1",
+    "label": "Unitree G1 humanoid",
+    "adapter": "robot_eval.simulation:G1Simulation",
+    "adapter_options": {},
+    "root_body": "pelvis",
+    "floor_geom": "floor",
+    "policy_state": "Fresh LSTM hidden/cell reset",
+    "monitor": {
+      "fall_contact_bodies": [
+        "pelvis"
+      ],
+      "fall_hold_s": 0.02,
+      "posture_tilt_deg": 60,
+      "posture_min_height_m": 0.45,
+      "posture_hold_s": 0.1,
+      "recovery_tilt_deg": 10,
+      "recovery_min_height_m": 0.65,
+      "recovery_velocity_tolerance_m_s": 0.25,
+      "recovery_hold_s": 0.4
+    }
+  },
+  "seed": 0,
+  "duration_s": 10,
+  "warmup_s": 2,
+  "command": [
+    0.5,
+    0,
+    0
+  ],
+  "minimum_progress_m": 2,
+  "experiment": {
+    "id": "shared-walking-push-v1",
+    "condition": "light",
+    "schedule_id": "seed0",
+    "force_mode": "newtons",
+    "magnitude": 100,
+    "body_mass_kg": 32.106899999999996,
+    "gravity_m_s2": 9.81
+  },
+  "push": {
+    "force_n": [
+      0.0,
+      -100.0,
+      0.0
+    ],
+    "start_s": 3.606363522352242,
+    "duration_s": 0.2
+  }
+}

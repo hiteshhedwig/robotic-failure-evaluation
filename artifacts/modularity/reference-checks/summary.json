@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "g1-baseline",
+      "status": "COMPLETED",
+      "reference_status": "COMPLETED",
+      "progress_difference_m": 0.0,
+      "max_qpos_difference": 0.0,
+      "trace_samples": 501,
+      "policy_and_model_hashes_match": true,
+      "passed": true
+    },
+    {
+      "case": "g1-recovery",
+      "status": "COMPLETED",
+      "reference_status": "COMPLETED",
+      "progress_difference_m": 0.0,
+      "max_qpos_difference": 0.0,
+      "trace_samples": 501,
+      "policy_and_model_hashes_match": true,
+      "passed": true
+    },
+    {
+      "case": "g1-fall",
+      "status": "FALL",
+      "reference_status": "FALL",
+      "progress_difference_m": 0.0,
+      "max_qpos_difference": 0.0,
+      "trace_samples": 185,
+      "policy_and_model_hashes_match": true,
+      "passed": true
+    },
+    {
+      "case": "g1-upright-timeout",
+      "status": "TASK_TIMEOUT",
+      "reference_status": "TASK_TIMEOUT",
+      "progress_difference_m": 0.0,
+      "max_qpos_difference": 0.0,
+      "trace_samples": 501,
+      "policy_and_model_hashes_match": true,
+      "passed": true
+    },
+    {
+      "case": "go1-baseline",
+      "status": "COMPLETED",
+      "reference_status": "COMPLETED",
+      "progress_difference_m": 0.0,
+      "max_qpos_difference": 0.0,
+      "trace_samples": 501,
+      "policy_and_model_hashes_match": true,
+      "passed": true
+    },
+    {
+      "case": "go1-recovery",
+      "status": "COMPLETED",
+      "reference_status": "COMPLETED",
+      "progress_difference_m": 0.0,
+      "max_qpos_difference": 0.0,
+      "trace_samples": 501,
+      "policy_and_model_hashes_match": true,
+      "passed": true
+    },
+    {
+      "case": "go1-fall",
+      "status": "FALL",
+      "reference_status": "FALL",
+      "progress_difference_m": 0.0,
+      "max_qpos_difference": 0.0,
+      "trace_samples": 262,
+      "policy_and_model_hashes_match": true,
+      "passed": true
+    },
+    {
+      "case": "go1-posture",
+      "status": "POSTURE_VIOLATION",
+      "reference_status": "POSTURE_VIOLATION",
+      "progress_difference_m": 0.0,
+      "max_qpos_difference": 0.0,
+      "trace_samples": 501,
+      "policy_and_model_hashes_match": true,
+      "passed": true
+    }
+  ],
+  "note": "Local behavior preservation, not a cross-machine determinism guarantee. Evaluator source/profile provenance changed intentionally."
+}

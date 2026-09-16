@@ -1,0 +1,45 @@
+{
+  "status": "POSTURE_VIOLATION",
+  "scenario_id": "extreme-seed5",
+  "seed": 5,
+  "robot": "go1",
+  "robot_profile_sha256": "3de15ada6118fe7628303fa93e7b21df3f32c22d08eec38140fce724ac709762",
+  "experiment": null,
+  "progress_m": -2.8743482450483686,
+  "lateral_displacement_m": 9.753760131175929,
+  "min_root_height_m": 0.1328792946870495,
+  "max_tilt_deg": 135.20354151550646,
+  "peak_tilt_after_push_deg": 135.20354151550646,
+  "fall_time_s": null,
+  "posture_violation_time_s": 3.824000000000003,
+  "recovery_confirmed_time_s": null,
+  "recovery_latency_s": null,
+  "injected_push": {
+    "force_n": [
+      0,
+      1000,
+      0
+    ],
+    "start_s": 3.592,
+    "duration_s": 0.2
+  },
+  "actual_impulse_ns": [
+    0.0,
+    200.0,
+    0.0
+  ],
+  "final_position": [
+    -1.956692345732068,
+    9.787241036910348,
+    0.1417675153742584
+  ],
+  "simulated_seconds": 9.999999999999343,
+  "trace_samples": 501,
+  "physics_steps": 2500,
+  "initial_evaluation_position": [
+    0.9176558993163006,
+    0.033480905734419614,
+    0.29661012243742335
+  ],
+  "wall_seconds": 1.0268054459993436
+}

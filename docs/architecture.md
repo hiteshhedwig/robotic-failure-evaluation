@@ -35,8 +35,38 @@ Its full-collision flat-floor XML makes trunk contact observable. Both adapters
 return position, velocity, tilt, contacts, qpos/qvel, actions and actual efforts.
 Go1 also records its position targets separately.
 
-The Go1 adapter reuses the G1 class's state/fingerprint helpers. This is intentionally
-a small shared implementation, not a dynamically extensible middleware layer.
+Both adapters inherit the robot-independent MuJoCoAdapter helper. Go1 does not
+import or inherit the G1 controller. RobotAdapter documents the required interface.
+
+## Extension boundaries
+
+configs/robots/*.json descriptors select lazy adapter factories, root/floor names
+and validated monitor limits. Profiles may provide adapter_options for a compatible
+controller/model loader. External profile directories extend built-ins; duplicate
+IDs are rejected. Generated scenarios embed full profiles and explicit force
+vectors. A saved profile and its source/asset fingerprints travel with the trial.
+
+robot_eval/profiles.py discovers/validates profiles and checks loaded model IDs,
+contact bodies and supported physics cadence. The worker and monitor contain no
+G1/Go1 dispatch branches. robot_eval/base.py owns common state/force/provenance math.
+
+robot_eval/experiments.py expands task, seed, force-level, direction and onset JSON
+recipes. It samples one requested schedule per seed across robots/conditions,
+then execution resolves each robot's physics grid. Absolute newtons and multiples
+of rooted body weight are supported. Model probes load assets but do not step.
+The built-in task remains forward-distance walking, not arbitrary task inference.
+
+robot_eval/scenarios.py validates raw inputs and realized intervals; intervals that
+collapse on the physics grid are rejected. robot_eval/disturbances.py schedules one
+root-body world-frame ForcePulse and its actual impulse independently of controllers.
+robot_eval/episode.py owns task execution, monitoring and artifact lifecycle.
+
+scripts/evaluate.py composes generation, bounded subprocess execution and reporting.
+Infrastructure outcomes still receive a report. Generated suites and result/report
+directories are never overwritten. JSON import descriptors are trusted local code
+configuration; they are not a sandbox for untrusted plugins.
+
+See [the extension guide](extending.md) for the precise adapter contract and examples.
 
 ## Simulation and wall time
 
@@ -95,11 +125,10 @@ The comparator requires identical scenario IDs and resolved configurations. It f
 new task/infrastructure failures and reports changed fingerprints. It does not claim
 statistical significance from one matched run or proof of a policy improvement.
 
-Reports group by both robot and condition, so equal condition names are never pooled.
+Reports group by robot, experiment, condition, task settings, force units/magnitude/duration and available source/model/policy/profile fingerprints. Equal labels alone never justify pooling.
 Within-robot force tiers use matched seeded schedules. Wilson intervals describe the
 conditional pushed-trial proportions; identical nominal resets receive no interval.
-The exploratory choice of severity ranges is disclosed. Cross-robot force sweeps are
-not a fair robustness ranking.
+Recipe sampling/design is preserved. Duplicate input paths are rejected; repeated seed/push configurations suppress intervals. Cross-robot force sweeps, including body-weight-normalized ones, are not a fair robustness ranking.
 
 ## Demo provenance
 

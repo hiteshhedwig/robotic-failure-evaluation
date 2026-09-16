@@ -1,0 +1,13 @@
+g1-reference-seed0 COMPLETED
+g1-light-seed0 COMPLETED
+go1-reference-seed0 COMPLETED
+go1-light-seed0 COMPLETED
+g1-strong-seed0 FALL
+go1-strong-seed0 FALL
+g1-reference-seed1 COMPLETED
+g1-light-seed1 COMPLETED
+go1-reference-seed1 COMPLETED
+g1-strong-seed1 FALL
+go1-light-seed1 COMPLETED
+go1-strong-seed1 FALL
+Reported 12 attempts for g1, go1 at artifacts/modularity/newton-sweep/report/report.md
